@@ -1,0 +1,50 @@
+{
+  "name": "boilerplate",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "cp ./envs/.env.develop .env && next dev",
+    "build": "cp ./envs/.env.production .env && next build",
+    "start": "next start",
+    "prepare": "husky install",
+    "lint": "eslint src --max-warnings=0",
+    "generate": "yarn plop --plopfile generators/plopfile.js"
+  },
+  "dependencies": {
+    "@chakra-ui/react": "^1.8.8",
+    "@egjs/flicking-plugins": "^4.3.0",
+    "@egjs/react-flicking": "^4.7.0",
+    "@emotion/react": "^11",
+    "@emotion/styled": "^11",
+    "axios": "^0.27.2",
+    "date-fns": "^2.28.0",
+    "framer-motion": "^6",
+    "next": "12.1.6",
+    "react": "18.1.0",
+    "react-dom": "18.1.0",
+    "react-icons": "^4.3.1"
+  },
+  "devDependencies": {
+    "@types/node": "17.0.31",
+    "@types/react": "18.0.8",
+    "@types/react-dom": "18.0.3",
+    "@typescript-eslint/eslint-plugin": "^5.22.0",
+    "@typescript-eslint/parser": "^5.22.0",
+    "eslint": "^8.14.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-prettier": "^4.0.0",
+    "eslint-plugin-react": "^7.29.4",
+    "eslint-plugin-react-hooks": "^4.5.0",
+    "husky": "^7.0.4",
+    "lint-staged": "^12.4.1",
+    "plop": "^3.1.0",
+    "prettier": "2.6.2",
+    "typescript": "4.6.4"
+  },
+  "lint-staged": {
+    "src/**/*": [
+      "yarn lint --fix"
+    ],
+    "*.js": "eslint --cache --fix"
+  }
+}
