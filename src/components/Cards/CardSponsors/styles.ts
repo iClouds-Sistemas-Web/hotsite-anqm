@@ -9,7 +9,9 @@ export const Container = styled(C.Flex)`
 
   justify-content: center;
 
-  background-color: #dddddd;
+  border-radius: 5.82822px;
+  background-color: #ffffff;
+  border: 1.16564px solid #eeeeee;
 
   @media (max-width: 1279px) {
     max-width: 17.5rem;
@@ -17,8 +19,9 @@ export const Container = styled(C.Flex)`
   }
 
   @media (max-width: 479px) {
-    min-height: auto;
     max-width: 48.66%;
+    min-height: 16.3rem;
+    max-height: 16.3rem;
   }
 
   @media (max-width: 300px) {
@@ -32,23 +35,9 @@ export const Wrapper = styled(C.Flex)`
 `;
 
 export const ContentImage = styled(C.Flex)`
-  position: relative;
-
   width: 100%;
   height: auto;
+  padding: 5rem 2rem;
 
-  background-color: #dddddd;
-
-  > img {
-    top: 50%;
-    left: 50%;
-    position: absolute;
-
-    margin-top: -3.4rem;
-    margin-left: -3rem;
-  }
-
-  @media (max-width: 479px) {
-    padding-bottom: 100%;
-  }
+  justify-content: center;
 `;

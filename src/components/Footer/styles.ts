@@ -70,8 +70,7 @@ export const ContentContact = styled(C.Flex)`
 
   @media (max-width: 767px) {
     height: 5.1rem;
-    margin: 2rem 0;
-    margin: 0 auto;
+    margin: 2rem;
 
     > p {
       font-size: 1.4rem;
