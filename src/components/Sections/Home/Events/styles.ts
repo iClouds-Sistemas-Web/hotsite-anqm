@@ -6,21 +6,62 @@ import { personTheme as theme } from '~/styles/theme';
 export const Container = styled(C.Flex)`
   width: 100%;
   height: auto;
+  margin: 0 auto;
+  max-width: 192rem;
+  min-height: 70rem;
 
-  justify-content: center;
-
-  background-color: #c4c4c4;
+  @media (max-width: 479px) {
+    max-height: 48rem;
+    min-height: 48rem;
+  }
 `;
 
 export const Wrapper = styled(C.Flex)`
+  position: relative;
+
   width: 100%;
   height: auto;
-  padding: 10rem 0;
+  padding: 10rem 0 0;
 
   flex-direction: column;
 
+  background-size: cover;
+  background-repeat: no-repeat;
+  box-shadow: inset 0px 4px 30px #512940;
+  background-image: url('/images/png/bg-events.png');
+
   .flicking-viewport {
-    padding: 0 18.5rem;
+    height: 100%;
+    padding: 5rem 19.5rem;
+
+    .flicking-camera {
+      .flicking-panel {
+        height: 37rem;
+        width: 27.5rem;
+        min-height: 37rem;
+        max-width: 27.5rem;
+        min-width: 27.5rem;
+        margin-right: 4rem;
+
+        > img {
+          width: auto;
+          max-width: fit-content;
+        }
+
+        @media (max-width: 479px) {
+          max-width: 20rem;
+          min-width: 20rem;
+          margin-top: 3rem;
+          min-height: 27rem;
+          margin-right: 1.5rem;
+
+          > img {
+            min-width: 20rem;
+            max-width: 24.4rem;
+          }
+        }
+      }
+    }
 
     @media (max-width: 1279px) {
       padding: 0 12.5rem;
@@ -36,30 +77,81 @@ export const Wrapper = styled(C.Flex)`
   }
 
   @media (max-width: 767px) {
-    padding: 5rem 0;
+    padding: 6rem 0 5rem;
+  }
+
+  @media (max-width: 479px) {
+    padding: 8rem 0 0;
+
+    background-position-x: 45%;
+    box-shadow: inset 0px 1px 15px #512940;
+  }
+`;
+
+export const ContentEQuesterImage = styled(C.Flex)`
+  right: 4rem;
+  top: -5.6rem;
+  position: absolute;
+
+  overflow: hidden;
+
+  > img {
+    width: 100%;
+
+    height: auto;
+    max-width: 20rem;
+
+    @media (max-width: 991px) {
+      right: -3.1rem;
+      position: relative;
+    }
+
+    @media (max-width: 767px) {
+      top: 1rem;
+      right: -2.6rem;
+
+      max-width: 17rem;
+    }
+
+    @media (max-width: 479px) {
+      max-width: 13rem;
+    }
+  }
+
+  @media (max-width: 991px) {
+    right: 0;
+  }
+
+  @media (max-width: 479px) {
+    top: -4.5rem;
   }
 `;
 
 export const ContentTitle = styled(C.Flex)`
   width: 100%;
   height: auto;
-  min-height: 8rem;
-  margin-bottom: 5rem;
+  min-height: 7rem;
 
-  align-items: center;
+  text-align: center;
   justify-content: center;
 
-  background-color: #8b8787;
-
   > h2 {
-    font-size: 5rem;
+    color: #fdc973;
+    font-size: 7rem;
     font-weight: 400;
     line-height: 5.5rem;
-    font-family: ${theme.fonts.roboto};
+    font-family: ${theme.fonts.anton};
+    text-shadow: 0px 5px 10px rgba(81, 41, 64, 0.9);
+
+    @media (max-width: 767px) {
+      font-size: 5rem;
+    }
 
     @media (max-width: 479px) {
-      font-size: 3.4rem;
+      color: #febe55;
+      font-size: 4rem;
       line-height: 3.9rem;
+      text-shadow: 0px 5px 10px rgba(56, 40, 28, 0.55);
     }
   }
 
@@ -67,35 +159,15 @@ export const ContentTitle = styled(C.Flex)`
     margin-bottom: 3rem;
   }
 
-  @media (max-width: 479px) {
-    min-height: 6rem;
-  }
-`;
-
-export const ContentEvent = styled(C.Flex)`
-  position: relative;
-
-  width: 100%;
-  height: auto;
-  min-height: 37rem;
-  max-width: 29.5rem;
-  min-width: 29.5rem;
-  margin-right: 2rem;
-
-  background-color: #dddddd;
-
-  > img {
-    top: 50%;
-    left: 50%;
-    position: absolute;
-
-    margin-top: -3.4rem;
-    margin-left: -3rem;
+  @media (max-width: 767px) {
+    margin-top: 4rem;
   }
 
   @media (max-width: 479px) {
-    max-width: 20rem;
-    min-width: 20rem;
-    min-height: 25rem;
+    min-height: 5rem;
+
+    margin: 1rem 0 0;
+    text-align: center;
+    justify-content: center;
   }
 `;
