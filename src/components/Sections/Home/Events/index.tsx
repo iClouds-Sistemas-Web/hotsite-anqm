@@ -7,30 +7,37 @@ export function Events() {
   return (
     <S.Container as="section">
       <S.Wrapper>
+        <S.ContentEQuesterImage>
+          <C.Image
+            src="/images/png/etiqueta-eQuester.png"
+            alt="Etiqueta com logo eQuester, fundo amarelo, texto cor açaí escrito baixe o app "
+          />
+        </S.ContentEQuesterImage>
+
         <S.ContentTitle>
-          <C.Text as="h2">Section Title</C.Text>
+          <C.Text as="h2">Agenda de Eventos</C.Text>
         </S.ContentTitle>
 
         <Carousel>
-          <S.ContentEvent className="flicking-panel">
-            <C.Image src="/images/png/image.png" />
-          </S.ContentEvent>
+          <div className="flicking-panel">
+            <C.Image src="/images/png/img-events.png" alt="Evento" />
+          </div>
 
-          <S.ContentEvent className="flicking-panel">
-            <C.Image src="/images/png/image.png" />
-          </S.ContentEvent>
+          <div className="flicking-panel">
+            <C.Image src="/images/png/img-events.png" alt="Evento" />
+          </div>
 
-          <S.ContentEvent className="flicking-panel">
-            <C.Image src="/images/png/image.png" />
-          </S.ContentEvent>
+          <div className="flicking-panel">
+            <C.Image src="/images/png/img-events.png" alt="Evento" />
+          </div>
 
-          <S.ContentEvent className="flicking-panel">
-            <C.Image src="/images/png/image.png" />
-          </S.ContentEvent>
+          <div className="flicking-panel">
+            <C.Image src="/images/png/img-events.png" alt="Evento" />
+          </div>
 
-          <S.ContentEvent className="flicking-panel">
-            <C.Image src="/images/png/image.png" />
-          </S.ContentEvent>
+          <div className="flicking-panel">
+            <C.Image src="/images/png/img-events.png" alt="Evento" />
+          </div>
         </Carousel>
       </S.Wrapper>
     </S.Container>
