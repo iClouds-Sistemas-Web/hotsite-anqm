@@ -100,7 +100,7 @@ export const ContentDescription = styled(C.Flex)`
   > h2 {
     font-weight: 600;
     font-size: 1.9rem;
-    line-height: 2.4rem;
+    line-height: 2rem;
     white-space: normal;
     font-family: ${theme.fonts.roboto};
 
