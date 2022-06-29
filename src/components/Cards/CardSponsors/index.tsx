@@ -6,7 +6,10 @@ export function CardSponsors() {
     <S.Container>
       <S.Wrapper>
         <S.ContentImage>
-          <C.Image src="/images/png/image.png" />
+          <C.Image
+            src="/images/png/logo-equester-sponsors.png"
+            alt="Logo eQuester cor açaí, com fundo branco"
+          />
         </S.ContentImage>
       </S.Wrapper>
     </S.Container>

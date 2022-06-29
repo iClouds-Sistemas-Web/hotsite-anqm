@@ -8,7 +8,7 @@ export function Sponsors() {
     <S.Container as="section">
       <S.Wrapper>
         <S.ContentTitle>
-          <C.Text as="h2">Title Section</C.Text>
+          <C.Text as="h2">Nossos Parceiros</C.Text>
         </S.ContentTitle>
 
         <S.ContentSponsors>
