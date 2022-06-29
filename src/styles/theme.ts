@@ -29,6 +29,7 @@ export const personTheme = {
   },
 
   fonts: {
+    anton: 'Anton',
     roboto: 'Roboto',
     roboto_condensed: 'Roboto Condensed',
   },
