@@ -13,15 +13,15 @@ export const Container = styled(C.Flex)`
 export const Wrapper = styled(C.Flex)`
   width: 100%;
   height: auto;
-  max-width: 128rem;
-  padding: 0 2rem 5rem;
+  max-width: 103rem;
+  padding-bottom: 8.4rem;
 
   align-items: center;
   flex-direction: column;
   justify-content: center;
 
-  @media (max-width: 1279px) {
-    max-width: 100%;
+  @media (max-width: 991px) {
+    padding: 0 2rem 5rem;
   }
 
   @media (max-width: 767px) {
@@ -38,10 +38,8 @@ export const ContentNewsHeader = styled(C.Flex)`
   align-items: flex-start;
   justify-content: flex-start;
 
-  border-bottom: 1px solid #d3d3d3;
-
   > h1 {
-    margin-bottom: 1rem;
+    margin-bottom: 0.5rem;
 
     font-weight: 600;
     font-size: 3.5rem;
@@ -69,12 +67,15 @@ export const ContentNewsHeader = styled(C.Flex)`
   }
 
   > h2 {
+    color: #333333;
     font-weight: 400;
     font-size: 1.9rem;
     line-height: 2.4rem;
+    border-bottom: 1px solid #d3d3d3;
     font-family: ${theme.fonts.roboto_condensed};
 
     @media (max-width: 767px) {
+      border: none;
       font-size: 1.7rem;
       line-height: 2.2rem;
     }
@@ -88,32 +89,28 @@ export const ContentNewsHeader = styled(C.Flex)`
 `;
 
 export const ContentImage = styled(C.Flex)`
-  position: relative;
-
   width: 100%;
   height: auto;
-  min-height: 50rem;
-  max-width: 81.8rem;
+  max-width: 81.9rem;
   margin-bottom: 5rem;
-  padding-bottom: 40.323%;
-
-  background-color: #dddddd;
 
   > img {
-    top: 50%;
-    left: 50%;
-    position: absolute;
+    width: 100%;
+    height: 50rem;
+    max-width: 81.9rem;
 
-    margin-top: -3.4rem;
-    margin-left: -3rem;
+    @media (max-width: 767px) {
+      width: 100%;
+      height: 100%;
+    }
+
+    @media (max-width: 479px) {
+      width: 100%;
+      height: 22rem;
+    }
   }
 
-  @media (max-width: 991px) {
-    min-height: auto;
-    padding-bottom: 65.673%;
-  }
-
-  @media (max-width: 767px) {
+  @media (max-width: 479px) {
     margin-bottom: 2rem;
   }
 `;
@@ -122,6 +119,7 @@ export const ContentDescription = styled(C.Flex)`
   width: 100%;
   height: auto;
   max-width: 92.5rem;
+  min-height: 93.6rem;
 
   > p {
     font-weight: 400;
@@ -132,7 +130,7 @@ export const ContentDescription = styled(C.Flex)`
 
     @media (max-width: 767px) {
       font-size: 1.7rem;
-      line-height: 2.2rem;
+      line-height: 3rem;
     }
   }
 `;

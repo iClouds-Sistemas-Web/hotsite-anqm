@@ -8,13 +8,15 @@ export const Container = styled(C.Flex)`
   height: auto;
 
   justify-content: center;
+
+  background: rgba(242, 183, 5, 0.1);
 `;
 
 export const Wrapper = styled(C.Flex)`
   width: 100%;
   height: auto;
-  max-width: 128rem;
   padding: 0 2rem;
+  max-width: 128rem;
 
   align-items: center;
   flex-direction: column;
@@ -23,6 +25,10 @@ export const Wrapper = styled(C.Flex)`
   @media (max-width: 1279px) {
     max-width: 100%;
   }
+
+  @media (max-width: 479px) {
+    padding: 0 2rem 1rem;
+  }
 `;
 
 export const ContentTitle = styled(C.Flex)`
@@ -30,27 +36,27 @@ export const ContentTitle = styled(C.Flex)`
   height: auto;
   min-height: 8rem;
 
-  margin-bottom: 5rem;
+  margin: 2rem 0 5rem;
 
   align-items: center;
   justify-content: center;
 
-  > h2 {
-    margin-right: 2rem;
-    min-width: max-content;
+  @media (max-width: 479px) {
+    margin: 1rem 0 3rem;
+  }
 
+  > h2 {
+    color: #1a1a1a;
     font-size: 5rem;
     font-weight: 400;
     line-height: 5.5rem;
-    font-family: ${theme.fonts.roboto};
+    font-family: ${theme.fonts.anton};
 
     @media (max-width: 767px) {
-      margin-right: 0;
-    }
+      text-align: center;
 
-    @media (max-width: 479px) {
-      font-size: 3.4rem;
-      line-height: 3.9rem;
+      font-size: 4rem;
+      line-height: 4.9rem;
     }
   }
 
