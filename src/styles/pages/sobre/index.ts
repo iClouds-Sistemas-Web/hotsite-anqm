@@ -7,6 +7,12 @@ export const Container = styled(C.Flex)`
   min-height: 100vh;
 
   flex-direction: column;
+
+  @media (max-width: 479px) {
+    position: relative;
+
+    padding-top: 8rem;
+  }
 `;
 
 export const Wrapper = styled(C.Flex)`
