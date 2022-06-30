@@ -98,6 +98,9 @@ export const ContentDescription = styled(C.Flex)`
   }
 
   > h2 {
+    height: 8.5rem;
+    margin-bottom: 2rem;
+
     font-weight: 600;
     font-size: 1.9rem;
     line-height: 2rem;
@@ -105,6 +108,7 @@ export const ContentDescription = styled(C.Flex)`
     font-family: ${theme.fonts.roboto};
 
     @media (max-width: 479px) {
+      height: auto;
       font-size: 1.7rem;
       line-height: 1.9rem;
     }
