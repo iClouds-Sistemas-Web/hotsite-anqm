@@ -72,10 +72,10 @@ export const ContentSearchInput = styled(C.Flex)`
   width: 100%;
   height: auto;
   margin-left: auto;
-  max-width: 63.1rem;
 
   @media (max-width: 767px) {
     max-width: 100%;
+    flex-direction: column;
   }
 `;
 
