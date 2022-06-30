@@ -17,7 +17,7 @@ import * as S from '~/styles/pages';
 const Home: NextPage = (news) => {
   return (
     <S.Container>
-      <Nav />
+      <Nav styletype="primary" />
       <S.Wrapper>
         <Header />
         <Channels />

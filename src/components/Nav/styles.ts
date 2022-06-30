@@ -1,9 +1,15 @@
 import styled from '@emotion/styled';
 import * as C from '@chakra-ui/react';
 
+import { css } from '@emotion/react';
+
 import { personTheme as theme } from '~/styles/theme';
 
-export const Container = styled(C.Flex)`
+interface NavProps {
+  styletype?: 'primary' | 'secondary';
+}
+
+export const Container = styled(C.Flex)<NavProps>`
   z-index: 2000;
 
   width: 100%;
@@ -12,7 +18,12 @@ export const Container = styled(C.Flex)`
   justify-content: center;
 
   backdrop-filter: blur(5px);
-  background: rgba(0, 0, 0, 0.6);
+
+  ${({ styletype }) => css`
+    ${styletype === 'primary'
+      ? 'background: rgba(0, 0, 0, 0.6);'
+      : 'background: rgba(255, 255, 255, 0.6); border-bottom: 1px solid #E3E3E3;'}
+  `}
 
   @media (max-width: 479px) {
     top: 0;
@@ -91,8 +102,10 @@ export const ContentNavigation = styled(C.Flex)`
   }
 `;
 
-export const Link = styled(C.Link)`
-  color: #ffffff;
+export const Link = styled(C.Link)<NavProps>`
+  ${({ styletype }) => css`
+    ${styletype === 'primary' ? 'color: #ffffff;' : 'color: #333333;'}
+  `}
   font-weight: 400;
   font-size: 1.3rem;
   line-height: 2.8rem;

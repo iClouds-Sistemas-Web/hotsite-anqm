@@ -5,9 +5,13 @@ import { Toggle } from '~/components';
 import * as S from './styles';
 import * as C from '@chakra-ui/react';
 
-export function Nav() {
+interface NavProps {
+  styletype?: 'primary' | 'secondary';
+}
+
+export function Nav({ styletype }: NavProps) {
   return (
-    <S.Container as="nav">
+    <S.Container as="nav" styletype={styletype}>
       <S.ContentToggle>
         <Toggle />
       </S.ContentToggle>
@@ -15,7 +19,11 @@ export function Nav() {
       <S.Wrapper>
         <S.ContentLogo>
           <C.Image
-            src="/images/svg/logo-anqm-nav.svg"
+            src={
+              styletype
+                ? '/images/svg/logo-anqm-nav.svg'
+                : '/images/svg/logo-anqm-dark.svg'
+            }
             alt="Logo Associação Norte-Riograndense de Criadores de Cavalo, cor do texto branco, com detalhes em verde e amarelo"
           />
         </S.ContentLogo>
@@ -23,7 +31,7 @@ export function Nav() {
         <S.ContentNavigation>
           {data.navigation.map((item) => (
             <NextLink key={item.id} href={item.url}>
-              <S.Link>{item.title}</S.Link>
+              <S.Link styletype={styletype}>{item.title}</S.Link>
             </NextLink>
           ))}
         </S.ContentNavigation>
