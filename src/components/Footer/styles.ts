@@ -56,10 +56,10 @@ export const ContentContact = styled(C.Flex)`
   justify-content: flex-start;
 
   > p {
-    color: #858585;
     font-weight: 400;
     font-size: 1.9rem;
     line-height: 2.4rem;
+    color: ${theme.colors.text.footer};
     font-family: ${theme.fonts.roboto};
   }
 
@@ -126,10 +126,10 @@ export const ContentSocialLinks = styled(C.Flex)`
   p {
     margin: 1rem;
 
-    color: #858585;
     font-size: 2rem;
     font-weight: 300;
     line-height: 1.8rem;
+    color: ${theme.colors.text.footer};
     font-family: ${theme.fonts.roboto};
   }
 
@@ -207,9 +207,9 @@ export const ContentNavigation = styled(C.Flex)`
     list-style-type: none;
   }
 
-  color: #858585;
   font-size: 1.2rem;
   line-height: 2.8rem;
+  color: ${theme.colors.text.footer};
   font-family: ${theme.fonts.roboto};
 
   @media (max-width: 1279px) {

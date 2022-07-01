@@ -8,6 +8,8 @@ export const Container = styled(C.Flex)`
 
   flex-direction: column;
 
+  background-color: #fbfbfb;
+
   @media (max-width: 479px) {
     position: relative;
 

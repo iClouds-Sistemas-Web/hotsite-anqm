@@ -83,10 +83,10 @@ export const ContentButton = styled(C.Flex)`
     width: 216px;
     text-align: center;
 
-    color: #858585;
     font-weight: 400;
     font-size: 1.3rem;
     line-height: 2.3rem;
+    color: ${theme.colors.text.footer};
     font-family: ${theme.fonts.roboto};
 
     @media (max-width: 479px) {

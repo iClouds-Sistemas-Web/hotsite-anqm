@@ -12,19 +12,18 @@ export const theme = extendTheme({
 
 export const personTheme = {
   colors: {
-    primary: '#FDC973',
-    secondary: '#512940',
+    primary: '#0E4F25 ',
+    secondary: 'rgba(242, 183, 5, 0.1)',
 
     white: '#ffffff',
     black: '#000000',
 
-    background: '#EEF2F5',
     tranparent: 'transparent',
 
     text: {
       title: '#1A1A1A',
-      subtitle: '#1A1A1A',
-      description: '#1A1A1A',
+      footer: '#858585',
+      description: '#333333',
     },
   },
 
