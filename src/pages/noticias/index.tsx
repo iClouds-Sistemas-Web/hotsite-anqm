@@ -2,6 +2,7 @@ import type { GetServerSideProps, NextPage } from 'next';
 
 import { Nav, News, Footer, Sponsors, NewsList } from '~/components';
 
+import * as C from '@chakra-ui/react';
 import * as S from '~/styles/pages/noticias';
 
 import { BiSearchAlt2 } from 'react-icons/bi';
@@ -14,18 +15,20 @@ const AllNews: NextPage = (news) => {
       <Nav />
       <S.Wrapper>
         <News data={news} amount_of_news={8}>
+          <S.ContentTitle>
+            <C.Text as="span">Notícias</C.Text>
+          </S.ContentTitle>
           <S.InputGroup>
             <S.InputLeftElement pointerEvents="none">
               <BiSearchAlt2 />
             </S.InputLeftElement>
             <S.Input
               type="text"
-              placeholder="Pesquisar..."
+              placeholder="Buscar notícia"
               _focus={{ boxShadow: 'none' }}
             />
           </S.InputGroup>
         </News>
-
         <NewsList />
         <Sponsors />
       </S.Wrapper>

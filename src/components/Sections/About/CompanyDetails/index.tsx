@@ -6,62 +6,54 @@ export function CompanyDetails() {
     <S.Container as="section">
       <S.Wrapper>
         <S.ContentTitle>
-          <C.Text as="h2">Title Section</C.Text>
+          <C.Text as="h2">Resultados</C.Text>
         </S.ContentTitle>
 
         <S.AboutGroup>
           <S.ContentAside>
-            <S.List>
+            <ul>
               <S.ListItem>
                 Lorem Ipsum is simply dummy text of the printing and typesetting
                 industry.
               </S.ListItem>
-
               <S.ListItem>
                 Lorem Ipsum is simply dummy text of the printing and typesetting
                 industry.
               </S.ListItem>
-
               <S.ListItem>
                 Lorem Ipsum is simply dummy text of the printing and typesetting
                 industry.
               </S.ListItem>
-
               <S.ListItem>
                 Lorem Ipsum is simply dummy text of the printing and typesetting
                 industry.
               </S.ListItem>
-
               <S.ListItem>
                 Lorem Ipsum is simply dummy text of the printing and typesetting
                 industry.
               </S.ListItem>
-
               <S.ListItem>
                 Lorem Ipsum is simply dummy text of the printing and typesetting
                 industry.
               </S.ListItem>
-
               <S.ListItem>
                 Lorem Ipsum is simply dummy text of the printing and typesetting
                 industry.
               </S.ListItem>
-
               <S.ListItem>
                 Lorem Ipsum is simply dummy text of the printing and typesetting
                 industry.
               </S.ListItem>
-
               <S.ListItem>
                 Lorem Ipsum is simply dummy text of the printing and typesetting
                 industry.
               </S.ListItem>
-            </S.List>
+            </ul>
           </S.ContentAside>
 
           <S.ContentSelect>
             <S.Select _focus={{ boxShadow: 'none' }} size="lg">
-              <option value="option1">Option 1</option>
+              <option value="option1">Label</option>
               <option value="option2">Option 2</option>
               <option value="option3">Option 3</option>
             </S.Select>
@@ -101,19 +93,20 @@ export function CompanyDetails() {
               text of the printing and typesetting industry. Lorem Ipsum is
               simply dummy text of the printing and typesetting industry. Lorem
               Ipsum is simply dummy text of the printing and typesetting
-              industry. <br />
-              <br /> Lorem Ipsum Lorem Ipsum is simply dummy text of the
-              printing and typesetting industry. Lorem Ipsum is simply dummy
-              text of the printing and typesetting industry. Lorem Ipsum is
-              simply dummy text of the printing and typesetting industry. Lorem
-              Ipsum is simply dummy text of the printing and typesetting
               industry. Lorem Ipsum Lorem Ipsum is simply dummy text of the
+              printing and typesetting industry.
+              <br />
+              <br /> Lorem Ipsum is simply dummy text of the printing and
+              typesetting industry. Lorem Ipsum is simply dummy text of the
               printing and typesetting industry. Lorem Ipsum is simply dummy
-              text of the printing and typesetting industry. Lorem Ipsum is
-              simply dummy text of the printing and typesetting industry. Lorem
+              text of the printing and typesetting industry. Lorem Ipsum Lorem
               Ipsum is simply dummy text of the printing and typesetting
-              industry. Lorem Ipsum Lorem Ipsum is simply dummy text of the
-              printing and typesetting industry.{' '}
+              industry. Lorem Ipsum is simply dummy text of the printing and
+              typesetting industry. Lorem Ipsum is simply dummy text of the
+              printing and typesetting industry. Lorem Ipsum is simply dummy
+              text of the printing and typesetting industry. Lorem Ipsum Lorem
+              Ipsum is simply dummy text of the printing and typesetting
+              industry.{' '}
             </C.Text>
           </S.ContentInformations>
         </S.AboutGroup>

@@ -10,7 +10,7 @@ export function NewsSection({ data, amount_of_news }: NewsProps) {
     <S.Container as="section">
       <S.Wrapper>
         <S.ContentTitle>
-          <C.Text as="h2">Section Title</C.Text>
+          <C.Text as="h2">Outras Notícias</C.Text>
         </S.ContentTitle>
 
         <S.ContentMoreNews>

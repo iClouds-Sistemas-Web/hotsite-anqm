@@ -9,6 +9,12 @@ export const Container = styled(C.Flex)`
   min-height: 100vh;
 
   flex-direction: column;
+
+  @media (max-width: 479px) {
+    position: relative;
+
+    padding-top: 8rem;
+  }
 `;
 
 export const Wrapper = styled(C.Flex)`
@@ -31,9 +37,13 @@ export const Wrapper = styled(C.Flex)`
         border-bottom: 1px solid #d3d3d3;
 
         @media (max-width: 767px) {
-          margin-bottom: 1rem;
+          margin-bottom: 2rem;
 
           border-bottom: none;
+        }
+
+        h2 {
+          display: none;
         }
       }
 
@@ -44,18 +54,66 @@ export const Wrapper = styled(C.Flex)`
   }
 `;
 
+export const ContentTitle = styled(C.Flex)`
+  width: 100%;
+  height: 8rem;
+  max-width: 60.9rem;
+
+  justify-content: flex-start;
+
+  > span {
+    color: #0e4f25;
+    font-size: 5rem;
+    font-weight: 400;
+    line-height: 9rem;
+    font-family: ${theme.fonts.anton};
+
+    @media (max-width: 767px) {
+      margin-right: 0;
+      margin-bottom: 1rem;
+    }
+
+    @media (max-width: 479px) {
+      width: 100%;
+
+      text-align: center;
+
+      font-size: 3.4rem;
+      line-height: 3.9rem;
+    }
+  }
+
+  @media (max-width: 767px) {
+    flex-direction: column;
+  }
+
+  @media (max-width: 479px) {
+    height: 3.9rem;
+  }
+`;
+
 export const InputGroup = styled(C.InputGroup)`
   width: 100%;
   height: auto;
+  padding-top: 2rem;
+
+  @media (max-width: 479px) {
+    padding-top: 1.5rem;
+  }
 `;
 
 export const InputLeftElement = styled(C.InputLeftElement)`
   width: 4.8rem;
   height: 4.8rem;
+  margin-top: 2rem;
 
   > svg {
     width: 1.75rem;
     height: 1.75rem;
+  }
+
+  @media (max-width: 479px) {
+    margin-top: 1.5rem;
   }
 `;
 
@@ -67,6 +125,8 @@ export const Input = styled(C.Input)`
   font-size: 1.6rem;
   line-height: 2.4rem;
   font-family: ${theme.fonts.roboto};
+
+  border: 1px solid #b3b3b3;
 
   &::placeholder {
     font-size: 1.6rem;

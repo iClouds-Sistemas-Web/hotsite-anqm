@@ -1,15 +1,36 @@
 import styled from '@emotion/styled';
 import * as C from '@chakra-ui/react';
 
+import { css } from '@emotion/react';
+
 import { personTheme as theme } from '~/styles/theme';
 
-export const Container = styled(C.Flex)`
+interface NavProps {
+  styletype?: 'primary' | 'secondary';
+}
+
+export const Container = styled(C.Flex)<NavProps>`
+  z-index: 2000;
+
   width: 100%;
   height: auto;
 
   justify-content: center;
 
-  background-color: #c4c4c4;
+  backdrop-filter: blur(5px);
+
+  ${({ styletype }) => css`
+    ${styletype === 'primary'
+      ? 'background: rgba(0, 0, 0, 0.6);'
+      : 'background: rgba(255, 255, 255, 0.6); border-bottom: 1px solid #E3E3E3;'}
+  `}
+
+  @media (max-width: 479px) {
+    top: 0;
+    left: 0;
+    z-index: 100;
+    position: fixed;
+  }
 `;
 
 export const ContentToggle = styled(C.Flex)`
@@ -41,9 +62,9 @@ export const Wrapper = styled(C.Flex)`
   align-items: center;
   justify-content: space-between;
 
-  @media (max-width: 1279px) {
-    min-height: 8rem;
+  @media (max-width: 1310px) {
     padding: 0 7rem;
+    min-height: 8rem;
   }
 
   @media (max-width: 767px) {
@@ -55,55 +76,64 @@ export const ContentLogo = styled(C.Flex)`
   width: 100%;
   height: auto;
   max-width: 19rem;
-  min-height: 9rem;
-  margin-right: 2rem;
 
   align-items: center;
   justify-content: center;
 
-  border: 2px solid #000000;
-
-  font-weight: 400;
-  font-size: 30px;
-  line-height: 36px;
-  font-family: ${theme.fonts.roboto};
-
-  @media (max-width: 1279px) {
-    min-height: 6rem;
-  }
-
-  @media (max-width: 767px) {
-    margin: 0;
+  > img {
+    width: 19rem;
+    height: 5rem;
   }
 `;
 
 export const ContentNavigation = styled(C.Flex)`
   width: 100%;
   height: auto;
-  max-width: 71.5rem;
-  margin: 0 2rem 0 auto;
-
   min-height: 9rem;
+  margin-left: auto;
+  max-width: 71.7rem;
 
-  background-color: #000000;
+  gap: 2rem;
+  align-items: center;
+  justify-content: center;
 
   @media (max-width: 1279px) {
     display: none;
   }
 `;
 
+export const Link = styled(C.Link)<NavProps>`
+  ${({ styletype }) => css`
+    ${styletype === 'primary' ? 'color: #ffffff;' : 'color: #333333;'}
+  `}
+  font-weight: 400;
+  font-size: 1.3rem;
+  line-height: 2.8rem;
+  font-family: ${theme.fonts.roboto};
+
+  ::after {
+    padding-left: 2rem;
+
+    content: '';
+    opacity: 0.8;
+    border-right: 0.5px solid rgba(255, 255, 255, 0.15);
+  }
+
+  :nth-of-type(8)::after {
+    border: none;
+    padding-left: 0rem;
+  }
+`;
+
 export const ContentSocialLinks = styled(C.Flex)`
   width: 100%;
   height: auto;
-  max-width: 19rem;
+  max-width: 11.2rem;
+  padding-left: 4rem;
 
-  min-height: 9rem;
-
-  border: 2px solid #000000;
-
-  @media (max-width: 1279px) {
-    min-height: 6rem;
-  }
+  gap: 2rem;
+  align-items: center;
+  justify-content: flex-end;
 
   @media (max-width: 767px) {
     display: none;

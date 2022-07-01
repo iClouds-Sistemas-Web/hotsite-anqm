@@ -10,8 +10,6 @@ export const Container = styled(C.Flex)`
   align-items: center;
   flex-direction: column;
   justify-content: center;
-
-  background-color: #ffffff;
 `;
 
 export const Wrapper = styled(C.Flex)`
@@ -34,30 +32,33 @@ export const Wrapper = styled(C.Flex)`
 export const ContentTitle = styled(C.Flex)`
   width: 100%;
   height: auto;
-  min-height: 8rem;
+  min-height: 7rem;
   margin-bottom: 5rem;
 
   align-items: center;
   justify-content: center;
 
   > h2 {
+    text-align: center;
+
+    color: #0e4f25;
     font-size: 5rem;
     font-weight: 400;
     line-height: 5.5rem;
-    font-family: ${theme.fonts.roboto};
-
-    @media (max-width: 479px) {
-      font-size: 3.4rem;
-      line-height: 3.9rem;
-    }
+    font-family: ${theme.fonts.anton};
   }
 
   @media (max-width: 1279px) {
-    margin-bottom: 3rem;
+    margin-bottom: 4rem;
   }
 
   @media (max-width: 479px) {
-    min-height: 6rem;
+    min-height: 5rem;
+
+    > h2 {
+      font-size: 3.4rem;
+      line-height: 3.9rem;
+    }
   }
 `;
 
@@ -68,10 +69,6 @@ export const ContentSponsors = styled(C.Flex)`
 
   @media (max-width: 479px) {
     gap: 0.9rem;
-  }
-
-  @media (max-width: 374px) {
-    gap: 0.8rem;
   }
 
   @media (max-width: 374px) {
