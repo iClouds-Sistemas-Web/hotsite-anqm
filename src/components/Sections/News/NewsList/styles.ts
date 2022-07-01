@@ -8,7 +8,7 @@ export const Container = styled(C.Flex)`
   height: auto;
   justify-content: center;
 
-  background: rgba(242, 183, 5, 0.1);
+  background-color: ${theme.colors.secondary};
 `;
 
 export const Wrapper = styled(C.Flex)`

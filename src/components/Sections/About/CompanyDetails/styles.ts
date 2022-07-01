@@ -39,10 +39,10 @@ export const ContentTitle = styled(C.Flex)`
   border-bottom: 2px solid #dddddd;
 
   > h2 {
-    color: #0e4f25;
     font-size: 5rem;
     font-weight: 400;
     line-height: 5.5rem;
+    color: ${theme.colors.primary};
     font-family: ${theme.fonts.anton};
 
     @media (max-width: 479px) {
@@ -84,7 +84,7 @@ export const ContentAside = styled(C.Flex)`
   padding: 0.5rem 1rem 0 2rem;
 
   border-right: 1px solid #d3d3d3;
-  background: rgba(242, 183, 5, 0.1);
+  background-color: ${theme.colors.secondary};
 
   @media (max-width: 1279px) {
     margin-right: 2rem;

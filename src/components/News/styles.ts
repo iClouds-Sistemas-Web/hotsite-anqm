@@ -47,10 +47,10 @@ export const ContentTitle = styled(C.Flex)`
   > h2 {
     min-width: max-content;
 
-    color: #0e4f25;
     font-size: 5rem;
     font-weight: 400;
     line-height: 5.5rem;
+    color: ${theme.colors.primary};
     font-family: ${theme.fonts.anton};
 
     @media (max-width: 479px) {
@@ -139,12 +139,12 @@ export const ContentDescription = styled(C.Flex)`
   > span {
     margin-bottom: 1rem;
 
-    color: #333333;
     font-weight: 400;
     font-size: 1.3rem;
     line-height: 2.5rem;
     white-space: normal;
     font-family: ${theme.fonts.roboto};
+    color: ${theme.colors.text.description};
 
     @media (max-width: 479px) {
       margin-bottom: 0.5rem;
@@ -157,11 +157,11 @@ export const ContentDescription = styled(C.Flex)`
   > h2 {
     margin-bottom: 2rem;
 
-    color: #1a1a1a;
     font-weight: 700;
     font-size: 3.5rem;
     line-height: 3.6rem;
     white-space: normal;
+    color: ${theme.colors.text.title};
     font-family: ${theme.fonts.roboto};
 
     @media (max-width: 479px) {

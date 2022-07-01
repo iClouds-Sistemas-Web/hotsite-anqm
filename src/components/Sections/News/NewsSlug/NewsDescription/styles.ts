@@ -67,11 +67,11 @@ export const ContentNewsHeader = styled(C.Flex)`
   }
 
   > h2 {
-    color: #333333;
     font-weight: 400;
     font-size: 1.9rem;
     line-height: 2.4rem;
     border-bottom: 1px solid #d3d3d3;
+    color: ${theme.colors.text.description};
     font-family: ${theme.fonts.roboto_condensed};
 
     @media (max-width: 767px) {

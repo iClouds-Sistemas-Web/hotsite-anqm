@@ -31,12 +31,18 @@ export function NewsList() {
           </S.ListItem>
         </S.List>
         <S.ContentPagination>
-          <C.Image src="images/svg/chevron-left-pagination.svg" alt="" />
-          <C.Image src="images/svg/ellipse-4-pagination.svg" alt="" />
+          <C.Image
+            src="images/svg/arrow-left-pagination.svg"
+            alt="Seta para esquerda de cor cinza"
+          />
+          <C.Image src="images/svg/ellipse-1-pagination.svg" alt="" />
+          <C.Image src="images/svg/ellipse-2-pagination.svg" alt="" />
+          <C.Image src="images/svg/ellipse-3-pagination.svg" alt="" />
           <C.Image src="images/svg/ellipse-5-pagination.svg" alt="" />
-          <C.Image src="images/svg/ellipse-6-pagination.svg" alt="" />
-          <C.Image src="images/svg/ellipse-7-pagination.svg" alt="" />
-          <C.Image src="images/svg/chevron-right-pagination.svg" alt="" />
+          <C.Image
+            src="images/svg/arrow-right-pagination.svg"
+            alt="Seta para direita de cor cinza"
+          />
         </S.ContentPagination>
       </S.Wrapper>
     </S.Container>

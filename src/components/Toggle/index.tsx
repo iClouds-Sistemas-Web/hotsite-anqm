@@ -33,7 +33,7 @@ export function Toggle() {
           />
           <S.DrawerHeader>
             <C.Image
-              src="/images/png/logo-anqm-dark.png"
+              src="/images/svg/logo-anqm-dark.svg"
               alt="Logo Associação Norte-Riograndense de Criadores de Cavalo, cor do texto branco e preto, com detalhes em verde e amarelo"
             />
           </S.DrawerHeader>

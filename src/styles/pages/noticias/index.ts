@@ -10,6 +10,8 @@ export const Container = styled(C.Flex)`
 
   flex-direction: column;
 
+  background-color: #fbfbfb;
+
   @media (max-width: 479px) {
     position: relative;
 
@@ -62,10 +64,10 @@ export const ContentTitle = styled(C.Flex)`
   justify-content: flex-start;
 
   > span {
-    color: #0e4f25;
     font-size: 5rem;
     font-weight: 400;
     line-height: 9rem;
+    color: ${theme.colors.primary};
     font-family: ${theme.fonts.anton};
 
     @media (max-width: 767px) {
