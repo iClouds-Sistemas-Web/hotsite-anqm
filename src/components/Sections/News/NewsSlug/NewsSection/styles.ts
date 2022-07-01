@@ -9,7 +9,7 @@ export const Container = styled(C.Flex)`
 
   justify-content: center;
 
-  background: rgba(242, 183, 5, 0.1);
+  background-color: ${theme.colors.secondary};
 `;
 
 export const Wrapper = styled(C.Flex)`
@@ -46,10 +46,10 @@ export const ContentTitle = styled(C.Flex)`
   }
 
   > h2 {
-    color: #1a1a1a;
     font-size: 5rem;
     font-weight: 400;
     line-height: 5.5rem;
+    color: ${theme.colors.text.title};
     font-family: ${theme.fonts.anton};
 
     @media (max-width: 767px) {

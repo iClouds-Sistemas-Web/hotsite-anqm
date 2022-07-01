@@ -7,6 +7,8 @@ export const Container = styled(C.Flex)`
   min-height: 100vh;
 
   flex-direction: column;
+
+  background-color: #fbfbfb;
 `;
 
 export const Wrapper = styled(C.Flex)`

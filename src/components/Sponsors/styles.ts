@@ -41,10 +41,10 @@ export const ContentTitle = styled(C.Flex)`
   > h2 {
     text-align: center;
 
-    color: #0e4f25;
     font-size: 5rem;
     font-weight: 400;
     line-height: 5.5rem;
+    color: ${theme.colors.primary};
     font-family: ${theme.fonts.anton};
   }
 
