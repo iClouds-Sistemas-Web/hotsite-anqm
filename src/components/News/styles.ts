@@ -11,7 +11,7 @@ export const Container = styled(C.Flex)`
   flex-direction: column;
   justify-content: center;
 
-  background-color: #ffffff;
+  background-color: #fbfbfb;
 `;
 
 export const Wrapper = styled(C.Flex)`

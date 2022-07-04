@@ -9,7 +9,7 @@ export function Events() {
       <S.Wrapper>
         <S.ContentEQuesterImage>
           <C.Image
-            src="/images/png/tag-eQuester.png"
+            src="/images/svg/tag-eQuester.svg"
             alt="Etiqueta com logo eQuester, fundo amarelo, texto cor açaí escrito baixe o app "
           />
         </S.ContentEQuesterImage>

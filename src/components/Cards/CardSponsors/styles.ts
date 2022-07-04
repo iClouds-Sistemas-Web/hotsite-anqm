@@ -21,7 +21,6 @@ export const Container = styled(C.Flex)`
   @media (max-width: 479px) {
     max-width: 48.66%;
     min-height: 16.3rem;
-    max-height: 16.3rem;
   }
 
   @media (max-width: 300px) {
@@ -37,7 +36,7 @@ export const Wrapper = styled(C.Flex)`
 export const ContentImage = styled(C.Flex)`
   width: 100%;
   height: auto;
-  padding: 5rem 2rem;
+  padding: 0 2rem;
 
   justify-content: center;
 `;

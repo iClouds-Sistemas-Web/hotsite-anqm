@@ -7,7 +7,7 @@ export function CardSponsors() {
       <S.Wrapper>
         <S.ContentImage>
           <C.Image
-            src="/images/png/logo-equester-sponsors.png"
+            src="/images/svg/logo-equester-sponsors.svg"
             alt="Logo eQuester cor açaí, com fundo branco"
           />
         </S.ContentImage>

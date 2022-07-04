@@ -1,7 +1,6 @@
 import styled from '@emotion/styled';
-import * as C from '@chakra-ui/react';
-
 import { css } from '@emotion/react';
+import * as C from '@chakra-ui/react';
 
 import { personTheme as theme } from '~/styles/theme';
 
