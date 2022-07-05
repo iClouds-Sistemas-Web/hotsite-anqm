@@ -1,5 +1,6 @@
 import styled from '@emotion/styled';
 import * as C from '@chakra-ui/react';
+
 import { theme } from '~/styles/theme';
 
 export const Button = styled(C.Button)`

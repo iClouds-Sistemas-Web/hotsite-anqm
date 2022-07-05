@@ -10,6 +10,8 @@ export const Container = styled(C.Flex)`
 
   justify-content: center;
 
+  background-color: #fbfbfb;
+
   @media (max-width: 1279px) {
     padding: 0 7rem;
   }
