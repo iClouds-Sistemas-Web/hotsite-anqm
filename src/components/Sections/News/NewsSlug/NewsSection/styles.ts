@@ -55,8 +55,8 @@ export const ContentTitle = styled(C.Flex)`
     @media (max-width: 767px) {
       text-align: center;
 
-      font-size: 4rem;
-      line-height: 4.9rem;
+      font-size: 3.4rem;
+      line-height: 3.9rem;
     }
   }
 
