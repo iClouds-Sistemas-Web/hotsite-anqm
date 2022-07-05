@@ -13,7 +13,7 @@ export function Nav({ styletype }: NavProps) {
   return (
     <S.Container as="nav" styletype={styletype}>
       <S.ContentToggle>
-        <Toggle />
+        <Toggle styletype={styletype} />
       </S.ContentToggle>
 
       <S.Wrapper>
