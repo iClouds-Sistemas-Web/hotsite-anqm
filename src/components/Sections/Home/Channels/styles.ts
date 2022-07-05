@@ -14,7 +14,7 @@ export const Container = styled(C.Flex)`
 export const Wrapper = styled(C.Flex)`
   width: 100%;
   height: auto;
-  padding: 1rem 0 2.5rem;
+  padding: 1rem 0 0;
 
   gap: 1rem;
   flex-wrap: wrap;
@@ -45,6 +45,7 @@ export const ContentButton = styled(C.Flex)`
   max-width: 31rem;
   padding: 0 4.7rem;
   min-height: 16.2rem;
+  max-height: 16.2rem;
 
   align-items: center;
   flex-direction: column;
@@ -56,14 +57,18 @@ export const ContentButton = styled(C.Flex)`
   @media (max-width: 479px) {
     top: 4rem;
 
-    padding: 0;
     max-width: 27rem;
+    padding: 0 0 1rem;
     min-height: 11.2rem;
+    max-height: 11.2rem;
+    margin-bottom: 0.5rem;
   }
 
   > h1 {
     top: 5rem;
     position: absolute;
+
+    margin-bottom: 0.5rem;
 
     color: #2a2a2a;
     font-weight: 700;
@@ -80,7 +85,9 @@ export const ContentButton = styled(C.Flex)`
   }
 
   p {
-    width: 216px;
+    width: 100%;
+    margin-top: 0.5rem;
+
     text-align: center;
 
     font-weight: 400;

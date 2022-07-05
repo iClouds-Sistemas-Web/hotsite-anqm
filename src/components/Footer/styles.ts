@@ -6,7 +6,6 @@ import { personTheme as theme } from '~/styles/theme';
 export const Container = styled(C.Flex)`
   width: 100%;
   height: auto;
-  max-height: 55rem;
 
   align-items: center;
   flex-direction: column;
@@ -19,6 +18,7 @@ export const Wrapper = styled(C.Flex)`
   width: 100%;
   height: auto;
   max-width: 192rem;
+  min-height: 10rem;
   margin-bottom: 5rem;
   padding: 13.4rem 10rem 0;
 
@@ -30,17 +30,10 @@ export const Wrapper = styled(C.Flex)`
     padding: 2rem 9.2rem 0;
 
     align-items: center;
-  }
-
-  @media (max-width: 1000px) {
-    padding: 3rem 0 0;
-  }
-
-  @media (max-width: 767px) {
     flex-direction: column;
   }
 
-  @media (max-width: 479px) {
+  @media (max-width: 767px) {
     margin-bottom: 0;
     padding: 3rem 0 0;
   }
@@ -65,12 +58,11 @@ export const ContentContact = styled(C.Flex)`
 
   @media (max-width: 1279px) {
     align-items: center;
-    justify-content: center;
   }
 
   @media (max-width: 767px) {
-    height: 5.1rem;
     margin: 2rem;
+    height: 5.1rem;
 
     > p {
       font-size: 1.4rem;
@@ -89,7 +81,7 @@ export const ContentLogo = styled(C.Flex)`
   justify-content: center;
 
   @media (max-width: 1279px) {
-    max-width: 27rem;
+    max-width: 32rem;
   }
 
   @media (max-width: 767px) {
@@ -101,9 +93,13 @@ export const ContentLogoMobile = styled(ContentLogo)`
   display: none;
 
   @media (max-width: 767px) {
+    max-width: 27rem;
+
     display: flex;
     margin-bottom: 0;
+  }
 
+  @media (max-width: 767px) {
     max-width: 15.4rem;
     min-height: 8.1rem;
   }
@@ -116,7 +112,6 @@ export const ContentSocialLinks = styled(C.Flex)`
 
   margin: auto 0;
   flex-direction: column;
-  justify-content: center;
 
   > svg {
     width: 3.2rem;
@@ -134,19 +129,16 @@ export const ContentSocialLinks = styled(C.Flex)`
   }
 
   @media (max-width: 1279px) {
+    margin: 0;
     padding: 0;
-    margin: auto 0;
 
     align-items: center;
-  }
-
-  @media (max-width: 991px) {
-    max-width: 19.6rem;
+    flex-direction: row;
+    justify-content: center;
   }
 
   @media (max-width: 767px) {
-    /* margin-bottom: 4.4rem; */
-    flex-direction: row;
+    justify-content: center;
 
     p {
       margin: auto 0.5rem;
@@ -157,7 +149,7 @@ export const ContentSocialLinks = styled(C.Flex)`
     }
   }
 
-  @media (max-width: 479px) {
+  @media (max-width: 767px) {
     margin-bottom: 4.4rem;
   }
 `;
@@ -167,7 +159,7 @@ export const ContentFacebook = styled(C.Flex)`
 
   justify-content: flex-end;
 
-  @media (max-width: 479px) {
+  @media (max-width: 767px) {
     padding-right: 0;
     margin-right: 4.8rem;
 
@@ -181,7 +173,7 @@ export const ContentFacebook = styled(C.Flex)`
 export const ContentInstagram = styled(C.Flex)`
   justify-content: flex-end;
 
-  @media (max-width: 479px) {
+  @media (max-width: 767px) {
     img {
       width: 2.4rem;
       height: 2.4rem;
@@ -251,7 +243,7 @@ export const ContentCopyright = styled(C.Flex)`
     }
   }
 
-  @media (max-width: 479px) {
+  @media (max-width: 767px) {
     min-height: 3rem;
 
     > img {
