@@ -14,13 +14,17 @@ import * as C from '@chakra-ui/react';
 
 import { AiOutlineMenu } from 'react-icons/ai';
 
-export function Toggle() {
+interface ToggleProps {
+  styletype?: 'primary' | 'secondary';
+}
+
+export function Toggle({ styletype }: ToggleProps) {
   const { isOpen, onOpen, onClose } = useDisclosure();
 
   return (
     <>
       <S.Button onClick={onOpen}>
-        <AiOutlineMenu size={28} />
+        <AiOutlineMenu size={28} color={styletype ? 'white' : 'black'} />
       </S.Button>
 
       <Drawer isOpen={isOpen} placement="left" onClose={onClose}>
