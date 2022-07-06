@@ -43,7 +43,9 @@ export const ContentTitle = styled(C.Flex)`
     font-size: 5rem;
     font-weight: 400;
     line-height: 5.5rem;
-    font-family: ${theme.fonts.roboto};
+    font-family: ${theme.fonts.anton};
+
+    color: #0e4f25;
 
     @media (max-width: 479px) {
       font-size: 3.4rem;
@@ -84,7 +86,8 @@ export const Button = styled(C.Button)`
   min-width: 40rem;
   min-height: 8rem;
 
-  background-color: #000000;
+  background-color: #f2b705;
+  border-radius: 0.4rem;
 
   color: #ffffff;
   font-weight: 600;
