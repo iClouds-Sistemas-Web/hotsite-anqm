@@ -1,15 +1,17 @@
 import * as S from './styles';
 import * as C from '@chakra-ui/react';
 
-export function CardSponsors() {
+interface CardSponsorsProps {
+  alt: string;
+  src: string;
+}
+
+export function CardSponsors({ alt, src }: CardSponsorsProps) {
   return (
     <S.Container>
       <S.Wrapper>
         <S.ContentImage>
-          <C.Image
-            src="/images/svg/logo-equester-sponsors.svg"
-            alt="Logo eQuester cor açaí, com fundo branco"
-          />
+          <C.Image src={src} alt={alt} />
         </S.ContentImage>
       </S.Wrapper>
     </S.Container>

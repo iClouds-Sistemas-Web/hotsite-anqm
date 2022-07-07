@@ -12,13 +12,13 @@ import { getNews } from '~/services/functions/getNews';
 
 import * as S from '~/styles/pages/noticias/[slug]';
 
-const NewsDetails: NextPage = (news) => {
+const NewsDetails: NextPage = () => {
   return (
     <S.Container>
       <Nav />
       <S.Wrapper>
         <NewsDescription />
-        <NewsSection data={news} amount_of_news={4} />
+        <NewsSection amount_of_news={4} />
         <Sponsors />
       </S.Wrapper>
       <Footer />

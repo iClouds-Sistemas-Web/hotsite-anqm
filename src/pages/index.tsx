@@ -1,4 +1,4 @@
-import type { GetServerSideProps, NextPage } from 'next';
+import type { GetStaticProps, NextPage } from 'next';
 
 import {
   Nav,
@@ -10,20 +10,22 @@ import {
   Channels,
 } from '~/components';
 
-import { getNews } from '~/services/functions/getNews';
-
 import * as S from '~/styles/pages';
+import { HomeDataProps } from '~/interfaces/homeDataProps';
+import { getAdvertisement } from '~/services/functions/getAdvertisement';
 
-const Home: NextPage = (news) => {
+const Home: NextPage = ({ advertisement }: HomeDataProps) => {
+  console.log(advertisement);
+
   return (
     <S.Container>
       <Nav styletype="primary" />
       <S.Wrapper>
         <Header />
         <Channels />
-        <News data={news} amount_of_news={4} />
+        <News amount_of_news={4} />
         <Events />
-        <Sponsors />
+        <Sponsors data={advertisement} />
       </S.Wrapper>
       <Footer />
     </S.Container>
@@ -32,10 +34,13 @@ const Home: NextPage = (news) => {
 
 export default Home;
 
-export const getServerSideProps: GetServerSideProps = async () => {
-  const news = await getNews();
+export const getStaticProps: GetStaticProps = async () => {
+  const advertisement = await getAdvertisement();
 
   return {
-    props: { news },
+    props: {
+      advertisement,
+    },
+    revalidate: 60 * 30,
   };
 };

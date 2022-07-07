@@ -1,7 +1,16 @@
 import * as S from './styles';
 import * as C from '@chakra-ui/react';
-
-import { CardProps } from '~/interfaces/card';
+interface CardProps {
+  data?: {
+    id: number;
+    date: string;
+    title: string;
+    cover?: {
+      id: number;
+      file: string;
+    };
+  };
+}
 
 export function CardNews({ data }: CardProps) {
   return (

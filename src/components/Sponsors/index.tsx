@@ -3,7 +3,17 @@ import { CardSponsors } from '~/components';
 import * as S from './styles';
 import * as C from '@chakra-ui/react';
 
-export function Sponsors() {
+export interface SponsorsProps {
+  data: [
+    {
+      id: number;
+      title: string;
+      file_url: string;
+    }
+  ];
+}
+
+export function Sponsors({ data }: SponsorsProps) {
   return (
     <S.Container as="section">
       <S.Wrapper>
@@ -12,11 +22,13 @@ export function Sponsors() {
         </S.ContentTitle>
 
         <S.ContentSponsors>
-          <CardSponsors />
-          <CardSponsors />
-          <CardSponsors />
-          <CardSponsors />
-          <CardSponsors />
+          {data.map((sponsor) => (
+            <CardSponsors
+              key={sponsor.id}
+              alt={sponsor.title}
+              src={sponsor.file_url}
+            />
+          ))}
         </S.ContentSponsors>
       </S.Wrapper>
     </S.Container>

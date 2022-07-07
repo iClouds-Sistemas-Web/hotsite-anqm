@@ -9,12 +9,12 @@ import { BiSearchAlt2 } from 'react-icons/bi';
 
 import { getNews } from '~/services/functions/getNews';
 
-const AllNews: NextPage = (news) => {
+const AllNews: NextPage = () => {
   return (
     <S.Container>
       <Nav />
       <S.Wrapper>
-        <News data={news} amount_of_news={8}>
+        <News amount_of_news={8}>
           <S.ContentTitle>
             <C.Text as="span">Notícias</C.Text>
           </S.ContentTitle>
