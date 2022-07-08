@@ -37,22 +37,21 @@ export const ContentTitle = styled(C.Flex)`
   align-items: center;
   justify-content: center;
 
-  border-bottom: 1px solid #d3d3d3;
-
   > h2 {
     font-size: 5rem;
     font-weight: 400;
     line-height: 5.5rem;
-    font-family: ${theme.fonts.roboto};
+    color: ${theme.colors.primary};
+    font-family: ${theme.fonts.anton};
 
     @media (max-width: 479px) {
-      font-size: 3.4rem;
+      font-size: 4rem;
       line-height: 3.9rem;
     }
   }
 
   @media (max-width: 479px) {
-    min-height: 6rem;
+    min-height: 4.6rem;
     margin-bottom: 1rem;
   }
 `;
@@ -128,7 +127,7 @@ export const ContentContactDescription = styled(C.Flex)`
 export const ContactGroup = styled(C.Flex)`
   width: 100%;
   height: auto;
-  margin-bottom: 0.3rem;
+  margin-bottom: 0.4rem;
 
   align-items: center;
   justify-content: flex-start;
@@ -149,8 +148,6 @@ export const ContentIcon = styled(C.Flex)`
   width: 3.2rem;
   height: 3.2rem;
   margin-right: 0.5rem;
-
-  background-color: #000000;
 `;
 
 export const ContentMap = styled(C.Flex)`
@@ -159,9 +156,16 @@ export const ContentMap = styled(C.Flex)`
   max-width: 61.5rem;
   min-height: 33.9rem;
 
-  background-color: #dddddd;
+  background-size: auto;
+  background-repeat: no-repeat;
+  background-position-x: 45%;
+  background-image: url('images/png/map-contact.png');
 
   @media (max-width: 991px) {
     min-height: 40rem;
+  }
+
+  @media (max-width: 479px) {
+    min-height: 33.9rem;
   }
 `;
