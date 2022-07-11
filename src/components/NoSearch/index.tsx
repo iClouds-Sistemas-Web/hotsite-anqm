@@ -12,6 +12,10 @@ export function NoSearch() {
           <C.Text as="p">
             Por favor verifique o termo pesquisado e tente novamente.
           </C.Text>
+
+          <S.ContentImage>
+            <C.Image src="/images/svg/icon-search.svg" alt=""></C.Image>
+          </S.ContentImage>
           <S.ContentImage />
         </S.ContentText>
       </S.Wrapper>

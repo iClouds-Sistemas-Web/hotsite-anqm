@@ -54,6 +54,12 @@ export const ContentText = styled(C.Flex)`
     font-weight: 400;
     line-height: 3rem;
     font-family: ${theme.fonts.roboto};
+
+    @media (max-width: 479px) {
+      margin-bottom: 1rem;
+      font-size: 1.5rem;
+      line-height: 1.8rem;
+    }
   }
 `;
 
@@ -61,5 +67,10 @@ export const ContentImage = styled(C.Flex)`
   width: 23rem;
   height: 23rem;
 
-  background: #d9d9d9;
+  justify-content: center;
+
+  @media (max-width: 479px) {
+    width: 18rem;
+    height: 18rem;
+  }
 `;
