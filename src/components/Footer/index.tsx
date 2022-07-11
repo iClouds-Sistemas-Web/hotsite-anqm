@@ -7,7 +7,7 @@ export function Footer() {
       <S.Wrapper>
         <S.ContentLogoMobile>
           <C.Image
-            src="/images/png/logo-anqm-mobile.png"
+            src="/images/svg/logo-anqm-mobile.svg"
             alt="Logo Associação Norte-Riograndense de Criadores de Cavalo, cor do texto branco, com detalhes em verde e amarelo"
           />
         </S.ContentLogoMobile>
