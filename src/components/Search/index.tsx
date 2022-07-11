@@ -18,7 +18,7 @@ export function Search({ children }: SearchProps) {
         </S.ContentTitle>
         <S.ContentPhrase as="span">
           <p>
-            <strong>&quot;homenagem 30 anos&quot;</strong> - 3 0 resultados
+            <strong>&quot;homenagem 30 anos&quot;</strong> - 30 resultados
           </p>
         </S.ContentPhrase>
       </S.Wrapper>

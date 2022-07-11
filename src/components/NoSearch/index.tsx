@@ -16,7 +16,6 @@ export function NoSearch() {
           <S.ContentImage>
             <C.Image src="/images/svg/icon-search.svg" alt=""></C.Image>
           </S.ContentImage>
-          <S.ContentImage />
         </S.ContentText>
       </S.Wrapper>
     </S.Container>

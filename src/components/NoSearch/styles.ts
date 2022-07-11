@@ -9,7 +9,7 @@ export const Container = styled(C.Flex)`
 
   justify-content: center;
 
-  background-color: #f2f2f2;
+  background-color: rgba(242, 183, 5, 0.1);
 `;
 
 export const Wrapper = styled(C.Flex)`
@@ -22,7 +22,7 @@ export const Wrapper = styled(C.Flex)`
   justify-content: center;
 
   @media (max-width: 767px) {
-    padding: 2rem;
+    padding: 2rem 4rem 0;
     max-width: 100%;
   }
 `;
@@ -44,6 +44,11 @@ export const ContentText = styled(C.Flex)`
     font-size: 2.5rem;
     line-height: 3rem;
     font-family: ${theme.fonts.roboto};
+
+    @media (max-width: 479px) {
+      font-size: 2.2rem;
+      line-height: 2.6rem;
+    }
   }
 
   > p {
@@ -57,6 +62,7 @@ export const ContentText = styled(C.Flex)`
 
     @media (max-width: 479px) {
       margin-bottom: 1rem;
+
       font-size: 1.5rem;
       line-height: 1.8rem;
     }
