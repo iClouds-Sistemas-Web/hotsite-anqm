@@ -12,13 +12,13 @@ export function Search({ children }: SearchProps) {
     <S.Container as="section">
       <S.Wrapper>
         <S.ContentTitle>
-          <C.Text as="h2">Title Section</C.Text>
+          <C.Text as="h2">Notícias</C.Text>
 
           {children && <S.ContentSearchInput>{children}</S.ContentSearchInput>}
         </S.ContentTitle>
         <S.ContentPhrase as="span">
           <p>
-            <strong>&quot;Frase buscada&quot;</strong> - 0 resultados
+            <strong>&quot;homenagem 30 anos&quot;</strong> - 3 0 resultados
           </p>
         </S.ContentPhrase>
       </S.Wrapper>

@@ -50,7 +50,8 @@ export const ContentTitle = styled(C.Flex)`
     font-size: 5rem;
     font-weight: 400;
     line-height: 5.5rem;
-    font-family: ${theme.fonts.roboto};
+    color: ${theme.colors.primary};
+    font-family: ${theme.fonts.anton};
 
     @media (max-width: 767px) {
       margin-right: 0;
@@ -58,8 +59,13 @@ export const ContentTitle = styled(C.Flex)`
     }
 
     @media (max-width: 479px) {
-      font-size: 3.4rem;
+      width: 100%;
+
+      text-align: center;
+
+      font-size: 4rem;
       line-height: 4.9rem;
+      border-bottom: 1px solid #dddddd;
     }
   }
 
