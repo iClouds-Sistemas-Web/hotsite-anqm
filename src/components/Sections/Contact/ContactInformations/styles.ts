@@ -38,7 +38,7 @@ export const ContentTitle = styled(C.Flex)`
   justify-content: center;
 
   > h2 {
-    font-size: 5rem;
+    font-size: 7rem;
     font-weight: 400;
     line-height: 5.5rem;
     color: ${theme.colors.primary};
@@ -47,8 +47,6 @@ export const ContentTitle = styled(C.Flex)`
     @media (max-width: 479px) {
       font-size: 4rem;
       line-height: 3.9rem;
-    }
-  }
 
   @media (max-width: 479px) {
     min-height: 4.6rem;
@@ -109,7 +107,7 @@ export const ContentContactDescription = styled(C.Flex)`
   flex-direction: column;
 
   > h3 {
-    font-weight: 600;
+    font-weight: 400;
     font-size: 1.9rem;
     line-height: 3rem;
     font-family: ${theme.fonts.roboto};
