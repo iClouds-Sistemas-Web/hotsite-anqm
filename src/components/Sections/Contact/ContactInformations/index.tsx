@@ -13,11 +13,10 @@ export function ContactInformations() {
           <S.ContentInformations>
             <S.ContentAddress>
               <C.Text as="h3">ENDEREÇO</C.Text>
+              <C.Text as="p">Rod. Gov. Mário Covas, 111-179</C.Text>
               <C.Text as="p">
-                {' '}
-                Rod. Gov. Mário Covas, 111-179 - Parque de Exposições
+                Parque de Exposições Parnamirim - RN, 59150-000
               </C.Text>
-              <C.Text as="p"> Parnamirim - RN, 59150-000</C.Text>
             </S.ContentAddress>
 
             <S.ContentContactDescription>

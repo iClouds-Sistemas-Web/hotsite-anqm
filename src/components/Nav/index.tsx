@@ -29,11 +29,22 @@ export function Nav({ styletype }: NavProps) {
         </S.ContentLogo>
 
         <S.ContentNavigation>
-          {data.navigation.map((item) => (
-            <NextLink key={item.id} href={item.url}>
-              <S.Link styletype={styletype}>{item.title}</S.Link>
-            </NextLink>
-          ))}
+          {data.navigation.map((item) =>
+            item.externalLink === true ? (
+              <S.Link
+                key={item.id}
+                href={item.url}
+                target="_blank"
+                styletype={styletype}
+              >
+                {item.title}
+              </S.Link>
+            ) : (
+              <NextLink key={item.id} href={item.url}>
+                <S.Link styletype={styletype}>{item.title}</S.Link>
+              </NextLink>
+            )
+          )}
         </S.ContentNavigation>
 
         <S.ContentSocialLinks>

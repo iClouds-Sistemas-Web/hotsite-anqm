@@ -37,23 +37,20 @@ export const ContentTitle = styled(C.Flex)`
   align-items: center;
   justify-content: center;
 
-  border-bottom: 1px solid #d3d3d3;
-
   > h2 {
     font-size: 7rem;
     font-weight: 400;
     line-height: 5.5rem;
+    color: ${theme.colors.primary};
     font-family: ${theme.fonts.anton};
-
-    color: #0e4f25;
 
     @media (max-width: 479px) {
       font-size: 4rem;
       line-height: 3.9rem;
 
-      justify-content: center;
-      border-bottom: 1px solid #dddddd;
-    }
+  @media (max-width: 479px) {
+    min-height: 4.6rem;
+    margin-bottom: 1rem;
   }
 `;
 
@@ -161,9 +158,11 @@ export const ContentMap = styled(C.Flex)`
   background-repeat: no-repeat;
   background-position-x: 45%;
   background-image: url('images/png/map-contact.png');
+
   @media (max-width: 991px) {
     min-height: 40rem;
   }
+
   @media (max-width: 479px) {
     min-height: 33.9rem;
   }
