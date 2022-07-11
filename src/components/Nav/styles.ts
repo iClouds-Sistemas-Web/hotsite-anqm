@@ -110,6 +110,10 @@ export const Link = styled(C.Link)<NavProps>`
   line-height: 2.8rem;
   font-family: ${theme.fonts.roboto};
 
+  &:focus {
+    box-shadow: none;
+  }
+
   ::after {
     padding-left: 2rem;
 
