@@ -48,6 +48,8 @@ export const ContentContact = styled(C.Flex)`
   flex-direction: column;
   justify-content: flex-start;
 
+  cursor: pointer;
+
   > p {
     font-weight: 400;
     font-size: 1.9rem;
@@ -229,7 +231,7 @@ export const ContentCopyright = styled(C.Flex)`
     font-family: ${theme.fonts.roboto};
   }
 
-  > img {
+  img {
     right: 10rem;
     position: relative;
 
@@ -238,7 +240,7 @@ export const ContentCopyright = styled(C.Flex)`
   }
 
   @media (max-width: 767px) {
-    > img {
+    img {
       right: 2rem;
     }
   }
@@ -246,7 +248,7 @@ export const ContentCopyright = styled(C.Flex)`
   @media (max-width: 767px) {
     min-height: 3rem;
 
-    > img {
+    img {
       right: 2rem;
 
       width: 2.52rem;
