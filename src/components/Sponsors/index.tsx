@@ -22,6 +22,12 @@ export function Sponsors({ data }: SponsorsProps) {
         </S.ContentTitle>
 
         <S.ContentSponsors>
+          <S.ContentCardEQuester>
+            <C.Image
+              src="/images/svg/logo-equester-sponsors.svg"
+              alt="Logo eQuester cor açaí, com fundo branco"
+            />
+          </S.ContentCardEQuester>
           {data.map((sponsor) => (
             <CardSponsors
               key={sponsor.id}

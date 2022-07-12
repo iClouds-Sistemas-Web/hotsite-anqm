@@ -36,7 +36,7 @@ export const Wrapper = styled(C.Flex)`
 export const ContentImage = styled(C.Flex)`
   width: 100%;
   height: auto;
-  padding: 0 2rem;
+  padding: 5rem 2rem;
 
   justify-content: center;
 `;
