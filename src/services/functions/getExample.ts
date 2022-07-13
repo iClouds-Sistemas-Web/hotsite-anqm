@@ -6,7 +6,7 @@ import BR from 'date-fns/locale/pt-BR';
 
 import { mock } from '~/utils/contents';
 
-export async function getNews(): Promise<any> {
+export async function getExample(): Promise<any> {
   try {
     const { data } = await api.get(`contents`);
 

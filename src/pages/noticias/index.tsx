@@ -1,4 +1,4 @@
-import type { GetServerSideProps, NextPage } from 'next';
+import type { GetStaticProps, NextPage } from 'next';
 
 import { Nav, News, Footer, Sponsors, NewsList } from '~/components';
 
@@ -7,9 +7,11 @@ import * as S from '~/styles/pages/noticias';
 
 import { BiSearchAlt2 } from 'react-icons/bi';
 
-import { getNews } from '~/services/functions/getNews';
+import { HomeDataProps } from '~/interfaces/homeDataProps';
+import { getRecentNews } from '~/services/functions/getRecentNews';
+import { getAdvertisement } from '~/services/functions/getAdvertisement';
 
-const AllNews: NextPage = () => {
+const AllNews: NextPage = ({ advertisement }: HomeDataProps) => {
   return (
     <S.Container>
       <Nav />
@@ -30,7 +32,7 @@ const AllNews: NextPage = () => {
           </S.InputGroup>
         </News>
         <NewsList />
-        <Sponsors />
+        <Sponsors data={advertisement} />
       </S.Wrapper>
       <Footer />
     </S.Container>
@@ -39,10 +41,13 @@ const AllNews: NextPage = () => {
 
 export default AllNews;
 
-export const getServerSideProps: GetServerSideProps = async () => {
-  const news = await getNews();
+export const getStaticProps: GetStaticProps = async () => {
+  const advertisement = await getAdvertisement();
 
   return {
-    props: { news },
+    props: {
+      advertisement,
+    },
+    revalidate: 60 * 30,
   };
 };

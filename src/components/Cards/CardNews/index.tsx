@@ -1,15 +1,9 @@
 import * as S from './styles';
 import * as C from '@chakra-ui/react';
+
+import { DataNewsProps } from '~/interfaces/news';
 interface CardProps {
-  data?: {
-    id: number;
-    date: string;
-    title: string;
-    cover?: {
-      id: number;
-      file: string;
-    };
-  };
+  data?: DataNewsProps;
 }
 
 export function CardNews({ data }: CardProps) {
@@ -18,7 +12,8 @@ export function CardNews({ data }: CardProps) {
       <S.Wrapper>
         <S.ContentImage>
           <C.Image
-            src={data.cover.file}
+            src={data.content_files[0].file_url}
+            alt={data.title}
             fallbackSrc="https://cdn.neemo.com.br/uploads/settings_webdelivery/logo/8029/image-not-found.jpg"
           />
         </S.ContentImage>
