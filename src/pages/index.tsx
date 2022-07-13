@@ -1,5 +1,8 @@
 import type { GetStaticProps, NextPage } from 'next';
 
+import { getNews } from '~/services/functions/getNews';
+import { getAdvertisement } from '~/services/functions/getAdvertisement';
+
 import {
   Nav,
   News,
@@ -11,9 +14,8 @@ import {
 } from '~/components';
 
 import * as S from '~/styles/pages';
+
 import { HomeDataProps } from '~/interfaces/homeDataProps';
-import { getRecentNews } from '~/services/functions/getRecentNews';
-import { getAdvertisement } from '~/services/functions/getAdvertisement';
 
 const Home: NextPage = ({ advertisement, news }: HomeDataProps) => {
   return (
@@ -34,7 +36,7 @@ const Home: NextPage = ({ advertisement, news }: HomeDataProps) => {
 export default Home;
 
 export const getStaticProps: GetStaticProps = async () => {
-  const news = await getRecentNews();
+  const news = await getNews();
   const advertisement = await getAdvertisement();
 
   return {
