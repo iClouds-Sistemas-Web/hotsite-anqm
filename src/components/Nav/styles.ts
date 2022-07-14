@@ -9,7 +9,7 @@ interface NavProps {
 }
 
 export const Container = styled(C.Flex)<NavProps>`
-  z-index: 2000;
+  z-index: 1000;
 
   width: 100%;
   height: auto;

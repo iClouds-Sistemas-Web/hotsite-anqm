@@ -43,22 +43,45 @@ export function Toggle({ styletype }: ToggleProps) {
           </S.DrawerHeader>
 
           <DrawerBody>
-            {data.navigation.map((item) => (
-              <NextLink key={item.id} href={item.url}>
-                <S.Link>{item.title}</S.Link>
-              </NextLink>
-            ))}
+            {data.navigation.map((item) =>
+              item.externalLink === true ? (
+                <S.Link
+                  key={item.id}
+                  href={item.url}
+                  target="_blank"
+                  styletype={styletype}
+                >
+                  {item.title}
+                </S.Link>
+              ) : (
+                <NextLink key={item.id} href={item.url}>
+                  <S.Link styletype={styletype}>{item.title}</S.Link>
+                </NextLink>
+              )
+            )}
           </DrawerBody>
 
           <S.DrawerFooter>
-            <C.Image
-              src="/images/svg/icon-facebook.svg"
-              alt="Ícone facebook, quadrado com borda arredondada com a letra f, ambos cinza escuro"
-            />
-            <C.Image
-              src="/images/svg/icon-instagram.svg"
-              alt="Ícone instagram, quadrado com borda arredondada com um círculo no meio, ambos cinza escuro"
-            />
+            <a
+              href="https://www.facebook.com/anqmoficial/"
+              target={'_blank'}
+              rel="noreferrer"
+            >
+              <C.Image
+                src="/images/svg/icon-facebook.svg"
+                alt="Ícone facebook, quadrado com borda arredondada com a letra f, ambos cinza escuro"
+              />
+            </a>
+            <a
+              href="https://www.instagram.com/anqmoficial/"
+              target={'_blank'}
+              rel="noreferrer"
+            >
+              <C.Image
+                src="/images/svg/icon-instagram.svg"
+                alt="Ícone instagram, quadrado com borda arredondada com um círculo no meio, ambos cinza escuro"
+              />
+            </a>
           </S.DrawerFooter>
         </S.DrawerContent>
       </Drawer>
