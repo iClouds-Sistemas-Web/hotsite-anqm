@@ -1,7 +1,13 @@
 import * as S from './styles';
 import * as C from '@chakra-ui/react';
 
-export function NewsDescription() {
+import { NewsProps } from '~/interfaces/news';
+
+export function NewsDescription({ data }: NewsProps) {
+  if (!data) {
+    return <></>;
+  }
+
   return (
     <S.Container as="section">
       <S.Wrapper>
