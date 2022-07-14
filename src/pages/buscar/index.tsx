@@ -14,9 +14,9 @@ import * as S from '~/styles/pages/buscar';
 import { BiSearchAlt2 } from 'react-icons/bi';
 import { getAdvertisement } from '~/services/functions/getAdvertisement';
 
-import { HomeDataProps } from '~/interfaces/homeDataProps';
+import { pagesDataProps } from '~/interfaces/pagesDataProps';
 
-const Search: NextPage = ({ advertisement }: HomeDataProps) => {
+const Search: NextPage = ({ advertisement }: pagesDataProps) => {
   const foundPhrase = false;
 
   return (

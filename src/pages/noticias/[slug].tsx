@@ -10,11 +10,11 @@ import {
 import { getNews } from '~/services/functions/getNews';
 import { getAdvertisement } from '~/services/functions/getAdvertisement';
 
-import { HomeDataProps } from '~/interfaces/homeDataProps';
+import { pagesDataProps } from '~/interfaces/pagesDataProps';
 
 import * as S from '~/styles/pages/noticias/[slug]';
 
-const NewsDetails: NextPage = ({ advertisement, news }: HomeDataProps) => {
+const NewsDetails: NextPage = ({ advertisement, news }: pagesDataProps) => {
   return (
     <S.Container>
       <Nav />

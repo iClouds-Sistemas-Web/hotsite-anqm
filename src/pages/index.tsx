@@ -15,9 +15,9 @@ import {
 
 import * as S from '~/styles/pages';
 
-import { HomeDataProps } from '~/interfaces/homeDataProps';
+import { pagesDataProps } from '~/interfaces/pagesDataProps';
 
-const Home: NextPage = ({ advertisement, recentNews }: HomeDataProps) => {
+const Home: NextPage = ({ advertisement, recentNews }: pagesDataProps) => {
   return (
     <S.Container>
       <Nav styletype="primary" />

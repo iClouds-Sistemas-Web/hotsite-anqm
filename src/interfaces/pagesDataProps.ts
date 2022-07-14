@@ -1,10 +1,10 @@
 import { News } from './news';
 import { Advertisement } from './advertisement';
 
-export interface HomeDataProps {
-  advertisement: Advertisement[];
+export interface pagesDataProps {
+  news: News[];
 
   recentNews: News[];
 
-  news: News[];
+  advertisement: Advertisement[];
 }

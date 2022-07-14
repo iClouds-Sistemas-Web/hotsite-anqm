@@ -10,9 +10,9 @@ import { BiSearchAlt2 } from 'react-icons/bi';
 import { getRecentNews } from '~/services/functions/getRecentNews';
 import { getAdvertisement } from '~/services/functions/getAdvertisement';
 
-import { HomeDataProps } from '~/interfaces/homeDataProps';
+import { pagesDataProps } from '~/interfaces/pagesDataProps';
 
-const AllNews: NextPage = ({ advertisement, recentNews }: HomeDataProps) => {
+const AllNews: NextPage = ({ advertisement, recentNews }: pagesDataProps) => {
   return (
     <S.Container>
       <Nav />
