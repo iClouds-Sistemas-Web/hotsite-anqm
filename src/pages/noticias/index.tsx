@@ -7,15 +7,17 @@ import * as S from '~/styles/pages/noticias';
 
 import { BiSearchAlt2 } from 'react-icons/bi';
 
-import { HomeDataProps } from '~/interfaces/homeDataProps';
+import { getRecentNews } from '~/services/functions/getRecentNews';
 import { getAdvertisement } from '~/services/functions/getAdvertisement';
 
-const AllNews: NextPage = ({ advertisement }: HomeDataProps) => {
+import { HomeDataProps } from '~/interfaces/homeDataProps';
+
+const AllNews: NextPage = ({ advertisement, recentNews }: HomeDataProps) => {
   return (
     <S.Container>
       <Nav />
       <S.Wrapper>
-        <News amount_of_news={8}>
+        <News data={recentNews} amount_of_news={8}>
           <S.ContentTitle>
             <C.Text as="span">Notícias</C.Text>
           </S.ContentTitle>
@@ -41,11 +43,13 @@ const AllNews: NextPage = ({ advertisement }: HomeDataProps) => {
 export default AllNews;
 
 export const getStaticProps: GetStaticProps = async () => {
+  const recentNews = await getRecentNews();
   const advertisement = await getAdvertisement();
 
   return {
     props: {
-      advertisement,
+      recentNews: recentNews ? recentNews : [],
+      advertisement: advertisement ? advertisement : [],
     },
     revalidate: 60 * 30,
   };
