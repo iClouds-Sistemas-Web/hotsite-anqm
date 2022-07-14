@@ -6,7 +6,9 @@ import * as C from '@chakra-ui/react';
 import { NewsProps } from '~/interfaces/news';
 
 export function News({ data, children, amount_of_news }: NewsProps) {
-  console.log(data);
+  if (!data) {
+    return <></>;
+  }
 
   return (
     <S.Container as="section">
@@ -20,8 +22,8 @@ export function News({ data, children, amount_of_news }: NewsProps) {
         <S.ContentTopNews as="section">
           <S.ContentImage>
             <C.Image
-              src={data[0].content_files[0].file_url}
-              alt={data[0].title}
+              src={data[0].cover.src}
+              alt={data[0].cover.alt}
               fallbackSrc="https://cdn.neemo.com.br/uploads/settings_webdelivery/logo/8029/image-not-found.jpg"
             />
           </S.ContentImage>

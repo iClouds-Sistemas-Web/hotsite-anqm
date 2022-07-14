@@ -8,7 +8,6 @@ import * as S from '~/styles/pages/noticias';
 import { BiSearchAlt2 } from 'react-icons/bi';
 
 import { HomeDataProps } from '~/interfaces/homeDataProps';
-import { getRecentNews } from '~/services/functions/getRecentNews';
 import { getAdvertisement } from '~/services/functions/getAdvertisement';
 
 const AllNews: NextPage = ({ advertisement }: HomeDataProps) => {

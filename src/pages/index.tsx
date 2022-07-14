@@ -1,6 +1,6 @@
 import type { GetStaticProps, NextPage } from 'next';
 
-import { getNews } from '~/services/functions/getNews';
+import { getRecentNews } from '~/services/functions/getRecentNews';
 import { getAdvertisement } from '~/services/functions/getAdvertisement';
 
 import {
@@ -17,14 +17,14 @@ import * as S from '~/styles/pages';
 
 import { HomeDataProps } from '~/interfaces/homeDataProps';
 
-const Home: NextPage = ({ advertisement, news }: HomeDataProps) => {
+const Home: NextPage = ({ advertisement, recentNews }: HomeDataProps) => {
   return (
     <S.Container>
       <Nav styletype="primary" />
       <S.Wrapper>
         <Header />
         <Channels />
-        <News data={news} amount_of_news={4} />
+        <News data={recentNews} amount_of_news={4} />
         <Events />
         <Sponsors data={advertisement} />
       </S.Wrapper>
@@ -36,13 +36,13 @@ const Home: NextPage = ({ advertisement, news }: HomeDataProps) => {
 export default Home;
 
 export const getStaticProps: GetStaticProps = async () => {
-  const news = await getNews();
+  const recentNews = await getRecentNews();
   const advertisement = await getAdvertisement();
 
   return {
     props: {
-      news,
-      advertisement,
+      recentNews: recentNews ? recentNews : [],
+      advertisement: advertisement ? advertisement : [],
     },
     revalidate: 60 * 30,
   };

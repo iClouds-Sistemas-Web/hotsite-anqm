@@ -3,17 +3,9 @@ import { CardSponsors } from '~/components';
 import * as S from './styles';
 import * as C from '@chakra-ui/react';
 
-export interface SponsorsProps {
-  data: [
-    {
-      id: number;
-      title: string;
-      file_url: string;
-    }
-  ];
-}
+import { AdvertisementProps } from '~/interfaces/advertisement';
 
-export function Sponsors({ data }: SponsorsProps) {
+export function Sponsors({ data }: AdvertisementProps) {
   return (
     <S.Container as="section">
       <S.Wrapper>

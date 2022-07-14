@@ -1,12 +1,24 @@
 import { ReactNode } from 'react';
 
 export interface NewsProps {
-  data?: DataNewsProps[];
+  data?: News[];
   children?: ReactNode;
   amount_of_news?: number;
 }
 
-export interface DataNewsProps {
+export interface News {
+  id: number;
+  title: string;
+  resume: string;
+  slug: string;
+  date: string;
+  cover: {
+    alt: string;
+    src: string;
+  };
+}
+
+export interface DataNews {
   content_files: [
     {
       config_file_id: number;
@@ -18,8 +30,8 @@ export interface DataNewsProps {
     }
   ];
   content_id: number | null;
-  created: any;
-  date: any;
+  created: Date;
+  date: Date;
   exibir_capa: number;
   featured: number;
   gallery_id: number | null;
@@ -29,7 +41,7 @@ export interface DataNewsProps {
   language: string;
   link_em_nova_aba: string;
   link_externo: string;
-  modified: any;
+  modified: Date;
   resume: string;
   slug: string;
   status: number;
