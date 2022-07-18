@@ -97,9 +97,10 @@ export const ContentEQuesterImage = styled(C.Flex)`
 
   > img {
     width: 100%;
-
     height: auto;
     max-width: 20rem;
+
+    cursor: pointer;
 
     @media (max-width: 991px) {
       right: -3.1rem;
