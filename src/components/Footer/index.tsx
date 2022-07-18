@@ -1,4 +1,7 @@
 import Link from 'next/link';
+import NextLink from 'next/link';
+
+import { data } from '~/utils/data';
 
 import * as S from './styles';
 import * as C from '@chakra-ui/react';
@@ -59,16 +62,17 @@ export function Footer() {
       </S.Wrapper>
 
       <S.ContentNavigation>
-        <ul>
-          <li>Início</li>
-          <li>Notícias</li>
-          <li>Institucional</li>
-          <li>Ranking</li>
-          <li>Eventos</li>
-          <li>Resultados</li>
-          <li>Associe-se</li>
-          <li>Contatos</li>
-        </ul>
+        {data.navigation.map((item) =>
+          item.externalLink === true ? (
+            <S.Link key={item.id} href={item.url} target="_blank">
+              {item.title}
+            </S.Link>
+          ) : (
+            <NextLink key={item.id} href={item.url}>
+              <S.Link>{item.title}</S.Link>
+            </NextLink>
+          )
+        )}
       </S.ContentNavigation>
 
       <S.ContentCopyright>
