@@ -1,3 +1,5 @@
+import NextLink from 'next/link';
+
 import { CardNews } from '~/components';
 
 import * as S from './styles';
@@ -30,10 +32,13 @@ export function News({ data, children, amount_of_news }: NewsProps) {
 
           <S.ContentDescription>
             <C.Text as="span">{data[0].date}</C.Text>
-
-            <C.Text as="h2" isTruncated noOfLines={[3, 3, 5]}>
-              {data[0].title}
-            </C.Text>
+            <NextLink href={data[0].slug}>
+              <C.Link>
+                <C.Text as="h2" isTruncated noOfLines={[3, 3, 5]}>
+                  {data[0].title}
+                </C.Text>
+              </C.Link>
+            </NextLink>
 
             <C.Text as="p" isTruncated noOfLines={[2, 2, 5]}>
               {data[0].resume}

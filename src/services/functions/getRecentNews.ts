@@ -16,7 +16,7 @@ export async function getRecentNews(): Promise<any> {
         id: item?.id || '',
         title: item?.title || '',
         resume: item?.resume || '',
-        slug: item?.slug || '',
+        slug: `/noticias/${item?.slug || ''}-${item?.id}`,
         date: format(new Date(item?.date || ''), "dd 'de' MMMM 'de' yyyy", {
           locale: BR,
         }),

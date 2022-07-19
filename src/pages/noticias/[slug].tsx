@@ -7,19 +7,23 @@ import {
   NewsSection,
   NewsDescription,
 } from '~/components';
-import { getNews } from '~/services/functions/getNews';
+import { getNews, getNewsContent } from '~/services/functions/getNews';
 import { getAdvertisement } from '~/services/functions/getAdvertisement';
 
 import { pagesDataProps } from '~/interfaces/pagesDataProps';
 
 import * as S from '~/styles/pages/noticias/[slug]';
 
-const NewsDetails: NextPage = ({ advertisement, news }: pagesDataProps) => {
+const NewsDetails: NextPage = ({
+  advertisement,
+  news,
+  newsContent,
+}: pagesDataProps) => {
   return (
     <S.Container>
       <Nav />
       <S.Wrapper>
-        <NewsDescription data={news} />
+        <NewsDescription data={newsContent} />
         <NewsSection data={news} amount_of_news={4} />
         <Sponsors data={advertisement} />
       </S.Wrapper>
@@ -30,13 +34,19 @@ const NewsDetails: NextPage = ({ advertisement, news }: pagesDataProps) => {
 
 export default NewsDetails;
 
-export const getServerSideProps: GetServerSideProps = async () => {
+export const getServerSideProps: GetServerSideProps = async ({ params }) => {
+  const newsContentId = String(params.slug).split('-');
+
+  const newsContentIdFormatted = newsContentId[newsContentId.length - 1];
+
   const news = await getNews();
   const advertisement = await getAdvertisement();
+  const newsContent = await getNewsContent(newsContentIdFormatted);
 
   return {
     props: {
       news: news ? news : [],
+      newsContent: newsContent ? newsContent : [],
       advertisement: advertisement ? advertisement : [],
     },
   };
