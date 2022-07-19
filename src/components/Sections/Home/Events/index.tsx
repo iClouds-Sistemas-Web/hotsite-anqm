@@ -8,10 +8,16 @@ export function Events() {
     <S.Container as="section" id="events">
       <S.Wrapper>
         <S.ContentEQuesterImage>
-          <C.Image
-            src="/images/svg/tag-eQuester.svg"
-            alt="Etiqueta com logo eQuester, fundo amarelo, texto cor açaí escrito baixe o app "
-          />
+          <a
+            href="https://www.equester.com.br/"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <C.Image
+              src="/images/svg/tag-eQuester.svg"
+              alt="Etiqueta com logo eQuester, fundo amarelo, texto cor açaí escrito baixe o app "
+            />
+          </a>
         </S.ContentEQuesterImage>
 
         <S.ContentTitle>

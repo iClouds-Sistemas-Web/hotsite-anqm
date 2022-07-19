@@ -38,19 +38,20 @@ export const ContentTitle = styled(C.Flex)`
   justify-content: center;
 
   > h2 {
-    font-size: 7rem;
+    font-size: 5rem;
     font-weight: 400;
-    line-height: 5.5rem;
+    line-height: 4rem;
     color: ${theme.colors.primary};
     font-family: ${theme.fonts.anton};
 
     @media (max-width: 479px) {
       font-size: 4rem;
       line-height: 3.9rem;
-
-  @media (max-width: 479px) {
-    min-height: 4.6rem;
-    margin-bottom: 1rem;
+    }
+    @media (max-width: 479px) {
+      min-height: 4.6rem;
+      margin-bottom: 1rem;
+    }
   }
 `;
 

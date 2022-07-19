@@ -189,25 +189,27 @@ export const ContentNavigation = styled(C.Flex)`
   min-height: 2.8rem;
   margin-bottom: 10rem;
 
+  gap: 4rem;
   align-items: center;
   justify-content: center;
 
-  ul {
-    gap: 4rem;
-    display: flex;
+  @media (max-width: 1279px) {
+    display: none;
   }
+`;
 
-  li {
-    list-style-type: none;
-  }
-
+export const Link = styled(C.Link)`
   font-size: 1.2rem;
   line-height: 2.8rem;
   color: ${theme.colors.text.footer};
   font-family: ${theme.fonts.roboto};
 
-  @media (max-width: 1279px) {
-    display: none;
+  :hover {
+    text-decoration: none;
+  }
+
+  &:focus {
+    box-shadow: none;
   }
 `;
 

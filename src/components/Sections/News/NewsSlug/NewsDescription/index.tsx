@@ -22,7 +22,10 @@ export function NewsDescription() {
         </S.ContentNewsHeader>
 
         <S.ContentImage>
-          <C.Image src="/images/png/img-news-destaque.png" />
+          <C.Image
+            src="/images/png/img-news-destaque.png"
+            fallbackSrc="/images/image-not-found.jpg"
+          />
         </S.ContentImage>
 
         <S.ContentDescription>
