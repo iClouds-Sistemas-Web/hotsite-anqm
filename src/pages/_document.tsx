@@ -40,6 +40,7 @@ class MyDocument extends Document {
             href="https://fonts.googleapis.com/css2?family=Anton&display=swap"
             rel="stylesheet"
           />
+          <link rel="shortcut icon" href="/favicon.svg" type="image/svg" />
         </Head>
         <body>
           <Main />
