@@ -23,26 +23,31 @@ export function News({ data, children, amount_of_news }: NewsProps) {
 
         <S.ContentTopNews as="section">
           <S.ContentImage>
-            <C.Image
-              src={data[0].cover.src}
-              alt={data[0].cover.alt}
-              fallbackSrc="https://cdn.neemo.com.br/uploads/settings_webdelivery/logo/8029/image-not-found.jpg"
-            />
+            <NextLink href={data[0].slug}>
+              <C.Link>
+                <C.Image
+                  src={data[0].cover.src}
+                  alt={data[0].cover.alt}
+                  fallbackSrc="https://cdn.neemo.com.br/uploads/settings_webdelivery/logo/8029/image-not-found.jpg"
+                />
+              </C.Link>
+            </NextLink>
           </S.ContentImage>
 
           <S.ContentDescription>
-            <C.Text as="span">{data[0].date}</C.Text>
             <NextLink href={data[0].slug}>
-              <C.Link>
+              <C.Link style={{ textDecoration: 'none' }}>
+                <C.Text as="span">{data[0].date}</C.Text>
+
                 <C.Text as="h2" isTruncated noOfLines={[3, 3, 5]}>
                   {data[0].title}
                 </C.Text>
+
+                <C.Text as="p" isTruncated noOfLines={[2, 2, 5]}>
+                  {data[0].resume}
+                </C.Text>
               </C.Link>
             </NextLink>
-
-            <C.Text as="p" isTruncated noOfLines={[2, 2, 5]}>
-              {data[0].resume}
-            </C.Text>
           </S.ContentDescription>
         </S.ContentTopNews>
 

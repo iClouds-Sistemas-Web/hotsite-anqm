@@ -50,7 +50,7 @@ export const ContentImage = styled(C.Flex)`
 
   background-color: #dddddd;
 
-  > img {
+  img {
     position: absolute;
 
     width: 100%;
@@ -80,7 +80,7 @@ export const ContentDescription = styled(C.Flex)`
 
   flex-direction: column;
 
-  > span {
+  span {
     margin-bottom: 1rem;
 
     font-weight: 400;
@@ -97,7 +97,7 @@ export const ContentDescription = styled(C.Flex)`
     }
   }
 
-  > h2 {
+  h2 {
     height: 8.5rem;
     margin-bottom: 2rem;
 

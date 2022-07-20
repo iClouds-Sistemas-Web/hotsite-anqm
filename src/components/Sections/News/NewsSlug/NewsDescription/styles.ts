@@ -38,6 +38,8 @@ export const ContentNewsHeader = styled(C.Flex)`
   align-items: flex-start;
   justify-content: flex-start;
 
+  border-bottom: 1px solid #d3d3d3;
+
   > h1 {
     margin-bottom: 0.5rem;
 
@@ -70,7 +72,6 @@ export const ContentNewsHeader = styled(C.Flex)`
     font-weight: 400;
     font-size: 1.9rem;
     line-height: 2.4rem;
-    border-bottom: 1px solid #d3d3d3;
     color: ${theme.colors.text.description};
     font-family: ${theme.fonts.roboto_condensed};
 
@@ -96,7 +97,7 @@ export const ContentImage = styled(C.Flex)`
 
   > img {
     width: 100%;
-    height: 50rem;
+    height: auto;
     max-width: 81.9rem;
 
     @media (max-width: 767px) {
@@ -119,9 +120,18 @@ export const ContentDescription = styled(C.Flex)`
   width: 100%;
   height: auto;
   max-width: 92.5rem;
-  min-height: 93.6rem;
 
-  > p {
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+
+  img {
+    width: 100%;
+    height: 50rem;
+    max-width: 81.9rem;
+  }
+
+  p {
     font-weight: 400;
     font-size: 1.9rem;
     line-height: 3.4rem;
