@@ -1,4 +1,4 @@
-import type { GetServerSideProps, NextPage } from 'next';
+import type { GetStaticPaths, GetStaticProps, NextPage } from 'next';
 
 import {
   Nav,
@@ -34,7 +34,14 @@ const NewsDetails: NextPage = ({
 
 export default NewsDetails;
 
-export const getServerSideProps: GetServerSideProps = async ({ params }) => {
+export const getStaticPaths: GetStaticPaths = async () => {
+  return {
+    paths: [],
+    fallback: 'blocking',
+  };
+};
+
+export const getStaticProps: GetStaticProps = async ({ params }) => {
   const newsContentId = String(params.slug).split('-');
 
   const newsContentIdFormatted = newsContentId[newsContentId.length - 1];
