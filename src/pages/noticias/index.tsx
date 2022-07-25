@@ -1,3 +1,4 @@
+import { NextSeo } from 'next-seo';
 import type { GetStaticProps, NextPage } from 'next';
 
 import { Nav, News, Footer, Sponsors, NewsList } from '~/components';
@@ -16,6 +17,10 @@ import { pagesDataProps } from '~/interfaces/pagesDataProps';
 const AllNews: NextPage = ({ advertisement, recentNews }: pagesDataProps) => {
   return (
     <S.Container>
+      <NextSeo
+        title="ANQM | Notícias"
+        description="Acompanhe as noticias da ANQM. Fique por dentro de todas as nossas novidades."
+      />
       <Nav />
       <S.Wrapper>
         <News data={recentNews} amount_of_news={8}>

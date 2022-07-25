@@ -1,3 +1,4 @@
+import { NextSeo } from 'next-seo';
 import { GetStaticProps, NextPage } from 'next';
 
 import { Nav, Footer, Sponsors, CompanyDetails } from '~/components';
@@ -10,6 +11,10 @@ import * as S from '~/styles/pages/sobre';
 const About: NextPage = ({ advertisement }: pagesDataProps) => {
   return (
     <S.Container>
+      <NextSeo
+        title="ANQM | Institucional"
+        description="Conheça mais sobre a ANQM."
+      />
       <Nav />
       <S.Wrapper>
         <CompanyDetails />

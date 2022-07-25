@@ -1,3 +1,4 @@
+import { NextSeo } from 'next-seo';
 import type { GetStaticPaths, GetStaticProps, NextPage } from 'next';
 
 import {
@@ -21,6 +22,7 @@ const NewsDetails: NextPage = ({
 }: pagesDataProps) => {
   return (
     <S.Container>
+      <NextSeo title={newsContent.title} description={newsContent.resume} />
       <Nav />
       <S.Wrapper>
         <NewsDescription data={newsContent} />

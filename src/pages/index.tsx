@@ -1,3 +1,4 @@
+import { NextSeo } from 'next-seo';
 import type { GetStaticProps, NextPage } from 'next';
 
 import { getRecentNews } from '~/services/functions/getRecentNews';
@@ -20,6 +21,10 @@ import { pagesDataProps } from '~/interfaces/pagesDataProps';
 const Home: NextPage = ({ advertisement, recentNews }: pagesDataProps) => {
   return (
     <S.Container>
+      <NextSeo
+        title="ANQM | Home"
+        description="Associação Norteriograndense dos criadores do cavalo Quarto de Milha."
+      />
       <Nav styletype="primary" />
       <S.Wrapper>
         <Header />
