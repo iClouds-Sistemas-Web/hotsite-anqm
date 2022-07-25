@@ -5,13 +5,13 @@ import BR from 'date-fns/locale/pt-BR';
 
 import { DataNews } from '~/interfaces/news';
 
-export async function getNews(): Promise<any> {
+export async function getRecentNews(): Promise<any> {
   try {
     const { data } = await api.get(
-      `contents?clientId=${process.env.NEXT_PUBLIC_CLIENT_ID}&page=1&amountNews=5&indexId=2`
+      `contents/recent?clientId=${process.env.NEXT_PUBLIC_CLIENT_ID}&indexId=2`
     );
 
-    const dataNews = data.contents.map((item: DataNews) => {
+    const dataRecentNews = data.recentContents.map((item: DataNews) => {
       return {
         id: item?.id || '',
         title: item?.title || '',
@@ -27,23 +27,7 @@ export async function getNews(): Promise<any> {
       };
     });
 
-    return dataNews;
-  } catch (error) {
-    const data = [];
-
-    return data;
-  }
-}
-
-export async function getNewsContent(id: string): Promise<any> {
-  try {
-    const { data } = await api.get(
-      `contents/${id}?clientId=${process.env.NEXT_PUBLIC_CLIENT_ID}&indexId=2`
-    );
-
-    const dataNewsContent = data.singleSpecificContent;
-
-    return dataNewsContent;
+    return dataRecentNews;
   } catch (error) {
     const data = [];
 

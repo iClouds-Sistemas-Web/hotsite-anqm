@@ -1,47 +1,71 @@
+import NextLink from 'next/link';
+import { useEffect, useState } from 'react';
+
+import { format } from 'date-fns';
+import BR from 'date-fns/locale/pt-BR';
+import { api } from '~/services/config';
+
+import { Pagination } from '~/components/Pagination';
+
 import * as S from './styles';
 import * as C from '@chakra-ui/react';
 
+import { News } from '~/interfaces/news';
+
 export function NewsList() {
+  const [page, setPage] = useState(1);
+
+  const [data, setData] = useState<News[]>([]);
+
+  const [totalCountOfRegisters, setTotalCountOfRegisters] = useState('');
+  useEffect(() => {
+    api
+      .get(
+        `contents?clientId=${process.env.NEXT_PUBLIC_CLIENT_ID}&page=${page}&amountNews=10&indexId=2`
+      )
+      .then((response) => {
+        setData(response.data.contents);
+        setTotalCountOfRegisters(response.headers['content-length']);
+      });
+  }, [page]);
+
   return (
     <S.Container as="section">
       <S.Wrapper>
         <S.List>
           <S.ListItem>
-            <C.Text as="span">16 de outubro de 2019</C.Text>
-            <C.Text as="p" isTruncated noOfLines={[3, 3, 1]}>
-              ANQM homenageia seus ex-presidentes na festa de 30 anos da
-              Associação
-            </C.Text>
-          </S.ListItem>
+            {data.map((newsList) => (
+              <NextLink
+                key={newsList.id}
+                href={`/noticias/${newsList.slug}-${newsList.id}`}
+              >
+                <S.ListItemContent>
+                  <C.Text as="span">
+                    {newsList.date
+                      ? format(
+                          new Date(newsList.date),
+                          "dd 'de' MMMM 'de' yyyy",
+                          {
+                            locale: BR,
+                          }
+                        )
+                      : ''}
+                    <span> •</span>
+                  </C.Text>
 
-          <S.ListItem>
-            <C.Text as="span">16 de outubro de 2019</C.Text>
-            <C.Text as="p" isTruncated noOfLines={[3, 3, 1]}>
-              ANQM homenageia seus ex-presidentes na festa de 30 anos da
-              Associação
-            </C.Text>
-          </S.ListItem>
-
-          <S.ListItem>
-            <C.Text as="span">16 de outubro de 2019</C.Text>
-            <C.Text as="p" isTruncated noOfLines={[3, 3, 1]}>
-              ANQM homenageia seus ex-presidentes na festa de 30 anos da
-              Associação
-            </C.Text>
+                  <C.Text as="p" isTruncated noOfLines={[3, 3, 1]}>
+                    {newsList.title}
+                  </C.Text>
+                </S.ListItemContent>
+              </NextLink>
+            ))}
           </S.ListItem>
         </S.List>
         <S.ContentPagination>
-          <C.Image
-            src="images/svg/arrow-left-pagination.svg"
-            alt="Seta para esquerda de cor cinza"
-          />
-          <C.Image src="images/svg/ellipse-1-pagination.svg" alt="" />
-          <C.Image src="images/svg/ellipse-2-pagination.svg" alt="" />
-          <C.Image src="images/svg/ellipse-3-pagination.svg" alt="" />
-          <C.Image src="images/svg/ellipse-5-pagination.svg" alt="" />
-          <C.Image
-            src="images/svg/arrow-right-pagination.svg"
-            alt="Seta para direita de cor cinza"
+          <Pagination
+            totalCountOfRegisters={Number(totalCountOfRegisters)}
+            currentPage={page}
+            onPageChange={setPage}
           />
         </S.ContentPagination>
       </S.Wrapper>

@@ -1,4 +1,8 @@
-import type { GetServerSideProps, NextPage } from 'next';
+import { NextSeo } from 'next-seo';
+import type { GetStaticProps, NextPage } from 'next';
+
+import { getRecentNews } from '~/services/functions/getRecentNews';
+import { getAdvertisement } from '~/services/functions/getAdvertisement';
 
 import {
   Nav,
@@ -10,20 +14,24 @@ import {
   Channels,
 } from '~/components';
 
-import { getNews } from '~/services/functions/getNews';
-
 import * as S from '~/styles/pages';
 
-const Home: NextPage = (news) => {
+import { pagesDataProps } from '~/interfaces/pagesDataProps';
+
+const Home: NextPage = ({ advertisement, recentNews }: pagesDataProps) => {
   return (
     <S.Container>
+      <NextSeo
+        title="ANQM | Home"
+        description="Associação Norteriograndense dos criadores do cavalo Quarto de Milha."
+      />
       <Nav styletype="primary" />
       <S.Wrapper>
         <Header />
         <Channels />
-        <News data={news} amount_of_news={4} />
+        <News data={recentNews} amount_of_news={4} />
         <Events />
-        <Sponsors />
+        <Sponsors data={advertisement} />
       </S.Wrapper>
       <Footer />
     </S.Container>
@@ -32,10 +40,15 @@ const Home: NextPage = (news) => {
 
 export default Home;
 
-export const getServerSideProps: GetServerSideProps = async () => {
-  const news = await getNews();
+export const getStaticProps: GetStaticProps = async () => {
+  const recentNews = await getRecentNews();
+  const advertisement = await getAdvertisement();
 
   return {
-    props: { news },
+    props: {
+      recentNews: recentNews ? recentNews : [],
+      advertisement: advertisement ? advertisement : [],
+    },
+    revalidate: 60 * 30,
   };
 };

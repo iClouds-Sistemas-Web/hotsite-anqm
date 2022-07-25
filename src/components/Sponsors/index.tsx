@@ -3,7 +3,9 @@ import { CardSponsors } from '~/components';
 import * as S from './styles';
 import * as C from '@chakra-ui/react';
 
-export function Sponsors() {
+import { AdvertisementProps } from '~/interfaces/advertisement';
+
+export function Sponsors({ data }: AdvertisementProps) {
   return (
     <S.Container as="section">
       <S.Wrapper>
@@ -12,11 +14,19 @@ export function Sponsors() {
         </S.ContentTitle>
 
         <S.ContentSponsors>
-          <CardSponsors />
-          <CardSponsors />
-          <CardSponsors />
-          <CardSponsors />
-          <CardSponsors />
+          <S.ContentCardEQuester>
+            <C.Image
+              src="/images/svg/logo-equester-sponsors.svg"
+              alt="Logo eQuester cor açaí, com fundo branco"
+            />
+          </S.ContentCardEQuester>
+          {data.map((sponsor) => (
+            <CardSponsors
+              key={sponsor.id}
+              alt={sponsor.title}
+              src={sponsor.file_url}
+            />
+          ))}
         </S.ContentSponsors>
       </S.Wrapper>
     </S.Container>
