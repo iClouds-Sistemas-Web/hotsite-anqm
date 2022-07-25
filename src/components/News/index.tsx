@@ -23,10 +23,15 @@ export function News({ data, children, amount_of_news }: NewsProps) {
 
         <S.ContentTopNews as="section">
           <S.ContentImage>
-            <C.Image
-              src={data.news[0].cover.file}
-              fallbackSrc="/images/image-not-found.jpg"
-            />
+            <NextLink href={data[0].slug}>
+              <C.Link>
+                <C.Image
+                  src={data[0].cover.src}
+                  alt={data[0].title}
+                  fallbackSrc="/images/image-not-found.jpg"
+                />
+              </C.Link>
+            </NextLink>
           </S.ContentImage>
 
           <S.ContentDescription>

@@ -93,7 +93,6 @@ export const ContentImage = styled(C.Flex)`
   width: 100%;
   height: auto;
   max-width: 81.9rem;
-  margin-bottom: 5rem;
 
   > img {
     width: 100%;
@@ -132,9 +131,7 @@ export const ContentDescription = styled(C.Flex)`
   font-family: ${theme.fonts.roboto};
 
   img {
-    width: 100%;
-    height: 50rem;
-    padding: 0 2rem;
+    display: none;
   }
 
   @media (max-width: 767px) {

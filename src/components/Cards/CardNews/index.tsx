@@ -14,10 +14,15 @@ export function CardNews({ data }: CardProps) {
     <S.Container>
       <S.Wrapper>
         <S.ContentImage>
-          <C.Image
-            src={data.cover.file}
-            fallbackSrc="/images/image-not-found.jpg"
-          />
+          <NextLink href={data.slug}>
+            <C.Link>
+              <C.Image
+                src={data.cover.src}
+                alt={data.title}
+                fallbackSrc="/images/image-not-found.jpg"
+              />
+            </C.Link>
+          </NextLink>
         </S.ContentImage>
 
         <S.ContentDescription>
