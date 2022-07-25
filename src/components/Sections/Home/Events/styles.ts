@@ -95,7 +95,7 @@ export const ContentEQuesterImage = styled(C.Flex)`
 
   overflow: hidden;
 
-  > img {
+  img {
     width: 100%;
     height: auto;
     max-width: 20rem;
