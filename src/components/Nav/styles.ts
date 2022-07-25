@@ -113,7 +113,7 @@ export const Link = styled(C.Link)<NavProps>`
   &:hover {
     text-decoration: none;
   }
-    
+
   &:focus {
     box-shadow: none;
   }
