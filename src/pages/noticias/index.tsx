@@ -1,4 +1,5 @@
-import type { GetServerSideProps, NextPage } from 'next';
+import { NextSeo } from 'next-seo';
+import type { GetStaticProps, NextPage } from 'next';
 
 import { Nav, News, Footer, Sponsors, NewsList } from '~/components';
 
@@ -7,14 +8,22 @@ import * as S from '~/styles/pages/noticias';
 
 import { BiSearchAlt2 } from 'react-icons/bi';
 
-import { getNews } from '~/services/functions/getNews';
+import { getRecentNews } from '~/services/functions/getRecentNews';
+import { getAdvertisement } from '~/services/functions/getAdvertisement';
+import { getNewsPagination } from '~/services/functions/getNewsPagination';
 
-const AllNews: NextPage = (news) => {
+import { pagesDataProps } from '~/interfaces/pagesDataProps';
+
+const AllNews: NextPage = ({ advertisement, recentNews }: pagesDataProps) => {
   return (
     <S.Container>
+      <NextSeo
+        title="ANQM | Notícias"
+        description="Acompanhe as noticias da ANQM. Fique por dentro de todas as nossas novidades."
+      />
       <Nav />
       <S.Wrapper>
-        <News data={news} amount_of_news={8}>
+        <News data={recentNews} amount_of_news={8}>
           <S.ContentTitle>
             <C.Text as="span">Notícias</C.Text>
           </S.ContentTitle>
@@ -30,7 +39,7 @@ const AllNews: NextPage = (news) => {
           </S.InputGroup>
         </News>
         <NewsList />
-        <Sponsors />
+        <Sponsors data={advertisement} />
       </S.Wrapper>
       <Footer />
     </S.Container>
@@ -39,10 +48,17 @@ const AllNews: NextPage = (news) => {
 
 export default AllNews;
 
-export const getServerSideProps: GetServerSideProps = async () => {
-  const news = await getNews();
+export const getStaticProps: GetStaticProps = async () => {
+  const recentNews = await getRecentNews();
+  const paginationNews = await getNewsPagination();
+  const advertisement = await getAdvertisement();
 
   return {
-    props: { news },
+    props: {
+      recentNews: recentNews ? recentNews : [],
+      advertisement: advertisement ? advertisement : [],
+      paginationNews: paginationNews ? paginationNews : [],
+    },
+    revalidate: 60 * 30,
   };
 };

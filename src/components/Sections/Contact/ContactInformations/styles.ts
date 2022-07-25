@@ -13,7 +13,6 @@ export const Container = styled(C.Flex)`
   @media (max-width: 1279px) {
     padding: 0 7rem 7rem;
   }
-
   @media (max-width: 767px) {
     padding: 0 2rem 5rem;
   }

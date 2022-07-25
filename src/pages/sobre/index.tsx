@@ -1,16 +1,24 @@
-import { NextPage } from 'next';
+import { NextSeo } from 'next-seo';
+import { GetStaticProps, NextPage } from 'next';
 
 import { Nav, Footer, Sponsors, CompanyDetails } from '~/components';
+import { getAdvertisement } from '~/services/functions/getAdvertisement';
+
+import { pagesDataProps } from '~/interfaces/pagesDataProps';
 
 import * as S from '~/styles/pages/sobre';
 
-const About: NextPage = () => {
+const About: NextPage = ({ advertisement }: pagesDataProps) => {
   return (
     <S.Container>
+      <NextSeo
+        title="ANQM | Institucional"
+        description="Conheça mais sobre a ANQM."
+      />
       <Nav />
       <S.Wrapper>
         <CompanyDetails />
-        <Sponsors />
+        <Sponsors data={advertisement} />
       </S.Wrapper>
       <Footer />
     </S.Container>
@@ -18,3 +26,14 @@ const About: NextPage = () => {
 };
 
 export default About;
+
+export const getStaticProps: GetStaticProps = async () => {
+  const advertisement = await getAdvertisement();
+
+  return {
+    props: {
+      advertisement: advertisement ? advertisement : [],
+    },
+    revalidate: 60 * 30,
+  };
+};

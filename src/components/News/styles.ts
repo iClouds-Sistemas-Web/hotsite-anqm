@@ -107,7 +107,7 @@ export const ContentImage = styled(C.Flex)`
   max-width: 61rem;
   max-height: 40rem;
 
-  > img {
+  img {
     width: 100%;
     height: auto;
     min-height: 40rem;
@@ -136,7 +136,7 @@ export const ContentDescription = styled(C.Flex)`
 
   flex-direction: column;
 
-  > span {
+  span {
     margin-bottom: 1rem;
 
     font-weight: 400;
@@ -154,7 +154,7 @@ export const ContentDescription = styled(C.Flex)`
     }
   }
 
-  > h2 {
+  h2 {
     margin-bottom: 2rem;
 
     font-weight: 700;
@@ -172,7 +172,7 @@ export const ContentDescription = styled(C.Flex)`
     }
   }
 
-  > p {
+  p {
     font-weight: 400;
     font-size: 1.9rem;
     white-space: normal;

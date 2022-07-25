@@ -1,5 +1,6 @@
 import styled from '@emotion/styled';
 import * as C from '@chakra-ui/react';
+import { Flex } from '@chakra-ui/react';
 
 import { personTheme as theme } from '~/styles/theme';
 
@@ -30,38 +31,42 @@ export const Wrapper = styled(C.Flex)`
   }
 `;
 
-export const List = styled.ul`
-  list-style: none;
-`;
+export const List = styled(Flex)``;
 
 export const ListItem = styled.li`
-  margin-bottom: 3rem;
-
   display: flex;
+  flex-direction: column;
   align-items: flex-start;
 
-  > span {
-    min-width: 20rem;
-    margin-right: 0.5rem;
+  span {
+    margin-bottom: 3rem;
+    margin-left: 0.5rem;
 
+    cursor: pointer;
     font-weight: 700;
     font-size: 1.9rem;
     line-height: 2.4rem;
     font-family: ${theme.fonts.roboto};
 
+    &:last-child {
+      margin-bottom: 0;
+    }
+
     @media (max-width: 767px) {
+      margin-bottom: 0;
+      margin-left: 0;
+
       font-size: 1.5rem;
       line-height: 2rem;
     }
   }
 
-  :last-of-type {
-    margin-bottom: 0;
-  }
-
-  > p {
+  p {
+    cursor: pointer;
     width: 100%;
     max-width: 82rem;
+    margin-bottom: 3rem;
+    margin-left: 0.5rem;
 
     font-weight: 400;
     font-size: 1.9rem;
@@ -69,9 +74,27 @@ export const ListItem = styled.li`
     white-space: normal;
     font-family: ${theme.fonts.roboto};
 
+    &:last-child {
+      margin-bottom: 0;
+    }
+
     @media (max-width: 767px) {
+      margin-left: 0;
+
       font-size: 1.5rem;
       line-height: 2rem;
+    }
+  }
+`;
+
+export const ListItemContent = styled(C.Flex)`
+  > span {
+    min-width: fit-content;
+
+    @media (max-width: 767px) {
+      &:last-of-type {
+        display: none;
+      }
     }
   }
 
@@ -88,21 +111,6 @@ export const ContentPagination = styled(C.Flex)`
   gap: 1rem;
   align-items: center;
   justify-content: center;
-
-  > img {
-    width: 1rem;
-    height: 1rem;
-
-    :nth-of-type(1) {
-      width: 3rem;
-      height: 3rem;
-    }
-
-    :nth-of-type(6) {
-      width: 3rem;
-      height: 3rem;
-    }
-  }
 
   @media (max-width: 479px) {
     margin: 2rem 0 0;

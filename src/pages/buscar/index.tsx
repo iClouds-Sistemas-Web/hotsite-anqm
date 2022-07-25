@@ -1,4 +1,4 @@
-import type { NextPage } from 'next';
+import type { GetStaticProps, NextPage } from 'next';
 
 import {
   Nav,
@@ -12,8 +12,11 @@ import {
 import * as S from '~/styles/pages/buscar';
 
 import { BiSearchAlt2 } from 'react-icons/bi';
+import { getAdvertisement } from '~/services/functions/getAdvertisement';
 
-const Search: NextPage = () => {
+import { pagesDataProps } from '~/interfaces/pagesDataProps';
+
+const Search: NextPage = ({ advertisement }: pagesDataProps) => {
   const foundPhrase = false;
 
   return (
@@ -36,10 +39,21 @@ const Search: NextPage = () => {
 
       {foundPhrase ? <NewsList /> : <NoSearch />}
 
-      <Sponsors />
+      <Sponsors data={advertisement} />
       <Footer />
     </S.Container>
   );
 };
 
 export default Search;
+
+export const getStaticProps: GetStaticProps = async () => {
+  const advertisement = await getAdvertisement();
+
+  return {
+    props: {
+      advertisement: advertisement ? advertisement : [],
+    },
+    revalidate: 60 * 30,
+  };
+};

@@ -38,6 +38,8 @@ export const ContentNewsHeader = styled(C.Flex)`
   align-items: flex-start;
   justify-content: flex-start;
 
+  border-bottom: 1px solid #d3d3d3;
+
   > h1 {
     margin-bottom: 0.5rem;
 
@@ -70,7 +72,6 @@ export const ContentNewsHeader = styled(C.Flex)`
     font-weight: 400;
     font-size: 1.9rem;
     line-height: 2.4rem;
-    border-bottom: 1px solid #d3d3d3;
     color: ${theme.colors.text.description};
     font-family: ${theme.fonts.roboto_condensed};
 
@@ -92,11 +93,10 @@ export const ContentImage = styled(C.Flex)`
   width: 100%;
   height: auto;
   max-width: 81.9rem;
-  margin-bottom: 5rem;
 
   > img {
     width: 100%;
-    height: 50rem;
+    height: auto;
     max-width: 81.9rem;
 
     @media (max-width: 767px) {
@@ -119,18 +119,23 @@ export const ContentDescription = styled(C.Flex)`
   width: 100%;
   height: auto;
   max-width: 92.5rem;
-  min-height: 93.6rem;
 
-  > p {
-    font-weight: 400;
-    font-size: 1.9rem;
-    line-height: 3.4rem;
-    text-align: justify;
-    font-family: ${theme.fonts.roboto};
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
 
-    @media (max-width: 767px) {
-      font-size: 1.7rem;
-      line-height: 3rem;
-    }
+  font-weight: 400;
+  font-size: 1.9rem;
+  line-height: 3.4rem;
+  text-align: justify;
+  font-family: ${theme.fonts.roboto};
+
+  img {
+    display: none;
+  }
+
+  @media (max-width: 767px) {
+    font-size: 1.7rem;
+    line-height: 3rem;
   }
 `;
