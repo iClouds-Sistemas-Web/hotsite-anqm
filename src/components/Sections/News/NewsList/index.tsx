@@ -64,9 +64,8 @@ export function NewsList() {
                               }
                             )
                           : ''}
-                        <span> •</span>
                       </C.Text>
-
+                      <span>•</span>
                       <C.Text as="p" isTruncated noOfLines={[3, 3, 1]}>
                         {newsList.title}
                       </C.Text>

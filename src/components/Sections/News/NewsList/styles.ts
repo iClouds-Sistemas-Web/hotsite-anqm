@@ -40,6 +40,7 @@ export const ListItem = styled.li`
 
   span {
     margin-bottom: 3rem;
+    margin-left: 0.5rem;
 
     cursor: pointer;
     font-weight: 700;
@@ -52,6 +53,9 @@ export const ListItem = styled.li`
     }
 
     @media (max-width: 767px) {
+      margin-bottom: 0;
+      margin-left: 0;
+
       font-size: 1.5rem;
       line-height: 2rem;
     }
@@ -75,8 +79,22 @@ export const ListItem = styled.li`
     }
 
     @media (max-width: 767px) {
+      margin-left: 0;
+
       font-size: 1.5rem;
       line-height: 2rem;
+    }
+  }
+`;
+
+export const ListItemContent = styled(C.Flex)`
+  > span {
+    min-width: fit-content;
+
+    @media (max-width: 767px) {
+      &:last-of-type {
+        display: none;
+      }
     }
   }
 
@@ -87,33 +105,12 @@ export const ListItem = styled.li`
   }
 `;
 
-export const ListItemContent = styled(C.Flex)`
-  > span {
-    min-width: fit-content;
-  }
-`;
-
 export const ContentPagination = styled(C.Flex)`
   margin: 5rem 0;
 
   gap: 1rem;
   align-items: center;
   justify-content: center;
-
-  > img {
-    width: 1rem;
-    height: 1rem;
-
-    :nth-of-type(1) {
-      width: 3rem;
-      height: 3rem;
-    }
-
-    :nth-of-type(6) {
-      width: 3rem;
-      height: 3rem;
-    }
-  }
 
   @media (max-width: 479px) {
     margin: 2rem 0 0;
