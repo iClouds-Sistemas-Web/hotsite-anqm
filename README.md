@@ -1,15 +1,13 @@
 <div align="center">
-  <img src="https://img.shields.io/static/v1?label=Next&message=12.1.0&color=#4cb5f1%3CCOLOR%3E&style=plastic%3CSTYLE%3E&logo=react%3CLOGO%3E" alt="Version of the react" />
+  <img src="https://img.shields.io/static/v1?label=Next&message=12.1.6&color=#4cb5f1%3CCOLOR%3E&style=plastic%3CSTYLE%3E&logo=react%3CLOGO%3E" alt="Version of the react" />
 
-  <img src="https://img.shields.io/static/v1?label=React&message=17.0.2&color=#4cb5f1%3CCOLOR%3E&style=plastic%3CSTYLE%3E&logo=react%3CLOGO%3E" />
+  <img src="https://img.shields.io/static/v1?label=React&message=18.1.0&color=#4cb5f1%3CCOLOR%3E&style=plastic%3CSTYLE%3E&logo=react%3CLOGO%3E" />
 
-  <img src="https://img.shields.io/static/v1?label=TypeScript&message=4.5.4&color=#4cb5f1%3CCOLOR%3E&style=plastic%3CSTYLE%3E&logo=react%3CLOGO%3E" />
+  <img src="https://img.shields.io/static/v1?label=TypeScript&message=4.6.4&color=#4cb5f1%3CCOLOR%3E&style=plastic%3CSTYLE%3E&logo=react%3CLOGO%3E" />
 
-  <img src="https://img.shields.io/static/v1?label=Styled Components&message=5.3.3&color=#4cb5f1%3CCOLOR%3E&style=plastic%3CSTYLE%3E&logo=react%3CLOGO%3E" />
+  <img src="https://img.shields.io/static/v1?label=Chakra-ui&message=1.8.8&color=#4cb5f1%3CCOLOR%3E&style=plastic%3CSTYLE%3E&logo=react%3CLOGO%3E" />
 
-  <img src="https://img.shields.io/static/v1?label=Plop&message=3.0.5&color=#4cb5f1%3CCOLOR%3E&style=plastic%3CSTYLE%3E&logo=react%3CLOGO%3E" />
-
-  <img src="https://img.shields.io/static/v1?label=Jest&message=27.4.5&color=#4cb5f1%3CCOLOR%3E&style=plastic%3CSTYLE%3E&logo=react%3CLOGO%3E" />
+  <img src="https://img.shields.io/static/v1?label=Plop&message=3.1.0&color=#4cb5f1%3CCOLOR%3E&style=plastic%3CSTYLE%3E&logo=react%3CLOGO%3E" />
 
   <img src="https://img.shields.io/static/v1?label=Husky&message=7.0.4&color=#4cb5f1%3CCOLOR%3E&style=plastic%3CSTYLE%3E&logo=react%3CLOGO%3E" />
 </div>
@@ -36,9 +34,8 @@ As seguintes ferramentas foram usadas na construção do projeto:
 - [TypeScript](https://www.typescriptlang.org/)
 
 #### Auxiliares
-- [Jest](https://jestjs.io/)
 - [Plop](https://plopjs.com/)
-- [Styled Components](https://styled-components.com/)
+- [Chakra](https://chakra-ui.com/)
 
 #### Padronização de código/commits:
 - [Husky](https://typicode.github.io/husky/#/)

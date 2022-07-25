@@ -25,7 +25,7 @@ export function Carousel({ children }: CarouselProps) {
           {children}
         </Flicking>
       ) : (
-        <div>Nenhum carrossel encontrado!</div>
+        <div>Nenhum carrossel encontrado!!</div>
       )}
     </>
   );

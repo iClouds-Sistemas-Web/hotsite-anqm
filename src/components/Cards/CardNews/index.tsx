@@ -14,15 +14,10 @@ export function CardNews({ data }: CardProps) {
     <S.Container>
       <S.Wrapper>
         <S.ContentImage>
-          <NextLink href={data.slug}>
-            <C.Link>
-              <C.Image
-                src={data.cover.src}
-                alt={data.cover.alt}
-                fallbackSrc="https://cdn.neemo.com.br/uploads/settings_webdelivery/logo/8029/image-not-found.jpg"
-              />
-            </C.Link>
-          </NextLink>
+          <C.Image
+            src={data.cover.file}
+            fallbackSrc="/images/image-not-found.jpg"
+          />
         </S.ContentImage>
 
         <S.ContentDescription>

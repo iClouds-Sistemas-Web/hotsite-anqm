@@ -29,7 +29,10 @@ export function NewsDescription({ data }: NewsContentProps) {
         </S.ContentNewsHeader>
 
         <S.ContentImage>
-          <C.Image src={data.content_files[0].file_url} alt={data.title} />
+          <C.Image
+            src="/images/png/img-news-destaque.png"
+            fallbackSrc="/images/image-not-found.jpg"
+          />
         </S.ContentImage>
 
         <S.ContentDescription

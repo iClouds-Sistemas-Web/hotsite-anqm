@@ -23,15 +23,10 @@ export function News({ data, children, amount_of_news }: NewsProps) {
 
         <S.ContentTopNews as="section">
           <S.ContentImage>
-            <NextLink href={data[0].slug}>
-              <C.Link>
-                <C.Image
-                  src={data[0].cover.src}
-                  alt={data[0].cover.alt}
-                  fallbackSrc="https://cdn.neemo.com.br/uploads/settings_webdelivery/logo/8029/image-not-found.jpg"
-                />
-              </C.Link>
-            </NextLink>
+            <C.Image
+              src={data.news[0].cover.file}
+              fallbackSrc="/images/image-not-found.jpg"
+            />
           </S.ContentImage>
 
           <S.ContentDescription>

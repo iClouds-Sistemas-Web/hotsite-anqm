@@ -48,6 +48,8 @@ export const ContentContact = styled(C.Flex)`
   flex-direction: column;
   justify-content: flex-start;
 
+  cursor: pointer;
+
   > p {
     font-weight: 400;
     font-size: 1.9rem;
@@ -187,25 +189,27 @@ export const ContentNavigation = styled(C.Flex)`
   min-height: 2.8rem;
   margin-bottom: 10rem;
 
+  gap: 4rem;
   align-items: center;
   justify-content: center;
 
-  ul {
-    gap: 4rem;
-    display: flex;
+  @media (max-width: 1279px) {
+    display: none;
   }
+`;
 
-  li {
-    list-style-type: none;
-  }
-
+export const Link = styled(C.Link)`
   font-size: 1.2rem;
   line-height: 2.8rem;
   color: ${theme.colors.text.footer};
   font-family: ${theme.fonts.roboto};
 
-  @media (max-width: 1279px) {
-    display: none;
+  :hover {
+    text-decoration: none;
+  }
+
+  &:focus {
+    box-shadow: none;
   }
 `;
 
@@ -229,7 +233,7 @@ export const ContentCopyright = styled(C.Flex)`
     font-family: ${theme.fonts.roboto};
   }
 
-  > img {
+  img {
     right: 10rem;
     position: relative;
 
@@ -238,7 +242,7 @@ export const ContentCopyright = styled(C.Flex)`
   }
 
   @media (max-width: 767px) {
-    > img {
+    img {
       right: 2rem;
     }
   }
@@ -246,7 +250,7 @@ export const ContentCopyright = styled(C.Flex)`
   @media (max-width: 767px) {
     min-height: 3rem;
 
-    > img {
+    img {
       right: 2rem;
 
       width: 2.52rem;

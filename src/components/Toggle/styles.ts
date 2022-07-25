@@ -21,6 +21,9 @@ export const Button = styled(C.Button)`
 `;
 
 export const DrawerContent = styled(C.DrawerContent)`
+  z-index: 2000;
+  position: fixed;
+
   max-width: 27.9rem;
 `;
 
@@ -49,6 +52,10 @@ export const Link = styled(C.Link)`
 
   :nth-of-type(8) {
     border: none;
+  }
+
+  &:focus {
+    box-shadow: none;
   }
 `;
 
