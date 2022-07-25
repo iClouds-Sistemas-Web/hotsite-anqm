@@ -1,5 +1,6 @@
 import styled from '@emotion/styled';
 import * as C from '@chakra-ui/react';
+import { Flex } from '@chakra-ui/react';
 
 import { personTheme as theme } from '~/styles/theme';
 
@@ -30,24 +31,25 @@ export const Wrapper = styled(C.Flex)`
   }
 `;
 
-export const List = styled.ul`
-  list-style: none;
-`;
+export const List = styled(Flex)``;
 
 export const ListItem = styled.li`
-  margin-bottom: 3rem;
-
   display: flex;
+  flex-direction: column;
   align-items: flex-start;
 
-  > span {
-    min-width: 20rem;
-    margin-right: 0.5rem;
+  span {
+    margin-bottom: 3rem;
 
+    cursor: pointer;
     font-weight: 700;
     font-size: 1.9rem;
     line-height: 2.4rem;
     font-family: ${theme.fonts.roboto};
+
+    &:last-child {
+      margin-bottom: 0;
+    }
 
     @media (max-width: 767px) {
       font-size: 1.5rem;
@@ -55,19 +57,22 @@ export const ListItem = styled.li`
     }
   }
 
-  :last-of-type {
-    margin-bottom: 0;
-  }
-
-  > p {
+  p {
+    cursor: pointer;
     width: 100%;
     max-width: 82rem;
+    margin-bottom: 3rem;
+    margin-left: 0.5rem;
 
     font-weight: 400;
     font-size: 1.9rem;
     line-height: 2.4rem;
     white-space: normal;
     font-family: ${theme.fonts.roboto};
+
+    &:last-child {
+      margin-bottom: 0;
+    }
 
     @media (max-width: 767px) {
       font-size: 1.5rem;
@@ -79,6 +84,12 @@ export const ListItem = styled.li`
     margin-bottom: 1rem;
 
     flex-direction: column;
+  }
+`;
+
+export const ListItemContent = styled(C.Flex)`
+  > span {
+    min-width: fit-content;
   }
 `;
 
