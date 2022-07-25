@@ -7,9 +7,11 @@ import * as C from '@chakra-ui/react';
 import { NewsContentProps } from '~/interfaces/news';
 
 export function NewsDescription({ data }: NewsContentProps) {
-  const date = format(new Date(data.date || ''), "dd 'de' MMMM 'de' yyyy", {
-    locale: BR,
-  });
+  const date = data.date
+    ? format(new Date(data.date), "dd 'de' MMMM 'de' yyyy", {
+        locale: BR,
+      })
+    : '';
 
   if (!data) {
     return <></>;

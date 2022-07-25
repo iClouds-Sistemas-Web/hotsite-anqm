@@ -125,22 +125,20 @@ export const ContentDescription = styled(C.Flex)`
   flex-direction: column;
   justify-content: center;
 
+  font-weight: 400;
+  font-size: 1.9rem;
+  line-height: 3.4rem;
+  text-align: justify;
+  font-family: ${theme.fonts.roboto};
+
   img {
     width: 100%;
     height: 50rem;
-    max-width: 81.9rem;
+    padding: 0 2rem;
   }
 
-  p {
-    font-weight: 400;
-    font-size: 1.9rem;
-    line-height: 3.4rem;
-    text-align: justify;
-    font-family: ${theme.fonts.roboto};
-
-    @media (max-width: 767px) {
-      font-size: 1.7rem;
-      line-height: 3rem;
-    }
+  @media (max-width: 767px) {
+    font-size: 1.7rem;
+    line-height: 3rem;
   }
 `;
