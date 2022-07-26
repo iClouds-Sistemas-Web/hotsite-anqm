@@ -10,12 +10,16 @@ export function Footer() {
   return (
     <S.Container as="footer">
       <S.Wrapper>
-        <S.ContentLogoMobile>
-          <C.Image
-            src="/images/svg/logo-anqm-mobile.svg"
-            alt="Logo Associação Norte-Riograndense de Criadores de Cavalo, cor do texto branco, com detalhes em verde e amarelo"
-          />
-        </S.ContentLogoMobile>
+        <NextLink href="/">
+          <C.Link>
+            <S.ContentLogoMobile>
+              <C.Image
+                src="/images/svg/logo-anqm-mobile.svg"
+                alt="Logo Associação Norte-Riograndense de Criadores de Cavalo, cor do texto branco, com detalhes em verde e amarelo"
+              />
+            </S.ContentLogoMobile>
+          </C.Link>
+        </NextLink>
 
         <Link href={'/contato'}>
           <S.ContentContact>
@@ -24,12 +28,16 @@ export function Footer() {
           </S.ContentContact>
         </Link>
 
-        <S.ContentLogo>
-          <C.Image
-            src="/images/svg/logo-anqm.svg"
-            alt="Logo Associação Norte-Riograndense de Criadores de Cavalo, cor do texto branco, com detalhes em verde e amarelo"
-          />
-        </S.ContentLogo>
+        <NextLink href="/">
+          <C.Link>
+            <S.ContentLogo>
+              <C.Image
+                src="/images/svg/logo-anqm.svg"
+                alt="Logo Associação Norte-Riograndense de Criadores de Cavalo, cor do texto branco, com detalhes em verde e amarelo"
+              />
+            </S.ContentLogo>
+          </C.Link>
+        </NextLink>
 
         <S.ContentSocialLinks>
           <a
