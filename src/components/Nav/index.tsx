@@ -18,14 +18,18 @@ export function Nav({ styletype }: NavProps) {
 
       <S.Wrapper>
         <S.ContentLogo>
-          <C.Image
-            src={
-              styletype
-                ? '/images/svg/logo-anqm-nav.svg'
-                : '/images/svg/logo-anqm-dark.svg'
-            }
-            alt="Logo Associação Norte-Riograndense de Criadores de Cavalo, cor do texto branco, com detalhes em verde e amarelo"
-          />
+          <NextLink href="/">
+            <C.Link>
+              <C.Image
+                src={
+                  styletype
+                    ? '/images/svg/logo-anqm-nav.svg'
+                    : '/images/svg/logo-anqm-dark.svg'
+                }
+                alt="Logo Associação Norte-Riograndense de Criadores de Cavalo, cor do texto branco, com detalhes em verde e amarelo"
+              />
+            </C.Link>
+          </NextLink>
         </S.ContentLogo>
 
         <S.ContentNavigation>

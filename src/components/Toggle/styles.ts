@@ -57,6 +57,10 @@ export const Link = styled(C.Link)`
   &:focus {
     box-shadow: none;
   }
+
+  &:hover {
+    text-decoration: none;
+  }
 `;
 
 export const DrawerFooter = styled(C.DrawerFooter)`
