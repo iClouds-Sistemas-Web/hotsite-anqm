@@ -59,7 +59,13 @@ export function Toggle({ styletype }: ToggleProps) {
                 </S.Link>
               ) : (
                 <NextLink key={item.id} href={item.url}>
-                  <S.Link styletype={styletype}>{item.title}</S.Link>
+                  {item.scrollLink ? (
+                    <S.Link styletype={styletype} onClick={onClose}>
+                      {item.title}
+                    </S.Link>
+                  ) : (
+                    <S.Link styletype={styletype}>{item.title}</S.Link>
+                  )}
                 </NextLink>
               )
             )}
