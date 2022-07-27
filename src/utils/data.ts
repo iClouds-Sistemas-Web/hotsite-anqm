@@ -5,6 +5,7 @@ export const data = {
       url: '/',
       title: `Início`,
       externalLink: false,
+      scrollLink: false,
     },
 
     {
@@ -12,6 +13,7 @@ export const data = {
       url: '/noticias',
       title: `Notícias`,
       externalLink: false,
+      scrollLink: false,
     },
 
     {
@@ -19,6 +21,7 @@ export const data = {
       url: '/sobre',
       title: `Institucional`,
       externalLink: false,
+      scrollLink: false,
     },
 
     {
@@ -26,6 +29,7 @@ export const data = {
       url: 'https://www.equester.com.br/',
       title: `Ranking`,
       externalLink: true,
+      scrollLink: false,
     },
 
     {
@@ -33,6 +37,7 @@ export const data = {
       url: '/#events',
       title: `Eventos`,
       externalLink: false,
+      scrollLink: true,
     },
 
     {
@@ -40,6 +45,7 @@ export const data = {
       url: 'https://www.equester.com.br/',
       title: `Resultados`,
       externalLink: true,
+      scrollLink: false,
     },
 
     {
@@ -47,6 +53,7 @@ export const data = {
       url: '/associar',
       title: `Associe-se`,
       externalLink: false,
+      scrollLink: false,
     },
 
     {
@@ -54,6 +61,7 @@ export const data = {
       url: '/contato',
       title: `Contatos`,
       externalLink: false,
+      scrollLink: false,
     },
   ],
 };
