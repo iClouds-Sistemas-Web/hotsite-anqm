@@ -36,10 +36,14 @@ export function Toggle({ styletype }: ToggleProps) {
             }}
           />
           <S.DrawerHeader>
-            <C.Image
-              src="/images/svg/logo-anqm-dark.svg"
-              alt="Logo Associação Norte-Riograndense de Criadores de Cavalo, cor do texto branco e preto, com detalhes em verde e amarelo"
-            />
+            <NextLink href="/">
+              <C.Link>
+                <C.Image
+                  src="/images/svg/logo-anqm-dark.svg"
+                  alt="Logo Associação Norte-Riograndense de Criadores de Cavalo, cor do texto branco e preto, com detalhes em verde e amarelo"
+                />
+              </C.Link>
+            </NextLink>
           </S.DrawerHeader>
 
           <DrawerBody>
@@ -55,7 +59,13 @@ export function Toggle({ styletype }: ToggleProps) {
                 </S.Link>
               ) : (
                 <NextLink key={item.id} href={item.url}>
-                  <S.Link styletype={styletype}>{item.title}</S.Link>
+                  {item.scrollLink ? (
+                    <S.Link styletype={styletype} onClick={onClose}>
+                      {item.title}
+                    </S.Link>
+                  ) : (
+                    <S.Link styletype={styletype}>{item.title}</S.Link>
+                  )}
                 </NextLink>
               )
             )}

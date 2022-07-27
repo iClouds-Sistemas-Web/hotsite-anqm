@@ -5,7 +5,8 @@ import * as C from '@chakra-ui/react';
 
 export function Events() {
   return (
-    <S.Container as="section" id="events">
+    <S.Container as="section">
+      <C.Flex id="events" top="-8rem" position="absolute" />
       <S.Wrapper>
         <S.ContentEQuesterImage>
           <a

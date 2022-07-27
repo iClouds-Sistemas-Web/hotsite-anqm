@@ -4,6 +4,8 @@ import * as C from '@chakra-ui/react';
 import { personTheme as theme } from '~/styles/theme';
 
 export const Container = styled(C.Flex)`
+  position: relative;
+
   width: 100%;
   height: auto;
   margin: 0 auto;

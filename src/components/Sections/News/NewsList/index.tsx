@@ -30,7 +30,7 @@ export function NewsList() {
       .then((response) => {
         setIsLoading(true);
         setData(response.data.contents);
-        setTotalCountOfRegisters(response.headers['content-length']);
+        setTotalCountOfRegisters(response.data.divisionByPage);
         setIsLoading(false);
       });
   }, [page]);
@@ -39,7 +39,11 @@ export function NewsList() {
     <S.Container as="section">
       <S.Wrapper>
         {isLoading ? (
-          <Stack paddingBottom={20} justifyContent="center" alignItems="center">
+          <Stack
+            paddingBottom={20}
+            justifyContent="flex-start"
+            alignItems="flex-start"
+          >
             <Skeleton width="50%" height="10px" />
             <Skeleton width="50%" height="10px" />
             <Skeleton width="50%" height="10px" />

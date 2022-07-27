@@ -1,4 +1,5 @@
-import { Stack, Text } from '@chakra-ui/react';
+import * as C from '@chakra-ui/react';
+import { Stack } from '@chakra-ui/react';
 import { PaginationItem } from './PaginationItem';
 
 interface PaginationProps {
@@ -20,7 +21,7 @@ function generatePagesArray(from: number, to: number) {
 
 export function Pagination({
   totalCountOfRegisters,
-  registersPerPage = 12,
+  registersPerPage = 1,
   currentPage = 1,
   onPageChange,
 }: PaginationProps) {
@@ -47,14 +48,12 @@ export function Pagination({
       justify="center"
       direction={['column', 'row']}
     >
-      <Stack direction="row" spacing="2">
+      <Stack direction="row" spacing={2.5}>
         {currentPage > 1 + siblingsCount && (
           <>
             <PaginationItem onPageChange={onPageChange} number={1} />
-            {currentPage > 2 + siblingsCount && (
-              <Text color="gray.300" width="5" textAlign="center">
-                ...
-              </Text>
+            {currentPage > 1 + siblingsCount && (
+              <C.Image src="/images/svg/reticence.svg" alt="Reticence" />
             )}
           </>
         )}
@@ -90,9 +89,7 @@ export function Pagination({
         {currentPage + siblingsCount < lastPage && (
           <>
             {currentPage + 1 + siblingsCount < lastPage && (
-              <Text color="gray.300" width="5" textAlign="center">
-                ...
-              </Text>
+              <C.Image src="/images/svg/reticence.svg" alt="Reticence" />
             )}
             <PaginationItem onPageChange={onPageChange} number={lastPage} />
           </>
