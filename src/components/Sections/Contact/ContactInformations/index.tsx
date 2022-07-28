@@ -55,7 +55,11 @@ export function ContactInformations() {
           </S.ContentInformations>
 
           <S.ContentMap>
-            {/* <C.Image src="/images/png/map-contact.png" alt="" /> */}
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3968.4672139272!2d-35.267171384829766!3d-5.930142459987723!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7b257714f30b7d3%3A0x8b95b94a4134b515!2sRod.%20Gov.%20M%C3%A1rio%20Covas%2C%20111%20-%20Centro%2C%20Parnamirim%20-%20RN%2C%2059140-001!5e0!3m2!1spt-BR!2sbr!4v1658861709522!5m2!1spt-BR!2sbr"
+              width="610px"
+              height="340"
+            ></iframe>
           </S.ContentMap>
         </S.InformationsGroup>
       </S.Wrapper>

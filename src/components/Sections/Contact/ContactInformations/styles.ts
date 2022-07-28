@@ -158,7 +158,6 @@ export const ContentMap = styled(C.Flex)`
   background-size: auto;
   background-repeat: no-repeat;
   background-position-x: 45%;
-  background-image: url('images/png/map-contact.png');
 
   @media (max-width: 991px) {
     min-height: 40rem;
