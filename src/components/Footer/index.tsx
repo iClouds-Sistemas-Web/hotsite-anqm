@@ -10,16 +10,16 @@ export function Footer() {
   return (
     <S.Container as="footer">
       <S.Wrapper>
-        <NextLink href="/">
-          <C.Link>
-            <S.ContentLogoMobile>
+        <S.ContentLogoMobile>
+          <NextLink href="/">
+            <C.Link>
               <C.Image
                 src="/images/svg/logo-anqm-mobile.svg"
                 alt="Logo Associação Norte-Riograndense de Criadores de Cavalo, cor do texto branco, com detalhes em verde e amarelo"
               />
-            </S.ContentLogoMobile>
-          </C.Link>
-        </NextLink>
+            </C.Link>
+          </NextLink>
+        </S.ContentLogoMobile>
 
         <Link href={'/contato'}>
           <S.ContentContact>
@@ -28,16 +28,16 @@ export function Footer() {
           </S.ContentContact>
         </Link>
 
-        <NextLink href="/">
-          <C.Link>
-            <S.ContentLogo>
+        <S.ContentLogo>
+          <NextLink href="/">
+            <C.Link>
               <C.Image
                 src="/images/svg/logo-anqm.svg"
                 alt="Logo Associação Norte-Riograndense de Criadores de Cavalo, cor do texto branco, com detalhes em verde e amarelo"
               />
-            </S.ContentLogo>
-          </C.Link>
-        </NextLink>
+            </C.Link>
+          </NextLink>
+        </S.ContentLogo>
 
         <S.ContentSocialLinks>
           <a
