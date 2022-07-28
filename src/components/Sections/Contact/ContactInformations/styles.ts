@@ -107,7 +107,7 @@ export const ContentContactDescription = styled(C.Flex)`
   flex-direction: column;
 
   > h3 {
-    font-weight: 400;
+    font-weight: 600;
     font-size: 1.9rem;
     line-height: 3rem;
     font-family: ${theme.fonts.roboto};
