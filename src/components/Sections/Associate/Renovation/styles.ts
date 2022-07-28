@@ -91,6 +91,8 @@ export const Button = styled(C.Button)`
   min-width: 40rem;
   min-height: 8rem;
 
+  display: none;
+
   color: #ffffff;
   font-weight: 600;
   font-size: 1.9rem;
