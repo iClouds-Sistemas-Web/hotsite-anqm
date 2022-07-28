@@ -62,31 +62,33 @@ export function Channels() {
           </S.ContentButton>
         </a>
 
-        <a href="//www.equester.com.br/" target={'_blank'} rel="noreferrer">
-          <S.ContentButton>
-            <S.ContentIcon>
-              <C.Image
-                src="/images/svg/ellipse-associate-orange.svg"
-                alt="Imagem circular de cor laranja"
-              />
-              <C.Image
-                className="ellipse-white"
-                src="/images/svg/ellipse-associate-white.svg"
-                alt="Imagem circular de cor branco"
-              />
-              <C.Image
-                className="icon"
-                src="/images/svg/icon-events.svg"
-                alt="Ícone calendário com borda laranja"
-              />
-            </S.ContentIcon>
-            <C.Text as="h1">Eventos</C.Text>
-            <p>
-              Veja os próximos eventos!
-              <br /> Fique por dentro de todas as novidades.
-            </p>
-          </S.ContentButton>
-        </a>
+        <NextLink href="/#events">
+          <C.Link style={{ textDecoration: 'none' }}>
+            <S.ContentButton>
+              <S.ContentIcon>
+                <C.Image
+                  src="/images/svg/ellipse-associate-orange.svg"
+                  alt="Imagem circular de cor laranja"
+                />
+                <C.Image
+                  className="ellipse-white"
+                  src="/images/svg/ellipse-associate-white.svg"
+                  alt="Imagem circular de cor branco"
+                />
+                <C.Image
+                  className="icon"
+                  src="/images/svg/icon-events.svg"
+                  alt="Ícone calendário com borda laranja"
+                />
+              </S.ContentIcon>
+              <C.Text as="h1">Eventos</C.Text>
+              <p>
+                Veja os próximos eventos!
+                <br /> Fique por dentro de todas as novidades.
+              </p>
+            </S.ContentButton>
+          </C.Link>
+        </NextLink>
       </S.Wrapper>
     </S.Container>
   );

@@ -50,7 +50,7 @@ export const ContentContact = styled(C.Flex)`
 
   cursor: pointer;
 
-  > p {
+  p {
     font-weight: 400;
     font-size: 1.9rem;
     line-height: 2.4rem;
@@ -121,7 +121,7 @@ export const ContentSocialLinks = styled(C.Flex)`
   }
 
   p {
-    margin: 1rem;
+    margin: 1rem 0 1rem 1rem;
 
     font-size: 2rem;
     font-weight: 300;
