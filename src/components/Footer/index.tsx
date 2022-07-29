@@ -83,19 +83,21 @@ export function Footer() {
         )}
       </S.ContentNavigation>
 
-      <S.ContentCopyright>
-        <C.Text as="p">2022 ACQM - TODOS OS DIREITOS RESERVADOS</C.Text>
-        <a
-          href="https://www.iclouds.com.br/"
-          target={'_blank'}
-          rel="noreferrer"
-        >
+      <a
+        href="https://www.iclouds.com.br/"
+        style={{ width: '100%' }}
+        target={'_blank'}
+        rel="noreferrer"
+      >
+        <S.ContentCopyright>
+          <C.Text as="p">2022 ACQM - TODOS OS DIREITOS RESERVADOS</C.Text>
+
           <C.Image
             src="/images/svg/icon-iClouds-logo.svg"
             alt="Ícone iClouds, nuvem com letras iC com fundo cinza escuro"
           />
-        </a>
-      </S.ContentCopyright>
+        </S.ContentCopyright>
+      </a>
     </S.Container>
   );
 }

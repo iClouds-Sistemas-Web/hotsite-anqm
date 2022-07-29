@@ -44,13 +44,14 @@ export const ContentTitle = styled(C.Flex)`
     font-family: ${theme.fonts.anton};
 
     @media (max-width: 479px) {
-      font-size: 4rem;
+      font-size: 3.4rem;
       line-height: 3.9rem;
     }
-    @media (max-width: 479px) {
-      min-height: 4.6rem;
-      margin-bottom: 1rem;
-    }
+  }
+
+  @media (max-width: 479px) {
+    min-height: 6rem;
+    margin-bottom: 1rem;
   }
 `;
 
@@ -155,8 +156,8 @@ export const ContentMap = styled(C.Flex)`
   min-height: 33.9rem;
 
   background-size: auto;
-  background-repeat: no-repeat;
   background-position-x: 45%;
+  background-repeat: no-repeat;
 
   @media (max-width: 991px) {
     min-height: 40rem;
