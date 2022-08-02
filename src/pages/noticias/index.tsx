@@ -1,3 +1,5 @@
+import Router from 'next/router';
+import { useState } from 'react';
 import { NextSeo } from 'next-seo';
 import type { GetStaticProps, NextPage } from 'next';
 
@@ -15,6 +17,12 @@ import { getNewsPagination } from '~/services/functions/getNewsPagination';
 import { pagesDataProps } from '~/interfaces/pagesDataProps';
 
 const AllNews: NextPage = ({ advertisement, recentNews }: pagesDataProps) => {
+  const [search, setSearch] = useState('');
+
+  function handleNewSearch() {
+    Router.push(`/noticias/buscar?search=${search.replace(' ', '-')}`);
+  }
+
   return (
     <S.Container>
       <NextSeo
@@ -28,14 +36,17 @@ const AllNews: NextPage = ({ advertisement, recentNews }: pagesDataProps) => {
             <C.Text as="span">Notícias</C.Text>
           </S.ContentTitle>
           <S.InputGroup>
-            <S.InputLeftElement pointerEvents="none">
-              <BiSearchAlt2 />
-            </S.InputLeftElement>
             <S.Input
               type="text"
-              placeholder="Buscar notícia"
+              placeholder="Buscar título da notícia..."
               _focus={{ boxShadow: 'none' }}
+              onChange={(e) => setSearch(e.target.value)}
             />
+            <S.InputRightElement>
+              <button onClick={handleNewSearch}>
+                <BiSearchAlt2 />
+              </button>
+            </S.InputRightElement>
           </S.InputGroup>
         </News>
         <NewsList />

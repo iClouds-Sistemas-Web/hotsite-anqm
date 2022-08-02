@@ -1,13 +1,17 @@
-import { ReactNode } from 'react';
+import { ReactNode, useContext } from 'react';
 
 import * as S from './styles';
 import * as C from '@chakra-ui/react';
+import { ApplicationContext } from '~/hooks/Application';
 
 interface SearchProps {
   children?: ReactNode;
+  totalRegisters: string;
 }
 
-export function Search({ children }: SearchProps) {
+export function Search({ children, totalRegisters }: SearchProps) {
+  const { search } = useContext(ApplicationContext);
+
   return (
     <S.Container as="section">
       <S.Wrapper>
@@ -18,7 +22,7 @@ export function Search({ children }: SearchProps) {
         </S.ContentTitle>
         <S.ContentPhrase as="span">
           <p>
-            <strong>&quot;homenagem 30 anos&quot;</strong> - 30 resultados
+            <strong>&quot;{search}&quot;</strong> - {totalRegisters} resultados
           </p>
         </S.ContentPhrase>
       </S.Wrapper>
