@@ -1,39 +1,20 @@
 import NextLink from 'next/link';
-import { useEffect, useState } from 'react';
+import { useContext } from 'react';
 import { Skeleton, Stack } from '@chakra-ui/react';
 
 import { format } from 'date-fns';
 import BR from 'date-fns/locale/pt-BR';
-import { api } from '~/services/config';
 
 import { Pagination } from '~/components/Pagination';
 
 import * as S from './styles';
 import * as C from '@chakra-ui/react';
 
-import { News } from '~/interfaces/news';
+import { ApplicationContext } from '~/hooks/Application';
 
 export function NewsList() {
-  const [page, setPage] = useState(1);
-
-  const [data, setData] = useState<News[]>([]);
-
-  const [totalCountOfRegisters, setTotalCountOfRegisters] = useState('');
-
-  const [isLoading, setIsLoading] = useState(true);
-
-  useEffect(() => {
-    api
-      .get(
-        `contents?clientId=${process.env.NEXT_PUBLIC_CLIENT_ID}&page=${page}&amountNews=10&indexId=2`
-      )
-      .then((response) => {
-        setIsLoading(true);
-        setData(response.data.contents);
-        setTotalCountOfRegisters(response.data.divisionByPage);
-        setIsLoading(false);
-      });
-  }, [page]);
+  const { data, page, setPage, isLoading, totalCountOfRegisters } =
+    useContext(ApplicationContext);
 
   return (
     <S.Container as="section">
@@ -79,11 +60,13 @@ export function NewsList() {
               </S.ListItem>
             </S.List>
             <S.ContentPagination>
-              <Pagination
-                totalCountOfRegisters={Number(totalCountOfRegisters)}
-                currentPage={page}
-                onPageChange={setPage}
-              />
+              {Number(totalCountOfRegisters) > 1 && (
+                <Pagination
+                  totalCountOfRegisters={Number(totalCountOfRegisters)}
+                  currentPage={page}
+                  onPageChange={setPage}
+                />
+              )}
             </S.ContentPagination>
           </>
         )}
