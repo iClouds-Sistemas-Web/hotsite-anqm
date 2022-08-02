@@ -104,14 +104,24 @@ export const InputGroup = styled(C.InputGroup)`
   }
 `;
 
-export const InputLeftElement = styled(C.InputLeftElement)`
+export const InputRightElement = styled(C.InputRightElement)`
   width: 4.8rem;
   height: 4.8rem;
   margin-top: 2rem;
 
-  > svg {
-    width: 1.75rem;
+  svg {
+    width: 100%;
     height: 1.75rem;
+
+    color: ${theme.colors.white};
+  }
+
+  button {
+    width: 3.2rem;
+    height: 3.2rem;
+
+    border-radius: 4px;
+    background-color: #0e4f25;
   }
 
   @media (max-width: 479px) {
@@ -122,15 +132,15 @@ export const InputLeftElement = styled(C.InputLeftElement)`
 export const Input = styled(C.Input)`
   width: 100%;
   height: 4.8rem;
-  padding-left: 4.8rem;
 
   font-size: 1.6rem;
   line-height: 2.4rem;
-  font-family: ${theme.fonts.roboto};
-
   border: 1px solid #b3b3b3;
+  font-family: ${theme.fonts.roboto};
+  background-color: ${theme.colors.white};
 
   &::placeholder {
+    color: #777777;
     font-size: 1.6rem;
     line-height: 2.4rem;
   }
