@@ -15,6 +15,7 @@ type ApplicationData = {
   page: number;
   search?: string;
   isLoading: boolean;
+  amountOfRegisters: string;
   totalCountOfRegisters: string;
   setPage: (props: SetStateAction<number>) => void;
   setSearch: (props: SetStateAction<string>) => void;
@@ -35,6 +36,8 @@ export const ApplicationProvider = ({ children }: ApplicationProps) => {
 
   const [isLoading, setIsLoading] = useState(true);
 
+  const [amountOfRegisters, setAmountOfRegisters] = useState('');
+
   const [totalCountOfRegisters, setTotalCountOfRegisters] = useState('');
 
   const { query } = useRouter();
@@ -52,9 +55,10 @@ export const ApplicationProvider = ({ children }: ApplicationProps) => {
         setIsLoading(true);
         setData(response.data.contents);
         setTotalCountOfRegisters(response.data.divisionByPage);
+        setAmountOfRegisters(response.data.contentsLength);
         setIsLoading(false);
       });
-  }, [page, query.search]);
+  }, [amountOfRegisters, page, query.search]);
 
   return (
     <ApplicationContext.Provider
@@ -65,6 +69,7 @@ export const ApplicationProvider = ({ children }: ApplicationProps) => {
         setPage,
         isLoading,
         setSearch,
+        amountOfRegisters,
         totalCountOfRegisters,
       }}
     >
