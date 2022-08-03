@@ -6,11 +6,10 @@ import { ApplicationContext } from '~/hooks/Application';
 
 interface SearchProps {
   children?: ReactNode;
-  totalRegisters: string;
 }
 
-export function Search({ children, totalRegisters }: SearchProps) {
-  const { search } = useContext(ApplicationContext);
+export function Search({ children }: SearchProps) {
+  const { search, amountOfRegisters } = useContext(ApplicationContext);
 
   return (
     <S.Container as="section">
@@ -22,7 +21,8 @@ export function Search({ children, totalRegisters }: SearchProps) {
         </S.ContentTitle>
         <S.ContentPhrase as="span">
           <p>
-            <strong>&quot;{search}&quot;</strong> - {totalRegisters} resultados
+            <strong>&quot;{search}&quot;</strong> - {amountOfRegisters}{' '}
+            resultados
           </p>
         </S.ContentPhrase>
       </S.Wrapper>
