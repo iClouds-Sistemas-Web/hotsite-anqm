@@ -31,7 +31,7 @@ const Search: NextPage = ({ advertisement }: pagesDataProps) => {
     <S.Container>
       <Nav />
       <S.Wrapper>
-        <SearchComponent totalRegisters="10">
+        <SearchComponent>
           <S.InputGroup>
             <S.Input
               type="text"
