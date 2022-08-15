@@ -8,7 +8,7 @@ import { pagesDataProps } from '~/interfaces/pagesDataProps';
 
 import * as S from '~/styles/pages/sobre';
 
-const About: NextPage = ({ advertisement }: pagesDataProps) => {
+const Institutional: NextPage = ({ advertisement }: pagesDataProps) => {
   return (
     <S.Container>
       <NextSeo
@@ -25,7 +25,7 @@ const About: NextPage = ({ advertisement }: pagesDataProps) => {
   );
 };
 
-export default About;
+export default Institutional;
 
 export const getStaticProps: GetStaticProps = async () => {
   const advertisement = await getAdvertisement();

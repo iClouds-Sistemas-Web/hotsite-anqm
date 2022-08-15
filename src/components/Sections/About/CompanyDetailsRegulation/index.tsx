@@ -3,7 +3,7 @@ import NextLink from 'next/link';
 import * as S from './styles';
 import * as C from '@chakra-ui/react';
 
-export function CompanyDetails() {
+export function CompanyDetailsRegulation() {
   return (
     <S.Container as="section">
       <S.Wrapper>
@@ -37,7 +37,7 @@ export function CompanyDetails() {
           </S.ContentSelect>
 
           <S.ContentInformations>
-            <C.Text as="h1">Sobre a ANQM</C.Text>
+            <C.Text as="h1">Regulamentos</C.Text>
 
             <C.Text as="p">
               Lorem Ipsum is simply dummy text of the printing and typesetting
