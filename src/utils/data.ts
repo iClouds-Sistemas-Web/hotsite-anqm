@@ -18,7 +18,7 @@ export const data = {
 
     {
       id: 2,
-      url: '/sobre',
+      url: '/institucional',
       title: `Institucional`,
       externalLink: false,
       scrollLink: false,
