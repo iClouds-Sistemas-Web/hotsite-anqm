@@ -1,9 +1,16 @@
 import NextLink from 'next/link';
+import { useRouter } from 'next/router';
 
 import * as S from './styles';
 import * as C from '@chakra-ui/react';
 
 export function CompanyDetailsRegulation() {
+  const router = useRouter();
+
+  function handleChange(e) {
+    router.push(`/${e.target.value}`);
+  }
+
   return (
     <S.Container as="section">
       <S.Wrapper>
@@ -29,10 +36,13 @@ export function CompanyDetailsRegulation() {
           </S.ContentAside>
 
           <S.ContentSelect>
-            <S.Select _focus={{ boxShadow: 'none' }} size="lg">
-              <option value="option1">Label</option>
-              <option value="option2">Option 2</option>
-              <option value="option3">Option 3</option>
+            <S.Select
+              _focus={{ boxShadow: 'none' }}
+              size="lg"
+              onChange={handleChange}
+            >
+              <option value="/institucional/regulamento">Regulamentos</option>
+              <option value="/institucional">Sobre a ANQM</option>
             </S.Select>
           </S.ContentSelect>
 
