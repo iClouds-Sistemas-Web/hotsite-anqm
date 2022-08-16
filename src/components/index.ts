@@ -28,6 +28,7 @@ export { NewsDescription } from './Sections/News/NewsSlug/NewsDescription';
 
 // Component: About
 export { CompanyDetails } from './Sections/About/CompanyDetails';
+export { CompanyDetailsRegulation } from './Sections/About/CompanyDetailsRegulation';
 
 // Component: Associate
 export { Renovation } from './Sections/Associate/Renovation';

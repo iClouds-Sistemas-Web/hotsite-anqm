@@ -3,7 +3,9 @@ import { Carousel } from '~/components';
 import * as S from './styles';
 import * as C from '@chakra-ui/react';
 
-export function Events() {
+import { EventsProps } from '~/interfaces/events';
+
+export function Events({ data }: EventsProps) {
   return (
     <S.Container as="section">
       <C.Flex id="events" top="-8rem" position="absolute" />
@@ -26,25 +28,11 @@ export function Events() {
         </S.ContentTitle>
 
         <Carousel>
-          <div className="flicking-panel">
-            <C.Image src="/images/png/img-events.png" alt="Evento" />
-          </div>
-
-          <div className="flicking-panel">
-            <C.Image src="/images/png/img-events.png" alt="Evento" />
-          </div>
-
-          <div className="flicking-panel">
-            <C.Image src="/images/png/img-events.png" alt="Evento" />
-          </div>
-
-          <div className="flicking-panel">
-            <C.Image src="/images/png/img-events.png" alt="Evento" />
-          </div>
-
-          <div className="flicking-panel">
-            <C.Image src="/images/png/img-events.png" alt="Evento" />
-          </div>
+          {data.map((item) => (
+            <div className="flicking-panel" key={item.id}>
+              <C.Image src={item.banner_file.src_medium} alt={item.title} />
+            </div>
+          ))}
         </Carousel>
       </S.Wrapper>
     </S.Container>

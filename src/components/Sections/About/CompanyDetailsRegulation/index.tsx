@@ -4,7 +4,7 @@ import { useRouter } from 'next/router';
 import * as S from './styles';
 import * as C from '@chakra-ui/react';
 
-export function CompanyDetails() {
+export function CompanyDetailsRegulation() {
   const router = useRouter();
 
   function handleChange(e) {
@@ -41,13 +41,13 @@ export function CompanyDetails() {
               size="lg"
               onChange={handleChange}
             >
-              <option value="/institucional">Sobre a ANQM</option>
               <option value="/institucional/regulamento">Regulamentos</option>
+              <option value="/institucional">Sobre a ANQM</option>
             </S.Select>
           </S.ContentSelect>
 
           <S.ContentInformations>
-            <C.Text as="h1">Sobre a ANQM</C.Text>
+            <C.Text as="h1">Regulamentos</C.Text>
 
             <C.Text as="p">
               Lorem Ipsum is simply dummy text of the printing and typesetting
