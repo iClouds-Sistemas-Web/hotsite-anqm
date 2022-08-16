@@ -13,8 +13,7 @@ export const Container = styled(C.Flex)`
   min-height: 70rem;
 
   @media (max-width: 479px) {
-    max-height: 48rem;
-    min-height: 48rem;
+    min-height: 50rem;
   }
 `;
 
@@ -38,29 +37,18 @@ export const Wrapper = styled(C.Flex)`
 
     .flicking-camera {
       .flicking-panel {
-        height: 37rem;
-        width: 27.5rem;
-        min-height: 37rem;
+        width: auto;
+        height: auto;
+        max-height: 39rem;
         max-width: 27.5rem;
-        min-width: 27.5rem;
         margin-right: 4rem;
 
-        > img {
-          width: auto;
-          max-width: fit-content;
-        }
+        display: flex;
 
         @media (max-width: 479px) {
-          max-width: 20rem;
-          min-width: 20rem;
-          margin-top: 3rem;
-          min-height: 27rem;
+          max-width: 24rem;
+          max-height: 32rem;
           margin-right: 1.5rem;
-
-          > img {
-            min-width: 20rem;
-            max-width: 24.4rem;
-          }
         }
       }
     }
