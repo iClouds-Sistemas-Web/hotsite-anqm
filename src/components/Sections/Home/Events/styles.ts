@@ -45,6 +45,10 @@ export const Wrapper = styled(C.Flex)`
 
         display: flex;
 
+        > img {
+          cursor: pointer;
+        }
+
         @media (max-width: 479px) {
           max-width: 24rem;
           max-height: 32rem;
