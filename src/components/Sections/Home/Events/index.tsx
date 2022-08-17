@@ -30,7 +30,13 @@ export function Events({ data }: EventsProps) {
         <Carousel>
           {data.map((item) => (
             <div className="flicking-panel" key={item.id}>
-              <C.Image src={item.banner_file.src_medium} alt={item.title} />
+              <a
+                href={`https://www.equester.com.br/eventos/${item.id}`}
+                target="_blank"
+                rel="noreferrer"
+              >
+                <C.Image src={item.banner_file.src_medium} alt={item.title} />
+              </a>
             </div>
           ))}
         </Carousel>
