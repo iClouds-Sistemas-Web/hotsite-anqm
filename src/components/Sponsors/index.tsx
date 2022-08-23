@@ -18,6 +18,7 @@ export function Sponsors({ data }: AdvertisementProps) {
             <C.Image
               src="/images/svg/logo-equester-sponsors.svg"
               alt="Logo eQuester cor açaí, com fundo branco"
+              fallbackSrc="/images/svg/logo-equester-sponsors.svg"
             />
           </S.ContentCardEQuester>
           {data.map((sponsor) => (

@@ -17,8 +17,8 @@ export function CardNews({ data }: CardProps) {
           <NextLink href={data.slug}>
             <C.Link>
               <C.Image
-                src={data.cover.src}
                 alt={data.title}
+                src={data.cover.src}
                 fallbackSrc="/images/image-not-found.jpg"
               />
             </C.Link>

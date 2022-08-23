@@ -11,7 +11,11 @@ export function CardSponsors({ alt, src }: CardSponsorsProps) {
     <S.Container>
       <S.Wrapper>
         <S.ContentImage>
-          <C.Image src={src} alt={alt} />
+          <C.Image
+            src={src}
+            alt={alt}
+            fallbackSrc="/images/image-not-found.jpg"
+          />
         </S.ContentImage>
       </S.Wrapper>
     </S.Container>
