@@ -18,6 +18,7 @@ export function Events({ data }: EventsProps) {
           >
             <C.Image
               src="/images/svg/tag-eQuester.svg"
+              fallbackSrc="/images/svg/tag-eQuester.svg"
               alt="Etiqueta com logo eQuester, fundo amarelo, texto cor açaí escrito baixe o app "
             />
           </a>
@@ -35,7 +36,11 @@ export function Events({ data }: EventsProps) {
                 target="_blank"
                 rel="noreferrer"
               >
-                <C.Image src={item.banner_file.src_medium} alt={item.title} />
+                <C.Image
+                  alt={item.title}
+                  src={item.banner_file.src_medium}
+                  fallbackSrc="/images/image-not-found.jpg"
+                />
               </a>
             </div>
           ))}

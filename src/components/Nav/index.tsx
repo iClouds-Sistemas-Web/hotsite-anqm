@@ -26,7 +26,12 @@ export function Nav({ styletype }: NavProps) {
                     ? '/images/svg/logo-anqm-nav.svg'
                     : '/images/svg/logo-anqm-dark.svg'
                 }
-                alt="Logo Associação Norte-Riograndense de Criadores de Cavalo, cor do texto branco, com detalhes em verde e amarelo"
+                fallbackSrc={
+                  styletype
+                    ? '/images/svg/logo-anqm-nav.svg'
+                    : '/images/svg/logo-anqm-dark.svg'
+                }
+                alt="Logo Associação Norte-Riograndense de Criadores de Cavalo com detalhes em verde e amarelo"
               />
             </C.Link>
           </NextLink>
@@ -59,6 +64,7 @@ export function Nav({ styletype }: NavProps) {
           >
             <C.Image
               src="/images/svg/icon-facebook.svg"
+              fallbackSrc="/images/svg/icon-facebook.svg"
               alt="Ícone facebook, quadrado com borda arredondada com a letra f, ambos cinza escuro"
             />
           </a>
@@ -69,6 +75,7 @@ export function Nav({ styletype }: NavProps) {
           >
             <C.Image
               src="/images/svg/icon-instagram.svg"
+              fallbackSrc="/images/svg/icon-instagram.svg"
               alt="Ícone instagram, quadrado com borda arredondada com um círculo no meio, ambos cinza escuro"
             />
           </a>

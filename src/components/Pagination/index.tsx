@@ -89,7 +89,11 @@ export function Pagination({
         {currentPage + siblingsCount < lastPage && (
           <>
             {currentPage + 1 + siblingsCount < lastPage && (
-              <C.Image src="/images/svg/reticence.svg" alt="Reticence" />
+              <C.Image
+                alt="Reticence"
+                src="/images/svg/reticence.svg"
+                fallbackSrc="/images/svg/reticence.svg"
+              />
             )}
             <PaginationItem onPageChange={onPageChange} number={lastPage} />
           </>

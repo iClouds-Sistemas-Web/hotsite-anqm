@@ -40,6 +40,7 @@ export function Toggle({ styletype }: ToggleProps) {
               <C.Link>
                 <C.Image
                   src="/images/svg/logo-anqm-dark.svg"
+                  fallbackSrc="/images/svg/logo-anqm-dark.svg"
                   alt="Logo Associação Norte-Riograndense de Criadores de Cavalo, cor do texto branco e preto, com detalhes em verde e amarelo"
                 />
               </C.Link>
@@ -79,6 +80,7 @@ export function Toggle({ styletype }: ToggleProps) {
             >
               <C.Image
                 src="/images/svg/icon-facebook.svg"
+                fallbackSrc="/images/svg/icon-facebook.svg"
                 alt="Ícone facebook, quadrado com borda arredondada com a letra f, ambos cinza escuro"
               />
             </a>
@@ -89,6 +91,7 @@ export function Toggle({ styletype }: ToggleProps) {
             >
               <C.Image
                 src="/images/svg/icon-instagram.svg"
+                fallbackSrc="/images/svg/icon-instagram.svg"
                 alt="Ícone instagram, quadrado com borda arredondada com um círculo no meio, ambos cinza escuro"
               />
             </a>
