@@ -15,6 +15,7 @@ export function Footer() {
             <C.Link>
               <C.Image
                 src="/images/svg/logo-anqm-mobile.svg"
+                fallbackSrc="/images/svg/logo-anqm-mobile.svg"
                 alt="Logo Associação Norte-Riograndense de Criadores de Cavalo, cor do texto branco, com detalhes em verde e amarelo"
               />
             </C.Link>
@@ -23,7 +24,7 @@ export function Footer() {
 
         <Link href={'/contato'}>
           <S.ContentContact>
-            <C.Text as="p">(84) 3272-4320 | (84) 9974-5202</C.Text>
+            <C.Text as="p">(84) 99964-3550</C.Text>
             <C.Text as="p">anqm@anqm.com.br </C.Text>
           </S.ContentContact>
         </Link>
@@ -33,6 +34,7 @@ export function Footer() {
             <C.Link>
               <C.Image
                 src="/images/svg/logo-anqm.svg"
+                fallbackSrc="/images/svg/logo-anqm.svg"
                 alt="Logo Associação Norte-Riograndense de Criadores de Cavalo, cor do texto branco, com detalhes em verde e amarelo"
               />
             </C.Link>
@@ -48,6 +50,7 @@ export function Footer() {
             <S.ContentFacebook>
               <C.Image
                 src="/images/svg/icon-facebook.svg"
+                fallbackSrc="/images/svg/icon-facebook.svg"
                 alt="Ícone facebook, quadrado com borda arredondada com a letra f, ambos cinza escuro"
               />
               <C.Text as="p">/anqm</C.Text>
@@ -61,6 +64,7 @@ export function Footer() {
             <S.ContentInstagram>
               <C.Image
                 src="/images/svg/icon-instagram.svg"
+                fallbackSrc="/images/svg/icon-instagram.svg"
                 alt="Ícone instagram, quadrado com borda arredondada com um círculo no meio, ambos cinza escuro"
               />
               <C.Text as="p">@anqm</C.Text>
