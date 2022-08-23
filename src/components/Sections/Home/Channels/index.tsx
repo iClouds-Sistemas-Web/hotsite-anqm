@@ -12,18 +12,21 @@ export function Channels() {
             <S.ContentButton>
               <S.ContentIcon>
                 <C.Image
-                  src="/images/svg/ellipse-associate-orange.svg"
                   alt="Imagem circular de cor laranja"
+                  src="/images/svg/ellipse-associate-orange.svg"
+                  fallbackSrc="/images/svg/ellipse-associate-orange.svg"
                 />
                 <C.Image
                   className="ellipse-white"
-                  src="/images/svg/ellipse-associate-white.svg"
                   alt="Imagem circular de cor branco"
+                  src="/images/svg/ellipse-associate-white.svg"
+                  fallbackSrc="/images/svg/ellipse-associate-white.svg"
                 />
                 <C.Image
                   className="icon"
                   src="/images/svg/icon-associate.svg"
                   alt="Ícone três pessoas com borda laranja"
+                  fallbackSrc="/images/svg/icon-associate.svg"
                 />
               </S.ContentIcon>
 
@@ -40,17 +43,20 @@ export function Channels() {
           <S.ContentButton>
             <S.ContentIcon>
               <C.Image
-                src="/images/svg/ellipse-associate-orange.svg"
                 alt="Imagem circular de cor laranja"
+                src="/images/svg/ellipse-associate-orange.svg"
+                fallbackSrc="/images/svg/ellipse-associate-orange.svg"
               />
               <C.Image
                 className="ellipse-white"
-                src="/images/svg/ellipse-associate-white.svg"
                 alt="Imagem circular de cor branco"
+                src="/images/svg/ellipse-associate-white.svg"
+                fallbackSrc="/images/svg/ellipse-associate-white.svg"
               />
               <C.Image
                 className="icon"
                 src="/images/svg/icon-ranking.svg"
+                fallbackSrc="/images/svg/icon-ranking.svg"
                 alt="Ícone troféu com uma estrela no meio de cor laranja"
               />
             </S.ContentIcon>
@@ -67,18 +73,21 @@ export function Channels() {
             <S.ContentButton>
               <S.ContentIcon>
                 <C.Image
-                  src="/images/svg/ellipse-associate-orange.svg"
                   alt="Imagem circular de cor laranja"
+                  src="/images/svg/ellipse-associate-orange.svg"
+                  fallbackSrc="/images/svg/ellipse-associate-orange.svg"
                 />
                 <C.Image
                   className="ellipse-white"
-                  src="/images/svg/ellipse-associate-white.svg"
                   alt="Imagem circular de cor branco"
+                  src="/images/svg/ellipse-associate-white.svg"
+                  fallbackSrc="/images/svg/ellipse-associate-white.svg"
                 />
                 <C.Image
                   className="icon"
                   src="/images/svg/icon-events.svg"
                   alt="Ícone calendário com borda laranja"
+                  fallbackSrc="/images/svg/icon-events.svg"
                 />
               </S.ContentIcon>
               <C.Text as="h1">Eventos</C.Text>

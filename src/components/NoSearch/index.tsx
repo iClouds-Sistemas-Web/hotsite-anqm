@@ -14,7 +14,11 @@ export function NoSearch() {
           </C.Text>
 
           <S.ContentImage>
-            <C.Image src="/images/svg/icon-search.svg" alt=""></C.Image>
+            <C.Image
+              src="/images/svg/icon-search.svg"
+              fallbackSrc="/images/svg/icon-search.svg"
+              alt="ícone de lupa com borda verde escuro com a lente cinza"
+            />
           </S.ContentImage>
         </S.ContentText>
       </S.Wrapper>
