@@ -7,8 +7,12 @@ import { getAdvertisement } from '~/services/functions/getAdvertisement';
 import { pagesDataProps } from '~/interfaces/pagesDataProps';
 
 import * as S from '~/styles/pages/sobre';
+import { getInstitutional } from '~/services/functions/getInstitutional';
 
-const Regulation: NextPage = ({ advertisement }: pagesDataProps) => {
+const Regulation: NextPage = ({
+  advertisement,
+  institutional,
+}: pagesDataProps) => {
   return (
     <S.Container>
       <NextSeo
@@ -17,7 +21,7 @@ const Regulation: NextPage = ({ advertisement }: pagesDataProps) => {
       />
       <Nav />
       <S.Wrapper>
-        <CompanyDetailsRegulation />
+        <CompanyDetailsRegulation data={institutional} />
         <Sponsors data={advertisement} />
       </S.Wrapper>
       <Footer />
@@ -29,9 +33,11 @@ export default Regulation;
 
 export const getStaticProps: GetStaticProps = async () => {
   const advertisement = await getAdvertisement();
+  const institutional = await getInstitutional(2);
 
   return {
     props: {
+      institutional: institutional ? institutional : [],
       advertisement: advertisement ? advertisement : [],
     },
     revalidate: 60 * 30,

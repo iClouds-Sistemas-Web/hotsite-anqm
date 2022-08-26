@@ -1,7 +1,11 @@
 import * as S from './styles';
 import * as C from '@chakra-ui/react';
 
-export function Renovation() {
+import { InstitutionalProps } from '~/interfaces/institutional';
+
+export function Renovation({ data }: InstitutionalProps) {
+  const description = data.text;
+
   return (
     <S.Container as="section">
       <S.Wrapper>
@@ -10,17 +14,10 @@ export function Renovation() {
         </S.ContentTitle>
 
         <S.ContentDescription>
-          <C.Text as="p">
-            Se você ainda não é sócio, faça seu cadastro! <br />
-          </C.Text>
-          <C.Text as="p">
-            Caso já seja sócio, renove sua sociedade! <br />
-            <br />
-          </C.Text>
-          <C.Text as="p">
-            Venha colaborar para o fortalecimento da associação do cavalo Quarto
-            de Milha e tenha várias vantagens se tornando sócio.
-          </C.Text>
+          <C.Flex
+            className="description"
+            dangerouslySetInnerHTML={{ __html: String(description) }}
+          />
         </S.ContentDescription>
 
         <S.ContentButton>
