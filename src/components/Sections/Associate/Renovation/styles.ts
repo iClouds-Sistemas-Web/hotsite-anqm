@@ -59,23 +59,21 @@ export const ContentTitle = styled(C.Flex)`
 `;
 
 export const ContentDescription = styled(C.Flex)`
-  width: 100%;
-  height: auto;
-  max-width: 82rem;
-  margin-bottom: 3rem;
+  > div {
+    width: 100%;
+    height: auto;
+    max-width: 82rem;
+    margin-bottom: 3rem;
 
-  flex-direction: column;
+    text-align: center;
+    align-items: center;
+    flex-direction: column;
 
-  > p {
     font-weight: 400;
     font-size: 1.5rem;
     line-height: 3rem;
     text-align: center;
     font-family: ${theme.fonts.roboto};
-  }
-
-  @media (max-width: 479px) {
-    margin-bottom: 2rem;
   }
 `;
 

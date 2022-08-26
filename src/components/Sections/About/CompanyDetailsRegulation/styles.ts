@@ -168,10 +168,12 @@ export const ContentInformations = styled(C.Flex)`
     }
   }
 
-  > p {
-    font-weight: 400;
-    font-size: 1.7rem;
-    line-height: 3rem;
-    font-family: ${theme.fonts.roboto};
+  .description {
+    > p {
+      font-weight: 400;
+      font-size: 1.7rem;
+      line-height: 3rem;
+      font-family: ${theme.fonts.roboto};
+    }
   }
 `;
