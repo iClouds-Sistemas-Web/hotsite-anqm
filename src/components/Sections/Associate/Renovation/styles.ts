@@ -64,19 +64,15 @@ export const ContentDescription = styled(C.Flex)`
   max-width: 82rem;
   margin-bottom: 3rem;
 
+  text-align: center;
+  align-items: center;
   flex-direction: column;
 
-  > p {
-    font-weight: 400;
-    font-size: 1.5rem;
-    line-height: 3rem;
-    text-align: center;
-    font-family: ${theme.fonts.roboto};
-  }
-
-  @media (max-width: 479px) {
-    margin-bottom: 2rem;
-  }
+  font-weight: 400;
+  font-size: 1.5rem;
+  line-height: 3rem;
+  text-align: center;
+  font-family: ${theme.fonts.roboto};
 `;
 
 export const ContentButton = styled(C.Flex)`

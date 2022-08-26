@@ -1,11 +1,13 @@
-import { NextPage } from 'next';
+import { GetStaticProps, NextPage } from 'next';
 import { NextSeo } from 'next-seo';
 
 import { Nav, Footer, Renovation } from '~/components';
+import { pagesDataProps } from '~/interfaces/pagesDataProps';
+import { getInstitutional } from '~/services/functions/getInstitutional';
 
 import * as S from '~/styles/pages/associar';
 
-const Associate: NextPage = () => {
+const Associate: NextPage = ({ institutional }: pagesDataProps) => {
   return (
     <S.Container>
       <NextSeo
@@ -14,7 +16,7 @@ const Associate: NextPage = () => {
       />
       <Nav />
       <S.Wrapper>
-        <Renovation />
+        <Renovation data={institutional} />
       </S.Wrapper>
       <Footer />
     </S.Container>
@@ -22,3 +24,14 @@ const Associate: NextPage = () => {
 };
 
 export default Associate;
+
+export const getStaticProps: GetStaticProps = async () => {
+  const institutional = await getInstitutional(3);
+
+  return {
+    props: {
+      institutional: institutional ? institutional : [],
+    },
+    revalidate: 60 * 30,
+  };
+};
