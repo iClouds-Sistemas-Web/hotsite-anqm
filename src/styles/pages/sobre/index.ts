@@ -23,6 +23,8 @@ export const Wrapper = styled(C.Flex)`
   flex: 1;
   flex-direction: column;
 
+  background-color: #fbfbfb;
+
   @media (max-width: 767px) {
     padding: 3rem 0 0;
   }
