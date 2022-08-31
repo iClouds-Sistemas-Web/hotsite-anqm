@@ -33,6 +33,10 @@ export const Wrapper = styled(C.Flex)`
 
   @media (max-width: 479px) {
     padding: 0 0 5rem;
+
+    > a {
+      max-height: 11.2rem;
+    }
   }
 `;
 
@@ -58,6 +62,7 @@ export const ContentButton = styled(C.Flex)`
     top: 4rem;
 
     max-width: 27rem;
+    min-width: 27rem;
     padding: 0 0 1rem;
     min-height: 11.2rem;
     max-height: 11.2rem;

@@ -8,9 +8,10 @@ export const Container = styled(C.Flex)`
 
   width: 100%;
   height: auto;
-  margin: 0 auto;
   max-width: 192rem;
   min-height: 70rem;
+
+  align-items: center;
 
   @media (max-width: 479px) {
     min-height: 50rem;
