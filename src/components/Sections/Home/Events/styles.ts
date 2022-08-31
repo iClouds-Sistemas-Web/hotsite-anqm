@@ -14,7 +14,7 @@ export const Container = styled(C.Flex)`
   align-items: center;
 
   @media (max-width: 479px) {
-    min-height: 50rem;
+    min-height: 49rem;
   }
 `;
 
@@ -76,8 +76,6 @@ export const Wrapper = styled(C.Flex)`
   }
 
   @media (max-width: 479px) {
-    padding: 8rem 0 0;
-
     background-position-x: 45%;
     box-shadow: inset 0px 1px 15px #512940;
   }
@@ -144,6 +142,8 @@ export const ContentTitle = styled(C.Flex)`
     }
 
     @media (max-width: 479px) {
+      margin-bottom: 1rem;
+
       color: #febe55;
       font-size: 4rem;
       line-height: 3.9rem;
