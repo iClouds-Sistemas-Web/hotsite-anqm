@@ -107,6 +107,25 @@ export const ContentImage = styled(C.Flex)`
   max-width: 61rem;
   max-height: 40rem;
 
+  overflow: overlay;
+
+  ::-webkit-scrollbar {
+    width: 0.7rem;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 5px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  }
+
   img {
     width: 100%;
     height: auto;
