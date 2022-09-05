@@ -11,10 +11,6 @@ export const Container = styled(C.Flex)`
   max-width: 192rem;
 
   align-items: center;
-
-  @media (max-width: 479px) {
-    min-height: 49rem;
-  }
 `;
 
 export const Wrapper = styled(C.Flex)`
@@ -76,6 +72,8 @@ export const Wrapper = styled(C.Flex)`
   }
 
   @media (max-width: 479px) {
+    min-height: 49rem;
+
     background-position-x: 45%;
     box-shadow: inset 0px 1px 15px #512940;
   }
