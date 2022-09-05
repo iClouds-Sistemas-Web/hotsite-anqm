@@ -9,7 +9,6 @@ export const Container = styled(C.Flex)`
   width: 100%;
   height: auto;
   max-width: 192rem;
-  min-height: 70rem;
 
   align-items: center;
 
@@ -24,6 +23,7 @@ export const Wrapper = styled(C.Flex)`
   width: 100%;
   height: auto;
   padding: 10rem 0 0;
+  min-height: 70rem;
 
   flex-direction: column;
 
