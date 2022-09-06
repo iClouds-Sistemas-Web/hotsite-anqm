@@ -169,6 +169,8 @@ export const ContentInformations = styled(C.Flex)`
   }
 
   .description {
+    flex-direction: column;
+
     > p {
       font-weight: 400;
       font-size: 1.7rem;

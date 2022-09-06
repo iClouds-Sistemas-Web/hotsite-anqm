@@ -1,6 +1,6 @@
 import Router from 'next/router';
 import { useContext } from 'react';
-import type { GetStaticProps, NextPage } from 'next';
+import type { GetServerSideProps, NextPage } from 'next';
 
 import { BiSearchAlt2 } from 'react-icons/bi';
 
@@ -58,13 +58,12 @@ const Search: NextPage = ({ advertisement }: pagesDataProps) => {
 
 export default Search;
 
-export const getStaticProps: GetStaticProps = async () => {
+export const getServerSideProps: GetServerSideProps = async () => {
   const advertisement = await getAdvertisement();
 
   return {
     props: {
       advertisement: advertisement ? advertisement : [],
     },
-    revalidate: 60 * 30,
   };
 };

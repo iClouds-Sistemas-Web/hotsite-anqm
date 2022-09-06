@@ -1,5 +1,5 @@
 import { NextSeo } from 'next-seo';
-import type { GetStaticProps, NextPage } from 'next';
+import type { GetServerSideProps, NextPage } from 'next';
 
 import { getEvents } from '~/services/functions/getEvents';
 import { getRecentNews } from '~/services/functions/getRecentNews';
@@ -45,7 +45,7 @@ const Home: NextPage = ({
 
 export default Home;
 
-export const getStaticProps: GetStaticProps = async () => {
+export const getServerSideProps: GetServerSideProps = async () => {
   const events = await getEvents();
   const recentNews = await getRecentNews();
   const advertisement = await getAdvertisement();
@@ -56,6 +56,5 @@ export const getStaticProps: GetStaticProps = async () => {
       recentNews: recentNews ? recentNews : [],
       advertisement: advertisement ? advertisement : [],
     },
-    revalidate: 60 * 30,
   };
 };

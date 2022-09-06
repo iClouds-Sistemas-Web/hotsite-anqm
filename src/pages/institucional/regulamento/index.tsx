@@ -1,5 +1,5 @@
 import { NextSeo } from 'next-seo';
-import { GetStaticProps, NextPage } from 'next';
+import { GetServerSideProps, NextPage } from 'next';
 
 import { Nav, Footer, Sponsors, CompanyDetailsRegulation } from '~/components';
 import { getAdvertisement } from '~/services/functions/getAdvertisement';
@@ -31,7 +31,7 @@ const Regulation: NextPage = ({
 
 export default Regulation;
 
-export const getStaticProps: GetStaticProps = async () => {
+export const getServerSideProps: GetServerSideProps = async () => {
   const advertisement = await getAdvertisement();
   const institutional = await getInstitutional(2);
 
@@ -40,6 +40,5 @@ export const getStaticProps: GetStaticProps = async () => {
       institutional: institutional ? institutional : [],
       advertisement: advertisement ? advertisement : [],
     },
-    revalidate: 60 * 30,
   };
 };
