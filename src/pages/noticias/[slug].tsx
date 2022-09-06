@@ -1,5 +1,5 @@
 import { NextSeo } from 'next-seo';
-import type { GetStaticPaths, GetStaticProps, NextPage } from 'next';
+import type { GetServerSideProps, NextPage } from 'next';
 
 import {
   Nav,
@@ -36,14 +36,7 @@ const NewsDetails: NextPage = ({
 
 export default NewsDetails;
 
-export const getStaticPaths: GetStaticPaths = async () => {
-  return {
-    paths: [],
-    fallback: 'blocking',
-  };
-};
-
-export const getStaticProps: GetStaticProps = async ({ params }) => {
+export const getServerSideProps: GetServerSideProps = async ({ params }) => {
   const newsContentId = String(params.slug).split('-');
 
   const newsContentIdFormatted = newsContentId[newsContentId.length - 1];

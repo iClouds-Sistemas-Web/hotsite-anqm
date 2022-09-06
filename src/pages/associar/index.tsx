@@ -1,5 +1,5 @@
-import { GetStaticProps, NextPage } from 'next';
 import { NextSeo } from 'next-seo';
+import { GetServerSideProps, NextPage } from 'next';
 
 import { Nav, Footer, Renovation } from '~/components';
 import { pagesDataProps } from '~/interfaces/pagesDataProps';
@@ -25,13 +25,12 @@ const Associate: NextPage = ({ institutional }: pagesDataProps) => {
 
 export default Associate;
 
-export const getStaticProps: GetStaticProps = async () => {
+export const getServerSideProps: GetServerSideProps = async () => {
   const institutional = await getInstitutional(3);
 
   return {
     props: {
       institutional: institutional ? institutional : [],
     },
-    revalidate: 60 * 30,
   };
 };

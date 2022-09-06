@@ -1,7 +1,7 @@
 import Router from 'next/router';
 import { useState } from 'react';
 import { NextSeo } from 'next-seo';
-import type { GetStaticProps, NextPage } from 'next';
+import type { GetServerSideProps, NextPage } from 'next';
 
 import { Nav, News, Footer, Sponsors, NewsList } from '~/components';
 
@@ -59,7 +59,7 @@ const AllNews: NextPage = ({ advertisement, recentNews }: pagesDataProps) => {
 
 export default AllNews;
 
-export const getStaticProps: GetStaticProps = async () => {
+export const getServerSideProps: GetServerSideProps = async () => {
   const recentNews = await getRecentNews();
   const paginationNews = await getNewsPagination();
   const advertisement = await getAdvertisement();
@@ -70,6 +70,5 @@ export const getStaticProps: GetStaticProps = async () => {
       advertisement: advertisement ? advertisement : [],
       paginationNews: paginationNews ? paginationNews : [],
     },
-    revalidate: 60 * 30,
   };
 };
