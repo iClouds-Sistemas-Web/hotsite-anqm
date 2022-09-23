@@ -15,7 +15,7 @@ export function ContactInformations() {
               <C.Text as="h3">ENDEREÇO</C.Text>
               <C.Text as="p">
                 Rod. Gov. Mário Covas, 111-179 - Parque de Exposições
-                Aristófanes Fernandes, Parnamirim - RN, 50710-030
+                Aristófanes Fernandes, Parnamirim - RN, 50710-030.
               </C.Text>
             </S.ContentAddress>
 
