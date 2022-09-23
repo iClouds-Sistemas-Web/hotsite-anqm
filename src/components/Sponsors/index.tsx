@@ -23,9 +23,9 @@ export function Sponsors({ data }: AdvertisementProps) {
           </S.ContentCardEQuester>
           {data.map((sponsor) => (
             <CardSponsors
-              key={sponsor.id}
-              alt={sponsor.title}
-              src={sponsor.file_url}
+              key={sponsor?.id}
+              alt={sponsor?.title}
+              src={sponsor?.file_url}
             />
           ))}
         </S.ContentSponsors>

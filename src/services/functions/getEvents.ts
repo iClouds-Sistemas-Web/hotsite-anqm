@@ -8,12 +8,14 @@ export async function getEvents(): Promise<any> {
 
     const dataEvents = data.events.map((item: DataEvents) => {
       return {
-        id: item?.id || '',
-        title: item?.title || '',
+        ...(item.id && { id: item.id }),
+        ...(item.title && { title: item.title }),
         banner_file: {
-          src_small: item.banner_file.small || '',
-          src_medium: item.banner_file.medium || '',
-          src_large: item.banner_file.large || '',
+          ...(item.banner_file.small && { src_small: item.banner_file.small }),
+          ...(item.banner_file.medium && {
+            src_medium: item.banner_file.medium,
+          }),
+          ...(item.banner_file.large && { src_large: item.banner_file.large }),
         },
       };
     });

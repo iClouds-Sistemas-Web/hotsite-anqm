@@ -7,8 +7,8 @@ import * as C from '@chakra-ui/react';
 import { NewsContentProps } from '~/interfaces/news';
 
 export function NewsDescription({ data }: NewsContentProps) {
-  const date = data.date
-    ? format(new Date(data.date), "dd 'de' MMMM 'de' yyyy", {
+  const date = data?.date
+    ? format(new Date(data?.date), "dd 'de' MMMM 'de' yyyy", {
         locale: BR,
       })
     : '';
@@ -21,17 +21,17 @@ export function NewsDescription({ data }: NewsContentProps) {
     <S.Container as="section">
       <S.Wrapper>
         <S.ContentNewsHeader>
-          <C.Text as="h1">{data.title}</C.Text>
+          <C.Text as="h1">{data?.title}</C.Text>
 
           <C.Text as="span">{date}</C.Text>
 
-          <C.Text as="h2">{data.resume}</C.Text>
+          <C.Text as="h2">{data?.resume}</C.Text>
         </S.ContentNewsHeader>
 
         <S.ContentImage>
           <C.Image
-            src={data.content_files[0].file_url}
-            alt={data.title}
+            src={data?.content_files[0].file_url}
+            alt={data?.title}
             fallbackSrc="/images/image-not-found.jpg"
           />
         </S.ContentImage>
