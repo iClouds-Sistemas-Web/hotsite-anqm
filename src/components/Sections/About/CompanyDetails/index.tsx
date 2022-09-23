@@ -7,7 +7,7 @@ import * as C from '@chakra-ui/react';
 import { InstitutionalProps } from '~/interfaces/institutional';
 
 export function CompanyDetails({ data }: InstitutionalProps) {
-  const description = data.text;
+  const description = data?.text;
 
   const router = useRouter();
 

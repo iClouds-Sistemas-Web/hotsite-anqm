@@ -15,7 +15,7 @@ export function NewsSection({ data, amount_of_news }: NewsProps) {
 
         <S.ContentMoreNews>
           {data
-            .map((item) => <CardNews key={item.id} data={item} />)
+            .map((item) => <CardNews key={item?.id} data={item} />)
             .splice(0, amount_of_news)}
         </S.ContentMoreNews>
       </S.Wrapper>

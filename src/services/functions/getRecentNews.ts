@@ -13,16 +13,20 @@ export async function getRecentNews(): Promise<any> {
 
     const dataRecentNews = data.recentContents.map((item: DataNews) => {
       return {
-        id: item?.id || '',
-        title: item?.title || '',
-        resume: item?.resume || '',
-        slug: `/noticias/${item?.slug || ''}-${item?.id}`,
-        date: format(new Date(item?.date || ''), "dd 'de' MMMM 'de' yyyy", {
-          locale: BR,
+        ...(item.id && { id: item.id }),
+        ...(item.title && { title: item.title }),
+        ...(item.resume && { resume: item.resume }),
+        ...(item.slug && { slug: `/noticias/${item.slug || ''}-${item.id}` }),
+        ...(item.date && {
+          date: format(new Date(item?.date), "dd 'de' MMMM 'de' yyyy", {
+            locale: BR,
+          }),
         }),
         cover: {
-          alt: item.title || '',
-          src: item.content_files[0].file_url || '',
+          ...(item.title && { alt: item.title }),
+          ...(item.content_files[0].file_url && {
+            src: item.content_files[0].file_url,
+          }),
         },
       };
     });
