@@ -14,11 +14,11 @@ export function CardNews({ data }: CardProps) {
     <S.Container>
       <S.Wrapper>
         <S.ContentImage>
-          <NextLink href={data.slug}>
+          <NextLink href={data[0]?.slug ? data[0].slug : '#'}>
             <C.Link>
               <C.Image
-                alt={data.title}
-                src={data.cover.src}
+                alt={data?.title}
+                src={data?.cover.src}
                 fallbackSrc="/images/image-not-found.jpg"
               />
             </C.Link>
@@ -26,12 +26,12 @@ export function CardNews({ data }: CardProps) {
         </S.ContentImage>
 
         <S.ContentDescription>
-          <NextLink href={data.slug}>
+          <NextLink href={data[0]?.slug ? data[0].slug : '#'}>
             <C.Link style={{ textDecoration: 'none' }}>
-              <C.Text as="span">{data.date}</C.Text>
+              <C.Text as="span">{data?.date}</C.Text>
 
               <C.Text as="h2" isTruncated noOfLines={[5, 5, 5, 3]}>
-                {data.title}
+                {data?.title}
               </C.Text>
             </C.Link>
           </NextLink>

@@ -23,11 +23,11 @@ export function News({ data, children, amount_of_news }: NewsProps) {
 
         <S.ContentTopNews as="section">
           <S.ContentImage>
-            <NextLink href={data[0].slug}>
+            <NextLink href={data[0]?.slug ? data[0].slug : '#'}>
               <C.Link>
                 <C.Image
-                  src={data[0].cover.src}
-                  alt={data[0].title}
+                  src={data[0]?.cover.src}
+                  alt={data[0]?.title}
                   fallbackSrc="/images/image-not-found.jpg"
                 />
               </C.Link>
@@ -35,16 +35,16 @@ export function News({ data, children, amount_of_news }: NewsProps) {
           </S.ContentImage>
 
           <S.ContentDescription>
-            <NextLink href={data[0].slug}>
+            <NextLink href={data[0]?.slug ? data[0].slug : '#'}>
               <C.Link style={{ textDecoration: 'none' }}>
-                <C.Text as="span">{data[0].date}</C.Text>
+                <C.Text as="span">{data[0]?.date}</C.Text>
 
                 <C.Text as="h2" isTruncated noOfLines={[3, 3, 5]}>
-                  {data[0].title}
+                  {data[0]?.title}
                 </C.Text>
 
                 <C.Text as="p" isTruncated noOfLines={[2, 2, 5]}>
-                  {data[0].resume}
+                  {data[0]?.resume}
                 </C.Text>
               </C.Link>
             </NextLink>
@@ -53,7 +53,7 @@ export function News({ data, children, amount_of_news }: NewsProps) {
 
         <S.ContentMoreNews as="section">
           {data
-            .map((item) => <CardNews key={item.id} data={item} />)
+            .map((item) => <CardNews key={item?.id} data={item} />)
             .splice(1, amount_of_news)}
         </S.ContentMoreNews>
       </S.Wrapper>

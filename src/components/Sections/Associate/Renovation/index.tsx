@@ -4,7 +4,7 @@ import * as C from '@chakra-ui/react';
 import { InstitutionalProps } from '~/interfaces/institutional';
 
 export function Renovation({ data }: InstitutionalProps) {
-  const description = data.text;
+  const description = data?.text;
 
   return (
     <S.Container as="section">
