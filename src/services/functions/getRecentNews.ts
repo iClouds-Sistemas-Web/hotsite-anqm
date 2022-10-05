@@ -22,7 +22,9 @@ export async function getRecentNews(): Promise<any> {
             locale: BR,
           }),
         }),
-        src: '/images/image-not-found.jpg',
+        cover: {
+          src: '/images/image-not-found.jpg',
+        },
       };
     });
 
