@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { api } from '../config';
 
 export async function getInstitutional(id: number): Promise<any> {

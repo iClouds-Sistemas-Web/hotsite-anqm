@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { api } from '../config';
 
 import { format } from 'date-fns';
@@ -22,13 +23,22 @@ export async function getRecentNews(): Promise<any> {
             locale: BR,
           }),
         }),
-        cover: {
-          src: '/images/image-not-found.jpg',
-        },
+
+        ...(item.content_files[0]
+          ? {
+              cover: Object({
+                alt: item.content_files[0].title,
+                src: item.content_files[0].file_url,
+              }),
+            }
+          : {
+              cover: Object({
+                alt: 'Capa não encontrada!',
+                src: '/images/image-not-found.jpg',
+              }),
+            }),
       };
     });
-
-    console.log('data', data.recentContents.content_files);
 
     return dataRecentNews;
   } catch (error) {
