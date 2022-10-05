@@ -16,20 +16,17 @@ export async function getRecentNews(): Promise<any> {
         ...(item.id && { id: item.id }),
         ...(item.title && { title: item.title }),
         ...(item.resume && { resume: item.resume }),
-        ...(item.slug && { slug: `/noticias/${item.slug || ''}-${item.id}` }),
+        ...(item.slug && { slug: `/noticias/${item.slug}-${item.id}` }),
         ...(item.date && {
           date: format(new Date(item?.date), "dd 'de' MMMM 'de' yyyy", {
             locale: BR,
           }),
         }),
-        cover: {
-          ...(item.title && { alt: item.title }),
-          ...(item.content_files[0].file_url && {
-            src: item.content_files[0].file_url,
-          }),
-        },
+        src: '/images/image-not-found.jpg',
       };
     });
+
+    console.log('data', data.recentContents.content_files);
 
     return dataRecentNews;
   } catch (error) {

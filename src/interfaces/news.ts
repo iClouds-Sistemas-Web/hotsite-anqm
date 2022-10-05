@@ -21,32 +21,32 @@ export interface News {
 export interface DataNews {
   content_files: [
     {
-      config_file_id: number;
-      config_files: string;
-      content_id: number;
       file: string;
-      file_url: string;
       title: string;
+      file_url: string;
+      type_image: string;
+      content_id: number;
+      config_file_id: number;
     }
   ];
-  content_id: number | null;
-  created: Date;
-  date: Date;
-  exibir_capa: number;
-  featured: number;
-  gallery_id: number | null;
   id: number;
-  index_id: number;
-  keywords: string;
-  language: string;
-  link_em_nova_aba: string;
-  link_externo: string;
-  modified: Date;
-  resume: string;
+  date: Date;
   slug: string;
-  status: number;
-  text: ReactNode;
   title: string;
+  created: Date;
+  resume: string;
+  status: number;
+  modified: Date;
+  text: ReactNode;
+  language: string;
+  index_id: number;
+  featured: number;
+  keywords: string;
+  exibir_capa: number;
+  link_externo: string;
+  link_em_nova_aba: string;
+  content_id: number | null;
+  gallery_id: number | null;
 }
 
 export interface NewsContentProps {
