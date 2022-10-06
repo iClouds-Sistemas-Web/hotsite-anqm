@@ -24,6 +24,8 @@ const Home: NextPage = ({
   recentNews,
   events,
 }: pagesDataProps) => {
+  console.log('Recente: ', recentNews);
+
   return (
     <S.Container>
       <NextSeo

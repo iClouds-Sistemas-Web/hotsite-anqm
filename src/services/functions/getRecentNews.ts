@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { api } from '../config';
 
 import { format } from 'date-fns';
@@ -16,18 +17,25 @@ export async function getRecentNews(): Promise<any> {
         ...(item.id && { id: item.id }),
         ...(item.title && { title: item.title }),
         ...(item.resume && { resume: item.resume }),
-        ...(item.slug && { slug: `/noticias/${item.slug || ''}-${item.id}` }),
+        ...(item.slug && { slug: `/noticias/${item.slug}-${item.id}` }),
         ...(item.date && {
           date: format(new Date(item?.date), "dd 'de' MMMM 'de' yyyy", {
             locale: BR,
           }),
         }),
-        cover: {
-          ...(item.title && { alt: item.title }),
-          ...(item.content_files[0].file_url && {
-            src: item.content_files[0].file_url,
-          }),
-        },
+        ...(item.content_files[0]
+          ? {
+              cover: Object({
+                alt: item.content_files[0].title,
+                src: item.content_files[0].file_url,
+              }),
+            }
+          : {
+              cover: Object({
+                alt: 'Capa não encontrada!',
+                src: '/images/image-not-found.jpg',
+              }),
+            }),
       };
     });
 

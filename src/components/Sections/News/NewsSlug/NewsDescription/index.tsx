@@ -30,7 +30,7 @@ export function NewsDescription({ data }: NewsContentProps) {
 
         <S.ContentImage>
           <C.Image
-            src={data?.content_files[0].file_url}
+            src={data?.content_files[0]?.file_url}
             alt={data?.title}
             fallbackSrc="/images/image-not-found.jpg"
           />

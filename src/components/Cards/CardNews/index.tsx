@@ -14,7 +14,7 @@ export function CardNews({ data }: CardProps) {
     <S.Container>
       <S.Wrapper>
         <S.ContentImage>
-          <NextLink href={data[0]?.slug ? data[0].slug : '#'}>
+          <NextLink href={data?.slug ? data.slug : '#'}>
             <C.Link>
               <C.Image
                 alt={data?.title}
@@ -26,7 +26,7 @@ export function CardNews({ data }: CardProps) {
         </S.ContentImage>
 
         <S.ContentDescription>
-          <NextLink href={data[0]?.slug ? data[0].slug : '#'}>
+          <NextLink href={data?.slug ? data.slug : '#'}>
             <C.Link style={{ textDecoration: 'none' }}>
               <C.Text as="span">{data?.date}</C.Text>
 

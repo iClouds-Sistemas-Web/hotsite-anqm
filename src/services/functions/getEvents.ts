@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { api } from '../config';
 
 import { DataEvents } from '~/interfaces/events';
@@ -10,13 +11,20 @@ export async function getEvents(): Promise<any> {
       return {
         ...(item.id && { id: item.id }),
         ...(item.title && { title: item.title }),
-        banner_file: {
-          ...(item.banner_file.small && { src_small: item.banner_file.small }),
-          ...(item.banner_file.medium && {
-            src_medium: item.banner_file.medium,
-          }),
-          ...(item.banner_file.large && { src_large: item.banner_file.large }),
-        },
+        ...(item.banner_file
+          ? {
+              banner_file: Object({
+                src_small: item.banner_file.small,
+                src_medium: item.banner_file.medium,
+                src_large: item.banner_file.large,
+              }),
+            }
+          : {
+              banner_file: Object({
+                alt: 'Capa não encontrada!',
+                src: '/images/image-not-found.jpg',
+              }),
+            }),
       };
     });
 
