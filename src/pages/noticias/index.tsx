@@ -12,7 +12,6 @@ import { BiSearchAlt2 } from 'react-icons/bi';
 
 import { getRecentNews } from '~/services/functions/getRecentNews';
 import { getAdvertisement } from '~/services/functions/getAdvertisement';
-import { getNewsPagination } from '~/services/functions/getNewsPagination';
 
 import { pagesDataProps } from '~/interfaces/pagesDataProps';
 
@@ -61,14 +60,12 @@ export default AllNews;
 
 export const getServerSideProps: GetServerSideProps = async () => {
   const recentNews = await getRecentNews();
-  const paginationNews = await getNewsPagination();
   const advertisement = await getAdvertisement();
 
   return {
     props: {
       recentNews: recentNews ? recentNews : [],
       advertisement: advertisement ? advertisement : [],
-      paginationNews: paginationNews ? paginationNews : [],
     },
   };
 };
