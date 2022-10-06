@@ -23,7 +23,6 @@ export async function getRecentNews(): Promise<any> {
             locale: BR,
           }),
         }),
-
         ...(item.content_files[0]
           ? {
               cover: Object({

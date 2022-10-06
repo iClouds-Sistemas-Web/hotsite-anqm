@@ -23,12 +23,6 @@ export async function getNewsPagination(): Promise<any> {
             locale: BR,
           }),
         }),
-        cover: {
-          ...(item.title && { alt: item.title }),
-          ...(item.content_files[0].file_url && {
-            src: item.content_files[0].file_url,
-          }),
-        },
       };
     });
 
