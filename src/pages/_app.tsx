@@ -10,7 +10,7 @@ import { Fonts } from '~/styles/global';
 
 function MyApp({ Component, pageProps }: AppProps) {
   useEffect(() => {
-    TagManager.initialize({ gtmId: 'GTM-PHZBHJL' });
+    TagManager.initialize({ gtmId: 'GTM-W6882XB' });
   }, []);
 
   return (
