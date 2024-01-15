@@ -1,5 +1,5 @@
-import { format } from 'date-fns';
 import BR from 'date-fns/locale/pt-BR';
+import { format, Locale } from 'date-fns';
 
 import * as S from './styles';
 import * as C from '@chakra-ui/react';
@@ -9,7 +9,7 @@ import { NewsContentProps } from '~/interfaces/news';
 export function NewsDescription({ data }: NewsContentProps) {
   const date = data?.date
     ? format(new Date(data?.date), "dd 'de' MMMM 'de' yyyy", {
-        locale: BR,
+        locale: BR as unknown as Locale,
       })
     : '';
 

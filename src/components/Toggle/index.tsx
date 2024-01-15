@@ -68,7 +68,7 @@ export function Toggle({ styletype }: ToggleProps) {
                     <S.Link styletype={styletype}>{item.title}</S.Link>
                   )}
                 </NextLink>
-              )
+              ),
             )}
           </DrawerBody>
 

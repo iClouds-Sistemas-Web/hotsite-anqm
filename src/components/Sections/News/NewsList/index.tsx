@@ -2,8 +2,8 @@ import NextLink from 'next/link';
 import { useContext } from 'react';
 import { Skeleton, Stack } from '@chakra-ui/react';
 
-import { format } from 'date-fns';
 import BR from 'date-fns/locale/pt-BR';
+import { format, Locale } from 'date-fns';
 
 import { Pagination } from '~/components/Pagination';
 
@@ -45,8 +45,8 @@ export function NewsList() {
                               new Date(newsList.date),
                               "dd 'de' MMMM 'de' yyyy",
                               {
-                                locale: BR,
-                              }
+                                locale: BR as unknown as Locale,
+                              },
                             )
                           : ''}
                       </C.Text>

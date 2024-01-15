@@ -9,8 +9,6 @@ export const Container = styled(C.Flex)`
   width: 100%;
   height: auto;
   max-width: 192rem;
-
-  align-items: center;
 `;
 
 export const Wrapper = styled(C.Flex)`
