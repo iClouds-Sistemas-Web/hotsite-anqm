@@ -5,7 +5,9 @@ import { DataEvents } from '~/interfaces/events';
 
 export async function getEvents(): Promise<any> {
   try {
-    const { data } = await api.get(`events`);
+    const { data } = await api.get(
+      `events?clientId=${process.env.NEXT_PUBLIC_CLIENT_ID}`,
+    );
 
     const dataEvents = data.events.map((item: DataEvents) => {
       return {

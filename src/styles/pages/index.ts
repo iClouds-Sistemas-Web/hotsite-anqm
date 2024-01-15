@@ -13,5 +13,6 @@ export const Container = styled(C.Flex)`
 
 export const Wrapper = styled(C.Flex)`
   flex: 1;
+  align-items: center;
   flex-direction: column;
 `;
