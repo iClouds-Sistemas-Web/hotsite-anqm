@@ -83,7 +83,7 @@ export function Footer() {
             <NextLink key={item.id} href={item.url}>
               <S.Link>{item.title}</S.Link>
             </NextLink>
-          )
+          ),
         )}
       </S.ContentNavigation>
 
