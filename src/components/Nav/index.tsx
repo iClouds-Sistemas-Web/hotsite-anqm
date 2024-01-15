@@ -52,7 +52,7 @@ export function Nav({ styletype }: NavProps) {
               <NextLink key={item.id} href={item.url}>
                 <S.Link styletype={styletype}>{item.title}</S.Link>
               </NextLink>
-            )
+            ),
           )}
         </S.ContentNavigation>
 

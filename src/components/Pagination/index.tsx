@@ -36,7 +36,7 @@ export function Pagination({
     currentPage < lastPage
       ? generatePagesArray(
           currentPage,
-          Math.min(currentPage + siblingsCount, lastPage)
+          Math.min(currentPage + siblingsCount, lastPage),
         )
       : [];
 
